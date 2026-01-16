@@ -1,0 +1,16 @@
+CAPI=2:
+name: "u337mg204:ece337:tb_full_adder"
+description: "Testbench for the full adder"
+
+filesets:
+    tb:
+        files:
+            - "testbench/tb_full_adder.sv"
+        file_type: systemVerilogSource
+
+targets:
+    default:
+        filesets:
+            - tb
+        toplevel: tb_full_adder
+

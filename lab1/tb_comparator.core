@@ -1,0 +1,16 @@
+CAPI=2:
+name: "u337mg204:ece337:tb_comparator:1.0.0"
+description: "Testbench for the comparator"
+
+filesets:
+    tb:
+        files:
+            - "testbench/tb_comparator.sv"
+        file_type: systemVerilogSource
+
+targets:
+    default:
+        filesets:
+            - tb
+        toplevel: tb_comparator
+

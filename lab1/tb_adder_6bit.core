@@ -1,0 +1,16 @@
+CAPI=2:
+name: "u337mg204:ece337:tb_adder_6bit"
+description: "Testbench for the 6-bit adder"
+
+filesets:
+    tb:
+        files:
+            - "testbench/tb_adder_6bit.sv"
+        file_type: systemVerilogSource
+
+targets:
+    default:
+        filesets:
+            - tb
+        toplevel: tb_adder_6bit
+
