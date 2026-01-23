@@ -7,6 +7,8 @@ filesets:
         files:
             - "source/adder_6bit.sv"
         file_type: systemVerilogSource
+        depend:
+            - "u337mg204:ece337:full_adder:1.0.0"
 
     synth:
         depend:

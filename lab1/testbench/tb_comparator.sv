@@ -6,6 +6,7 @@ module tb_comparator ();
     logic [7:0] b;
     logic gt;
     logic lt;
+
     logic eq;
 
     comparator DUT (.a(a), .b(b), .gt(gt), .lt(lt), .eq(eq));
@@ -13,7 +14,15 @@ module tb_comparator ();
     initial begin
         a = 8'h0;
         b = 8'h0;
-        #(1ns);
+        #(5ns);
+
+        a = 8'h1;
+        b = 8'h0;
+        #(5ns);
+
+        a = 8'h0;
+        b = 8'h1;
+        #(5ns);
 
         $finish;
     end

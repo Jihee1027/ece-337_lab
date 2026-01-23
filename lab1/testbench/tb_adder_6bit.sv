@@ -30,6 +30,10 @@ module tb_adder_6bit ();
 
         // Add For Loop Here! Make sure to wait #(TEST DELAY); between 
         // setting inputs and checking outputs for each iteration.
+        for (int i = 0; i < 8192; i++)  begin
+            test_inputs = i[12:0];
+            #(TEST_DELAY);
+        end
 
         $finish;
     end

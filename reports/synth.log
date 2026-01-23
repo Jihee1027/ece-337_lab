@@ -1,0 +1,240 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid this.
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version W-2024.09-SP4 for linux64 - Feb 26, 2025 
+
+                    Copyright (c) 1988 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Initializing gui preferences from file  /home/ecegridfs/a/337mg204/.synopsys_dc_gui/preferences.tcl
+Current time:       Tue Jan 20 19:47:20 2026
+Hostname:           ececomp2.ecn.purdue.edu
+CPU Model:          AMD EPYC 7513 32-Core Processor
+CPU Details:        Cores = 128 : Sockets = 2 : Cache Size = 512 KB : Freq = 2.60 GHz
+OS:                 Linux 4.18.0-553.89.1.el8_10.x86_64
+RAM:                502 GB (Free 248 GB)
+Swap:                63 GB (Free  63 GB)
+Work Filesystem:    /home/ecegridfs/a mounted to ecegridfs.ecn.purdue.edu:/export/home/a
+Tmp Filesystem:     /tmp mounted to tmpfs
+Work Disk:          2968 GB (Free 711 GB)
+Tmp Disk:            19 GB (Free  19 GB)
+
+CPU Load: 12%, Ram Free: 248 GB, Swap Free: 63 GB, Work Disk Free: 711 GB, Tmp Disk Free: 19 GB
+############################################
+#
+# Auto-generated project tcl file:
+#  * sets up variable
+#  * runs customized script
+#
+############################################
+sh date
+Tue Jan 20 19:47:20 EST 2026
+set TOP_MODULE adder_6bit
+adder_6bit
+set DC_SCRIPT synth.tcl
+synth.tcl
+set READ_SOURCES u337mg204_ece337_adder_6bit_1.0.0-read-sources
+u337mg204_ece337_adder_6bit_1.0.0-read-sources
+set SCRIPT_DIR src/u337mg204_ece337_synfiles_0
+src/u337mg204_ece337_synfiles_0
+set REPORT_DIR reports
+reports
+sh mkdir -p ${REPORT_DIR}
+set target_library /home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db
+/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db
+set link_library   [concat "*"  /home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db dw_foundation.sldb]
+* /home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db dw_foundation.sldb
+############################################
+#
+# Run custom script
+#
+############################################
+source ${SCRIPT_DIR}/${DC_SCRIPT}
+Running PRESTO HDLC
+Compiling source file ./src/u337mg204_ece337_full_adder_1.0.0/source/full_adder.sv
+Presto compilation completed successfully.
+Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
+Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/dw_foundation.sldb'
+Running PRESTO HDLC
+Compiling source file ./src/u337mg204_ece337_adder_6bit_1.0.0/source/adder_6bit.sv
+Presto compilation completed successfully.
+Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/gtech.db'
+Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (adder_6bit)
+Module: adder_6bit, Ports: 20, Input: 13, Output: 7, Inout: 0
+Module: adder_6bit, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module adder_6bit report end. (ELAB-965)
+Elaborated 1 design.
+Current design is now 'adder_6bit'.
+Information: Building the design 'full_adder'. (HDL-193)
+Presto compilation completed successfully. (full_adder)
+Module: full_adder, Ports: 5, Input: 3, Output: 2, Inout: 0
+Module: full_adder, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module full_adder report end. (ELAB-965)
+Information: Uniquified 6 instances of design 'full_adder'. (OPT-1056)
+CPU Load: 12%, Ram Free: 248 GB, Swap Free: 63 GB, Work Disk Free: 711 GB, Tmp Disk Free: 19 GB
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | W-2024.09-DWBB_202409.4 |     *     |
+| Licensed DW Building Blocks        | W-2024.09-DWBB_202409.4 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 54                                     |
+| Number of User Hierarchies                              | 6                                      |
+| Sequential Cell Count                                   | 0                                      |
+| Macro Count                                             | 0                                      |
+| Pad Count                                               | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 1                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 0                                      |
+| Number of Dont Touch Cells                              | 0                                      |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with Target Library Subset (with clock_path)     | false  (false )                        |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'full_adder_0'
+  Processing 'adder_6bit'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01   14256.0      0.55       0.6       0.0                          
+    0:00:01   14256.0      0.55       0.6       0.0                          
+    0:00:01   14256.0      0.55       0.6       0.0                          
+    0:00:01   14256.0      0.55       0.6       0.0                          
+    0:00:01   14256.0      0.55       0.6       0.0                          
+    0:00:01   13176.0      0.55       0.6       0.0                          
+    0:00:01   13176.0      0.55       0.6       0.0                          
+    0:00:01   13176.0      0.55       0.6       0.0                          
+    0:00:01   13176.0      0.55       0.6       0.0                          
+    0:00:01   13176.0      0.55       0.6       0.0                          
+    0:00:01   13176.0      0.55       0.6       0.0                          
+    0:00:01   13176.0      0.55       0.6       0.0                          
+    0:00:01   13176.0      0.55       0.6       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01   13176.0      0.55       0.6       0.0                          
+    0:00:01   13176.0      0.55       0.6       0.0                          
+    0:00:01   13176.0      0.55       0.6       0.0                          
+    0:00:01   12888.0      0.52       0.5       0.0 carry_out                
+    0:00:01   11736.0      0.47       0.5       0.0                          
+    0:00:01   11736.0      0.47       0.5       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01   11736.0      0.47       0.5       0.0                          
+    0:00:01   11736.0      0.47       0.5       0.0                          
+    0:00:01   11016.0      0.50       0.5       0.0                          
+    0:00:01   11016.0      0.50       0.5       0.0                          
+    0:00:01   11016.0      0.50       0.5       0.0                          
+    0:00:01   11016.0      0.50       0.5       0.0                          
+    0:00:01   11367.0      0.49       0.5       0.0                          
+    0:00:01   11367.0      0.49       0.5       0.0                          
+    0:00:01   11367.0      0.49       0.5       0.0                          
+    0:00:01   11367.0      0.49       0.5       0.0                          
+    0:00:01   11367.0      0.49       0.5       0.0                          
+    0:00:01   11367.0      0.49       0.5       0.0                          
+Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+CPU Load: 12%, Ram Free: 248 GB, Swap Free: 63 GB, Work Disk Free: 711 GB, Tmp Disk Free: 19 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+Writing verilog file '/home/ecegridfs/a/337mg204/ece337/tmp/build/u337mg204_ece337_adder_6bit_1.0.0/syn-design_compiler/adder_6bit.v'.
+
+Memory usage for this session 127 Mbytes.
+Memory usage for this session including child processes 127 Mbytes.
+CPU usage for this session 3 seconds ( 0.00 hours ).
+Elapsed time for this session 4 seconds ( 0.00 hours ).
+
+Thank you...

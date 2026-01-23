@@ -27,9 +27,13 @@ module tb_full_adder ();
     begin
         // Initialize Inputs
         test_inputs = 3'b000;
-
+        
         // Add For Loop Here! Make sure to wait #(TEST DELAY); between 
         // setting inputs and checking outputs for each iteration.
+        for (int i = 0; i < 8; i++) begin
+            test_inputs = i[2:0];
+            #(5ns);
+        end
 
         $finish;
     end
