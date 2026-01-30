@@ -1,0 +1,35 @@
+CAPI=2:
+name: "u337mg204:ece337:adder_128bit:1.0.0"
+description: "128-bit ripple-carry adder"
+
+filesets:
+    rtl:
+        files:
+            - "source/adder_128bit.sv"
+        file_type: systemVerilogSource
+
+    synfiles:
+        files:
+            - "scripts/syn_adder_128bit.tcl"
+        file_type: tclSource
+        depend:
+            - "u337mg204:ece337:synfiles"
+
+targets:
+    default: &default
+        filesets:
+            - rtl
+    syn:
+        <<: *default
+        filesets_append:
+            - synfiles
+        default_tool: design_compiler
+        toplevel: adder_128bit
+        tools:
+            design_compiler:
+                script_dir: "src/u337mg204_ece337_synfiles_0"
+                dc_script: "synth.tcl"
+                report_dir: "reports"
+                target_library: "/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db"
+                libs: "/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db dw_foundation.sldb"
+

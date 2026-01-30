@@ -1,0 +1,15 @@
+CAPI=2:
+name: "u337mg204:ece337:tb_pts_4bit:1.0.0"
+description: "Testbench for the parallel-to-serial shift register"
+
+filesets:
+    tb:
+        files:
+            - "testbench/tb_pts_4bit.sv"
+        file_type: systemVerilogSource
+
+targets:
+    default:
+        filesets:
+            - tb
+

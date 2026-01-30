@@ -1,0 +1,16 @@
+CAPI=2:
+name: "u337mg204:ece337:tb_pipelined_adder:1.0.0"
+description: "Testbench for the pipelined adder"
+
+filesets:
+    tb:
+        files:
+            - "testbench/tb_pipelined_adder.sv"
+        file_type: systemVerilogSource
+
+targets:
+    default:
+        filesets:
+            - tb
+        toplevel: tb_pipelined_adder
+
