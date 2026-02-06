@@ -1,0 +1,889 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : adder_128bit
+Version: W-2024.09-SP4
+Date   : Sun Feb  1 23:08:56 2026
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: b[0] (input port)
+  Endpoint: s[128] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  b[0] (in)                                               0.00       0.00 f
+  u_adder_128/b[0] (adder_nbit_N128)                      0.00       0.00 f
+  u_adder_128/gen_for_loop[0].FA/b (full_adder_127)       0.00       0.00 f
+  u_adder_128/gen_for_loop[0].FA/U3/Y (AOI22X1)           0.11       0.11 r
+  u_adder_128/gen_for_loop[0].FA/U2/Y (INVX1)             0.24       0.35 f
+  u_adder_128/gen_for_loop[0].FA/carry_out (full_adder_127)
+                                                          0.00       0.35 f
+  u_adder_128/gen_for_loop[1].FA/carry_in (full_adder_126)
+                                                          0.00       0.35 f
+  u_adder_128/gen_for_loop[1].FA/U3/Y (AOI22X1)           0.13       0.47 r
+  u_adder_128/gen_for_loop[1].FA/U2/Y (INVX1)             0.25       0.72 f
+  u_adder_128/gen_for_loop[1].FA/carry_out (full_adder_126)
+                                                          0.00       0.72 f
+  u_adder_128/gen_for_loop[2].FA/carry_in (full_adder_125)
+                                                          0.00       0.72 f
+  u_adder_128/gen_for_loop[2].FA/U3/Y (AOI22X1)           0.13       0.85 r
+  u_adder_128/gen_for_loop[2].FA/U2/Y (INVX1)             0.25       1.10 f
+  u_adder_128/gen_for_loop[2].FA/carry_out (full_adder_125)
+                                                          0.00       1.10 f
+  u_adder_128/gen_for_loop[3].FA/carry_in (full_adder_124)
+                                                          0.00       1.10 f
+  u_adder_128/gen_for_loop[3].FA/U3/Y (AOI22X1)           0.13       1.22 r
+  u_adder_128/gen_for_loop[3].FA/U2/Y (INVX1)             0.25       1.47 f
+  u_adder_128/gen_for_loop[3].FA/carry_out (full_adder_124)
+                                                          0.00       1.47 f
+  u_adder_128/gen_for_loop[4].FA/carry_in (full_adder_123)
+                                                          0.00       1.47 f
+  u_adder_128/gen_for_loop[4].FA/U3/Y (AOI22X1)           0.13       1.60 r
+  u_adder_128/gen_for_loop[4].FA/U2/Y (INVX1)             0.25       1.84 f
+  u_adder_128/gen_for_loop[4].FA/carry_out (full_adder_123)
+                                                          0.00       1.84 f
+  u_adder_128/gen_for_loop[5].FA/carry_in (full_adder_122)
+                                                          0.00       1.84 f
+  u_adder_128/gen_for_loop[5].FA/U3/Y (AOI22X1)           0.13       1.97 r
+  u_adder_128/gen_for_loop[5].FA/U2/Y (INVX1)             0.25       2.22 f
+  u_adder_128/gen_for_loop[5].FA/carry_out (full_adder_122)
+                                                          0.00       2.22 f
+  u_adder_128/gen_for_loop[6].FA/carry_in (full_adder_121)
+                                                          0.00       2.22 f
+  u_adder_128/gen_for_loop[6].FA/U3/Y (AOI22X1)           0.13       2.34 r
+  u_adder_128/gen_for_loop[6].FA/U2/Y (INVX1)             0.25       2.59 f
+  u_adder_128/gen_for_loop[6].FA/carry_out (full_adder_121)
+                                                          0.00       2.59 f
+  u_adder_128/gen_for_loop[7].FA/carry_in (full_adder_120)
+                                                          0.00       2.59 f
+  u_adder_128/gen_for_loop[7].FA/U3/Y (AOI22X1)           0.13       2.72 r
+  u_adder_128/gen_for_loop[7].FA/U2/Y (INVX1)             0.25       2.97 f
+  u_adder_128/gen_for_loop[7].FA/carry_out (full_adder_120)
+                                                          0.00       2.97 f
+  u_adder_128/gen_for_loop[8].FA/carry_in (full_adder_119)
+                                                          0.00       2.97 f
+  u_adder_128/gen_for_loop[8].FA/U3/Y (AOI22X1)           0.13       3.09 r
+  u_adder_128/gen_for_loop[8].FA/U2/Y (INVX1)             0.25       3.34 f
+  u_adder_128/gen_for_loop[8].FA/carry_out (full_adder_119)
+                                                          0.00       3.34 f
+  u_adder_128/gen_for_loop[9].FA/carry_in (full_adder_118)
+                                                          0.00       3.34 f
+  u_adder_128/gen_for_loop[9].FA/U3/Y (AOI22X1)           0.13       3.47 r
+  u_adder_128/gen_for_loop[9].FA/U2/Y (INVX1)             0.25       3.71 f
+  u_adder_128/gen_for_loop[9].FA/carry_out (full_adder_118)
+                                                          0.00       3.71 f
+  u_adder_128/gen_for_loop[10].FA/carry_in (full_adder_117)
+                                                          0.00       3.71 f
+  u_adder_128/gen_for_loop[10].FA/U3/Y (AOI22X1)          0.13       3.84 r
+  u_adder_128/gen_for_loop[10].FA/U2/Y (INVX1)            0.25       4.09 f
+  u_adder_128/gen_for_loop[10].FA/carry_out (full_adder_117)
+                                                          0.00       4.09 f
+  u_adder_128/gen_for_loop[11].FA/carry_in (full_adder_116)
+                                                          0.00       4.09 f
+  u_adder_128/gen_for_loop[11].FA/U3/Y (AOI22X1)          0.13       4.21 r
+  u_adder_128/gen_for_loop[11].FA/U2/Y (INVX1)            0.25       4.46 f
+  u_adder_128/gen_for_loop[11].FA/carry_out (full_adder_116)
+                                                          0.00       4.46 f
+  u_adder_128/gen_for_loop[12].FA/carry_in (full_adder_115)
+                                                          0.00       4.46 f
+  u_adder_128/gen_for_loop[12].FA/U3/Y (AOI22X1)          0.13       4.59 r
+  u_adder_128/gen_for_loop[12].FA/U2/Y (INVX1)            0.25       4.84 f
+  u_adder_128/gen_for_loop[12].FA/carry_out (full_adder_115)
+                                                          0.00       4.84 f
+  u_adder_128/gen_for_loop[13].FA/carry_in (full_adder_114)
+                                                          0.00       4.84 f
+  u_adder_128/gen_for_loop[13].FA/U3/Y (AOI22X1)          0.13       4.96 r
+  u_adder_128/gen_for_loop[13].FA/U2/Y (INVX1)            0.25       5.21 f
+  u_adder_128/gen_for_loop[13].FA/carry_out (full_adder_114)
+                                                          0.00       5.21 f
+  u_adder_128/gen_for_loop[14].FA/carry_in (full_adder_113)
+                                                          0.00       5.21 f
+  u_adder_128/gen_for_loop[14].FA/U3/Y (AOI22X1)          0.13       5.34 r
+  u_adder_128/gen_for_loop[14].FA/U2/Y (INVX1)            0.25       5.58 f
+  u_adder_128/gen_for_loop[14].FA/carry_out (full_adder_113)
+                                                          0.00       5.58 f
+  u_adder_128/gen_for_loop[15].FA/carry_in (full_adder_112)
+                                                          0.00       5.58 f
+  u_adder_128/gen_for_loop[15].FA/U3/Y (AOI22X1)          0.13       5.71 r
+  u_adder_128/gen_for_loop[15].FA/U2/Y (INVX1)            0.25       5.96 f
+  u_adder_128/gen_for_loop[15].FA/carry_out (full_adder_112)
+                                                          0.00       5.96 f
+  u_adder_128/gen_for_loop[16].FA/carry_in (full_adder_111)
+                                                          0.00       5.96 f
+  u_adder_128/gen_for_loop[16].FA/U3/Y (AOI22X1)          0.13       6.08 r
+  u_adder_128/gen_for_loop[16].FA/U2/Y (INVX1)            0.25       6.33 f
+  u_adder_128/gen_for_loop[16].FA/carry_out (full_adder_111)
+                                                          0.00       6.33 f
+  u_adder_128/gen_for_loop[17].FA/carry_in (full_adder_110)
+                                                          0.00       6.33 f
+  u_adder_128/gen_for_loop[17].FA/U3/Y (AOI22X1)          0.13       6.46 r
+  u_adder_128/gen_for_loop[17].FA/U2/Y (INVX1)            0.25       6.70 f
+  u_adder_128/gen_for_loop[17].FA/carry_out (full_adder_110)
+                                                          0.00       6.70 f
+  u_adder_128/gen_for_loop[18].FA/carry_in (full_adder_109)
+                                                          0.00       6.70 f
+  u_adder_128/gen_for_loop[18].FA/U3/Y (AOI22X1)          0.13       6.83 r
+  u_adder_128/gen_for_loop[18].FA/U2/Y (INVX1)            0.25       7.08 f
+  u_adder_128/gen_for_loop[18].FA/carry_out (full_adder_109)
+                                                          0.00       7.08 f
+  u_adder_128/gen_for_loop[19].FA/carry_in (full_adder_108)
+                                                          0.00       7.08 f
+  u_adder_128/gen_for_loop[19].FA/U3/Y (AOI22X1)          0.13       7.21 r
+  u_adder_128/gen_for_loop[19].FA/U2/Y (INVX1)            0.25       7.45 f
+  u_adder_128/gen_for_loop[19].FA/carry_out (full_adder_108)
+                                                          0.00       7.45 f
+  u_adder_128/gen_for_loop[20].FA/carry_in (full_adder_107)
+                                                          0.00       7.45 f
+  u_adder_128/gen_for_loop[20].FA/U3/Y (AOI22X1)          0.13       7.58 r
+  u_adder_128/gen_for_loop[20].FA/U2/Y (INVX1)            0.25       7.83 f
+  u_adder_128/gen_for_loop[20].FA/carry_out (full_adder_107)
+                                                          0.00       7.83 f
+  u_adder_128/gen_for_loop[21].FA/carry_in (full_adder_106)
+                                                          0.00       7.83 f
+  u_adder_128/gen_for_loop[21].FA/U3/Y (AOI22X1)          0.13       7.95 r
+  u_adder_128/gen_for_loop[21].FA/U2/Y (INVX1)            0.25       8.20 f
+  u_adder_128/gen_for_loop[21].FA/carry_out (full_adder_106)
+                                                          0.00       8.20 f
+  u_adder_128/gen_for_loop[22].FA/carry_in (full_adder_105)
+                                                          0.00       8.20 f
+  u_adder_128/gen_for_loop[22].FA/U3/Y (AOI22X1)          0.13       8.33 r
+  u_adder_128/gen_for_loop[22].FA/U2/Y (INVX1)            0.25       8.57 f
+  u_adder_128/gen_for_loop[22].FA/carry_out (full_adder_105)
+                                                          0.00       8.57 f
+  u_adder_128/gen_for_loop[23].FA/carry_in (full_adder_104)
+                                                          0.00       8.57 f
+  u_adder_128/gen_for_loop[23].FA/U3/Y (AOI22X1)          0.13       8.70 r
+  u_adder_128/gen_for_loop[23].FA/U2/Y (INVX1)            0.25       8.95 f
+  u_adder_128/gen_for_loop[23].FA/carry_out (full_adder_104)
+                                                          0.00       8.95 f
+  u_adder_128/gen_for_loop[24].FA/carry_in (full_adder_103)
+                                                          0.00       8.95 f
+  u_adder_128/gen_for_loop[24].FA/U3/Y (AOI22X1)          0.13       9.08 r
+  u_adder_128/gen_for_loop[24].FA/U2/Y (INVX1)            0.25       9.32 f
+  u_adder_128/gen_for_loop[24].FA/carry_out (full_adder_103)
+                                                          0.00       9.32 f
+  u_adder_128/gen_for_loop[25].FA/carry_in (full_adder_102)
+                                                          0.00       9.32 f
+  u_adder_128/gen_for_loop[25].FA/U3/Y (AOI22X1)          0.13       9.45 r
+  u_adder_128/gen_for_loop[25].FA/U2/Y (INVX1)            0.25       9.70 f
+  u_adder_128/gen_for_loop[25].FA/carry_out (full_adder_102)
+                                                          0.00       9.70 f
+  u_adder_128/gen_for_loop[26].FA/carry_in (full_adder_101)
+                                                          0.00       9.70 f
+  u_adder_128/gen_for_loop[26].FA/U3/Y (AOI22X1)          0.13       9.82 r
+  u_adder_128/gen_for_loop[26].FA/U2/Y (INVX1)            0.25      10.07 f
+  u_adder_128/gen_for_loop[26].FA/carry_out (full_adder_101)
+                                                          0.00      10.07 f
+  u_adder_128/gen_for_loop[27].FA/carry_in (full_adder_100)
+                                                          0.00      10.07 f
+  u_adder_128/gen_for_loop[27].FA/U3/Y (AOI22X1)          0.13      10.20 r
+  u_adder_128/gen_for_loop[27].FA/U2/Y (INVX1)            0.25      10.44 f
+  u_adder_128/gen_for_loop[27].FA/carry_out (full_adder_100)
+                                                          0.00      10.44 f
+  u_adder_128/gen_for_loop[28].FA/carry_in (full_adder_99)
+                                                          0.00      10.44 f
+  u_adder_128/gen_for_loop[28].FA/U3/Y (AOI22X1)          0.13      10.57 r
+  u_adder_128/gen_for_loop[28].FA/U2/Y (INVX1)            0.25      10.82 f
+  u_adder_128/gen_for_loop[28].FA/carry_out (full_adder_99)
+                                                          0.00      10.82 f
+  u_adder_128/gen_for_loop[29].FA/carry_in (full_adder_98)
+                                                          0.00      10.82 f
+  u_adder_128/gen_for_loop[29].FA/U3/Y (AOI22X1)          0.13      10.95 r
+  u_adder_128/gen_for_loop[29].FA/U2/Y (INVX1)            0.25      11.19 f
+  u_adder_128/gen_for_loop[29].FA/carry_out (full_adder_98)
+                                                          0.00      11.19 f
+  u_adder_128/gen_for_loop[30].FA/carry_in (full_adder_97)
+                                                          0.00      11.19 f
+  u_adder_128/gen_for_loop[30].FA/U3/Y (AOI22X1)          0.13      11.32 r
+  u_adder_128/gen_for_loop[30].FA/U2/Y (INVX1)            0.25      11.57 f
+  u_adder_128/gen_for_loop[30].FA/carry_out (full_adder_97)
+                                                          0.00      11.57 f
+  u_adder_128/gen_for_loop[31].FA/carry_in (full_adder_96)
+                                                          0.00      11.57 f
+  u_adder_128/gen_for_loop[31].FA/U3/Y (AOI22X1)          0.13      11.69 r
+  u_adder_128/gen_for_loop[31].FA/U2/Y (INVX1)            0.25      11.94 f
+  u_adder_128/gen_for_loop[31].FA/carry_out (full_adder_96)
+                                                          0.00      11.94 f
+  u_adder_128/gen_for_loop[32].FA/carry_in (full_adder_95)
+                                                          0.00      11.94 f
+  u_adder_128/gen_for_loop[32].FA/U3/Y (AOI22X1)          0.13      12.07 r
+  u_adder_128/gen_for_loop[32].FA/U2/Y (INVX1)            0.25      12.31 f
+  u_adder_128/gen_for_loop[32].FA/carry_out (full_adder_95)
+                                                          0.00      12.31 f
+  u_adder_128/gen_for_loop[33].FA/carry_in (full_adder_94)
+                                                          0.00      12.31 f
+  u_adder_128/gen_for_loop[33].FA/U3/Y (AOI22X1)          0.13      12.44 r
+  u_adder_128/gen_for_loop[33].FA/U2/Y (INVX1)            0.25      12.69 f
+  u_adder_128/gen_for_loop[33].FA/carry_out (full_adder_94)
+                                                          0.00      12.69 f
+  u_adder_128/gen_for_loop[34].FA/carry_in (full_adder_93)
+                                                          0.00      12.69 f
+  u_adder_128/gen_for_loop[34].FA/U3/Y (AOI22X1)          0.13      12.82 r
+  u_adder_128/gen_for_loop[34].FA/U2/Y (INVX1)            0.25      13.06 f
+  u_adder_128/gen_for_loop[34].FA/carry_out (full_adder_93)
+                                                          0.00      13.06 f
+  u_adder_128/gen_for_loop[35].FA/carry_in (full_adder_92)
+                                                          0.00      13.06 f
+  u_adder_128/gen_for_loop[35].FA/U3/Y (AOI22X1)          0.13      13.19 r
+  u_adder_128/gen_for_loop[35].FA/U2/Y (INVX1)            0.25      13.44 f
+  u_adder_128/gen_for_loop[35].FA/carry_out (full_adder_92)
+                                                          0.00      13.44 f
+  u_adder_128/gen_for_loop[36].FA/carry_in (full_adder_91)
+                                                          0.00      13.44 f
+  u_adder_128/gen_for_loop[36].FA/U3/Y (AOI22X1)          0.13      13.56 r
+  u_adder_128/gen_for_loop[36].FA/U2/Y (INVX1)            0.25      13.81 f
+  u_adder_128/gen_for_loop[36].FA/carry_out (full_adder_91)
+                                                          0.00      13.81 f
+  u_adder_128/gen_for_loop[37].FA/carry_in (full_adder_90)
+                                                          0.00      13.81 f
+  u_adder_128/gen_for_loop[37].FA/U3/Y (AOI22X1)          0.13      13.94 r
+  u_adder_128/gen_for_loop[37].FA/U2/Y (INVX1)            0.25      14.18 f
+  u_adder_128/gen_for_loop[37].FA/carry_out (full_adder_90)
+                                                          0.00      14.18 f
+  u_adder_128/gen_for_loop[38].FA/carry_in (full_adder_89)
+                                                          0.00      14.18 f
+  u_adder_128/gen_for_loop[38].FA/U3/Y (AOI22X1)          0.13      14.31 r
+  u_adder_128/gen_for_loop[38].FA/U2/Y (INVX1)            0.25      14.56 f
+  u_adder_128/gen_for_loop[38].FA/carry_out (full_adder_89)
+                                                          0.00      14.56 f
+  u_adder_128/gen_for_loop[39].FA/carry_in (full_adder_88)
+                                                          0.00      14.56 f
+  u_adder_128/gen_for_loop[39].FA/U3/Y (AOI22X1)          0.13      14.69 r
+  u_adder_128/gen_for_loop[39].FA/U2/Y (INVX1)            0.25      14.93 f
+  u_adder_128/gen_for_loop[39].FA/carry_out (full_adder_88)
+                                                          0.00      14.93 f
+  u_adder_128/gen_for_loop[40].FA/carry_in (full_adder_87)
+                                                          0.00      14.93 f
+  u_adder_128/gen_for_loop[40].FA/U3/Y (AOI22X1)          0.13      15.06 r
+  u_adder_128/gen_for_loop[40].FA/U2/Y (INVX1)            0.25      15.31 f
+  u_adder_128/gen_for_loop[40].FA/carry_out (full_adder_87)
+                                                          0.00      15.31 f
+  u_adder_128/gen_for_loop[41].FA/carry_in (full_adder_86)
+                                                          0.00      15.31 f
+  u_adder_128/gen_for_loop[41].FA/U3/Y (AOI22X1)          0.13      15.43 r
+  u_adder_128/gen_for_loop[41].FA/U2/Y (INVX1)            0.25      15.68 f
+  u_adder_128/gen_for_loop[41].FA/carry_out (full_adder_86)
+                                                          0.00      15.68 f
+  u_adder_128/gen_for_loop[42].FA/carry_in (full_adder_85)
+                                                          0.00      15.68 f
+  u_adder_128/gen_for_loop[42].FA/U3/Y (AOI22X1)          0.13      15.81 r
+  u_adder_128/gen_for_loop[42].FA/U2/Y (INVX1)            0.25      16.05 f
+  u_adder_128/gen_for_loop[42].FA/carry_out (full_adder_85)
+                                                          0.00      16.05 f
+  u_adder_128/gen_for_loop[43].FA/carry_in (full_adder_84)
+                                                          0.00      16.05 f
+  u_adder_128/gen_for_loop[43].FA/U3/Y (AOI22X1)          0.13      16.18 r
+  u_adder_128/gen_for_loop[43].FA/U2/Y (INVX1)            0.25      16.43 f
+  u_adder_128/gen_for_loop[43].FA/carry_out (full_adder_84)
+                                                          0.00      16.43 f
+  u_adder_128/gen_for_loop[44].FA/carry_in (full_adder_83)
+                                                          0.00      16.43 f
+  u_adder_128/gen_for_loop[44].FA/U3/Y (AOI22X1)          0.13      16.55 r
+  u_adder_128/gen_for_loop[44].FA/U2/Y (INVX1)            0.25      16.80 f
+  u_adder_128/gen_for_loop[44].FA/carry_out (full_adder_83)
+                                                          0.00      16.80 f
+  u_adder_128/gen_for_loop[45].FA/carry_in (full_adder_82)
+                                                          0.00      16.80 f
+  u_adder_128/gen_for_loop[45].FA/U3/Y (AOI22X1)          0.13      16.93 r
+  u_adder_128/gen_for_loop[45].FA/U2/Y (INVX1)            0.25      17.18 f
+  u_adder_128/gen_for_loop[45].FA/carry_out (full_adder_82)
+                                                          0.00      17.18 f
+  u_adder_128/gen_for_loop[46].FA/carry_in (full_adder_81)
+                                                          0.00      17.18 f
+  u_adder_128/gen_for_loop[46].FA/U3/Y (AOI22X1)          0.13      17.30 r
+  u_adder_128/gen_for_loop[46].FA/U2/Y (INVX1)            0.25      17.55 f
+  u_adder_128/gen_for_loop[46].FA/carry_out (full_adder_81)
+                                                          0.00      17.55 f
+  u_adder_128/gen_for_loop[47].FA/carry_in (full_adder_80)
+                                                          0.00      17.55 f
+  u_adder_128/gen_for_loop[47].FA/U3/Y (AOI22X1)          0.13      17.68 r
+  u_adder_128/gen_for_loop[47].FA/U2/Y (INVX1)            0.25      17.92 f
+  u_adder_128/gen_for_loop[47].FA/carry_out (full_adder_80)
+                                                          0.00      17.92 f
+  u_adder_128/gen_for_loop[48].FA/carry_in (full_adder_79)
+                                                          0.00      17.92 f
+  u_adder_128/gen_for_loop[48].FA/U3/Y (AOI22X1)          0.13      18.05 r
+  u_adder_128/gen_for_loop[48].FA/U2/Y (INVX1)            0.25      18.30 f
+  u_adder_128/gen_for_loop[48].FA/carry_out (full_adder_79)
+                                                          0.00      18.30 f
+  u_adder_128/gen_for_loop[49].FA/carry_in (full_adder_78)
+                                                          0.00      18.30 f
+  u_adder_128/gen_for_loop[49].FA/U3/Y (AOI22X1)          0.13      18.42 r
+  u_adder_128/gen_for_loop[49].FA/U2/Y (INVX1)            0.25      18.67 f
+  u_adder_128/gen_for_loop[49].FA/carry_out (full_adder_78)
+                                                          0.00      18.67 f
+  u_adder_128/gen_for_loop[50].FA/carry_in (full_adder_77)
+                                                          0.00      18.67 f
+  u_adder_128/gen_for_loop[50].FA/U3/Y (AOI22X1)          0.13      18.80 r
+  u_adder_128/gen_for_loop[50].FA/U2/Y (INVX1)            0.25      19.05 f
+  u_adder_128/gen_for_loop[50].FA/carry_out (full_adder_77)
+                                                          0.00      19.05 f
+  u_adder_128/gen_for_loop[51].FA/carry_in (full_adder_76)
+                                                          0.00      19.05 f
+  u_adder_128/gen_for_loop[51].FA/U3/Y (AOI22X1)          0.13      19.17 r
+  u_adder_128/gen_for_loop[51].FA/U2/Y (INVX1)            0.25      19.42 f
+  u_adder_128/gen_for_loop[51].FA/carry_out (full_adder_76)
+                                                          0.00      19.42 f
+  u_adder_128/gen_for_loop[52].FA/carry_in (full_adder_75)
+                                                          0.00      19.42 f
+  u_adder_128/gen_for_loop[52].FA/U3/Y (AOI22X1)          0.13      19.55 r
+  u_adder_128/gen_for_loop[52].FA/U2/Y (INVX1)            0.25      19.79 f
+  u_adder_128/gen_for_loop[52].FA/carry_out (full_adder_75)
+                                                          0.00      19.79 f
+  u_adder_128/gen_for_loop[53].FA/carry_in (full_adder_74)
+                                                          0.00      19.79 f
+  u_adder_128/gen_for_loop[53].FA/U3/Y (AOI22X1)          0.13      19.92 r
+  u_adder_128/gen_for_loop[53].FA/U2/Y (INVX1)            0.25      20.17 f
+  u_adder_128/gen_for_loop[53].FA/carry_out (full_adder_74)
+                                                          0.00      20.17 f
+  u_adder_128/gen_for_loop[54].FA/carry_in (full_adder_73)
+                                                          0.00      20.17 f
+  u_adder_128/gen_for_loop[54].FA/U3/Y (AOI22X1)          0.13      20.29 r
+  u_adder_128/gen_for_loop[54].FA/U2/Y (INVX1)            0.25      20.54 f
+  u_adder_128/gen_for_loop[54].FA/carry_out (full_adder_73)
+                                                          0.00      20.54 f
+  u_adder_128/gen_for_loop[55].FA/carry_in (full_adder_72)
+                                                          0.00      20.54 f
+  u_adder_128/gen_for_loop[55].FA/U3/Y (AOI22X1)          0.13      20.67 r
+  u_adder_128/gen_for_loop[55].FA/U2/Y (INVX1)            0.25      20.92 f
+  u_adder_128/gen_for_loop[55].FA/carry_out (full_adder_72)
+                                                          0.00      20.92 f
+  u_adder_128/gen_for_loop[56].FA/carry_in (full_adder_71)
+                                                          0.00      20.92 f
+  u_adder_128/gen_for_loop[56].FA/U3/Y (AOI22X1)          0.13      21.04 r
+  u_adder_128/gen_for_loop[56].FA/U2/Y (INVX1)            0.25      21.29 f
+  u_adder_128/gen_for_loop[56].FA/carry_out (full_adder_71)
+                                                          0.00      21.29 f
+  u_adder_128/gen_for_loop[57].FA/carry_in (full_adder_70)
+                                                          0.00      21.29 f
+  u_adder_128/gen_for_loop[57].FA/U3/Y (AOI22X1)          0.13      21.42 r
+  u_adder_128/gen_for_loop[57].FA/U2/Y (INVX1)            0.25      21.66 f
+  u_adder_128/gen_for_loop[57].FA/carry_out (full_adder_70)
+                                                          0.00      21.66 f
+  u_adder_128/gen_for_loop[58].FA/carry_in (full_adder_69)
+                                                          0.00      21.66 f
+  u_adder_128/gen_for_loop[58].FA/U3/Y (AOI22X1)          0.13      21.79 r
+  u_adder_128/gen_for_loop[58].FA/U2/Y (INVX1)            0.25      22.04 f
+  u_adder_128/gen_for_loop[58].FA/carry_out (full_adder_69)
+                                                          0.00      22.04 f
+  u_adder_128/gen_for_loop[59].FA/carry_in (full_adder_68)
+                                                          0.00      22.04 f
+  u_adder_128/gen_for_loop[59].FA/U3/Y (AOI22X1)          0.13      22.16 r
+  u_adder_128/gen_for_loop[59].FA/U2/Y (INVX1)            0.25      22.41 f
+  u_adder_128/gen_for_loop[59].FA/carry_out (full_adder_68)
+                                                          0.00      22.41 f
+  u_adder_128/gen_for_loop[60].FA/carry_in (full_adder_67)
+                                                          0.00      22.41 f
+  u_adder_128/gen_for_loop[60].FA/U3/Y (AOI22X1)          0.13      22.54 r
+  u_adder_128/gen_for_loop[60].FA/U2/Y (INVX1)            0.25      22.79 f
+  u_adder_128/gen_for_loop[60].FA/carry_out (full_adder_67)
+                                                          0.00      22.79 f
+  u_adder_128/gen_for_loop[61].FA/carry_in (full_adder_66)
+                                                          0.00      22.79 f
+  u_adder_128/gen_for_loop[61].FA/U3/Y (AOI22X1)          0.13      22.91 r
+  u_adder_128/gen_for_loop[61].FA/U2/Y (INVX1)            0.25      23.16 f
+  u_adder_128/gen_for_loop[61].FA/carry_out (full_adder_66)
+                                                          0.00      23.16 f
+  u_adder_128/gen_for_loop[62].FA/carry_in (full_adder_65)
+                                                          0.00      23.16 f
+  u_adder_128/gen_for_loop[62].FA/U3/Y (AOI22X1)          0.13      23.29 r
+  u_adder_128/gen_for_loop[62].FA/U2/Y (INVX1)            0.25      23.53 f
+  u_adder_128/gen_for_loop[62].FA/carry_out (full_adder_65)
+                                                          0.00      23.53 f
+  u_adder_128/gen_for_loop[63].FA/carry_in (full_adder_64)
+                                                          0.00      23.53 f
+  u_adder_128/gen_for_loop[63].FA/U3/Y (AOI22X1)          0.13      23.66 r
+  u_adder_128/gen_for_loop[63].FA/U2/Y (INVX1)            0.25      23.91 f
+  u_adder_128/gen_for_loop[63].FA/carry_out (full_adder_64)
+                                                          0.00      23.91 f
+  u_adder_128/gen_for_loop[64].FA/carry_in (full_adder_63)
+                                                          0.00      23.91 f
+  u_adder_128/gen_for_loop[64].FA/U3/Y (AOI22X1)          0.13      24.03 r
+  u_adder_128/gen_for_loop[64].FA/U2/Y (INVX1)            0.25      24.28 f
+  u_adder_128/gen_for_loop[64].FA/carry_out (full_adder_63)
+                                                          0.00      24.28 f
+  u_adder_128/gen_for_loop[65].FA/carry_in (full_adder_62)
+                                                          0.00      24.28 f
+  u_adder_128/gen_for_loop[65].FA/U3/Y (AOI22X1)          0.13      24.41 r
+  u_adder_128/gen_for_loop[65].FA/U2/Y (INVX1)            0.25      24.66 f
+  u_adder_128/gen_for_loop[65].FA/carry_out (full_adder_62)
+                                                          0.00      24.66 f
+  u_adder_128/gen_for_loop[66].FA/carry_in (full_adder_61)
+                                                          0.00      24.66 f
+  u_adder_128/gen_for_loop[66].FA/U3/Y (AOI22X1)          0.13      24.78 r
+  u_adder_128/gen_for_loop[66].FA/U2/Y (INVX1)            0.25      25.03 f
+  u_adder_128/gen_for_loop[66].FA/carry_out (full_adder_61)
+                                                          0.00      25.03 f
+  u_adder_128/gen_for_loop[67].FA/carry_in (full_adder_60)
+                                                          0.00      25.03 f
+  u_adder_128/gen_for_loop[67].FA/U3/Y (AOI22X1)          0.13      25.16 r
+  u_adder_128/gen_for_loop[67].FA/U2/Y (INVX1)            0.25      25.40 f
+  u_adder_128/gen_for_loop[67].FA/carry_out (full_adder_60)
+                                                          0.00      25.40 f
+  u_adder_128/gen_for_loop[68].FA/carry_in (full_adder_59)
+                                                          0.00      25.40 f
+  u_adder_128/gen_for_loop[68].FA/U3/Y (AOI22X1)          0.13      25.53 r
+  u_adder_128/gen_for_loop[68].FA/U2/Y (INVX1)            0.25      25.78 f
+  u_adder_128/gen_for_loop[68].FA/carry_out (full_adder_59)
+                                                          0.00      25.78 f
+  u_adder_128/gen_for_loop[69].FA/carry_in (full_adder_58)
+                                                          0.00      25.78 f
+  u_adder_128/gen_for_loop[69].FA/U3/Y (AOI22X1)          0.13      25.90 r
+  u_adder_128/gen_for_loop[69].FA/U2/Y (INVX1)            0.25      26.15 f
+  u_adder_128/gen_for_loop[69].FA/carry_out (full_adder_58)
+                                                          0.00      26.15 f
+  u_adder_128/gen_for_loop[70].FA/carry_in (full_adder_57)
+                                                          0.00      26.15 f
+  u_adder_128/gen_for_loop[70].FA/U3/Y (AOI22X1)          0.13      26.28 r
+  u_adder_128/gen_for_loop[70].FA/U2/Y (INVX1)            0.25      26.53 f
+  u_adder_128/gen_for_loop[70].FA/carry_out (full_adder_57)
+                                                          0.00      26.53 f
+  u_adder_128/gen_for_loop[71].FA/carry_in (full_adder_56)
+                                                          0.00      26.53 f
+  u_adder_128/gen_for_loop[71].FA/U3/Y (AOI22X1)          0.13      26.65 r
+  u_adder_128/gen_for_loop[71].FA/U2/Y (INVX1)            0.25      26.90 f
+  u_adder_128/gen_for_loop[71].FA/carry_out (full_adder_56)
+                                                          0.00      26.90 f
+  u_adder_128/gen_for_loop[72].FA/carry_in (full_adder_55)
+                                                          0.00      26.90 f
+  u_adder_128/gen_for_loop[72].FA/U3/Y (AOI22X1)          0.13      27.03 r
+  u_adder_128/gen_for_loop[72].FA/U2/Y (INVX1)            0.25      27.27 f
+  u_adder_128/gen_for_loop[72].FA/carry_out (full_adder_55)
+                                                          0.00      27.27 f
+  u_adder_128/gen_for_loop[73].FA/carry_in (full_adder_54)
+                                                          0.00      27.27 f
+  u_adder_128/gen_for_loop[73].FA/U3/Y (AOI22X1)          0.13      27.40 r
+  u_adder_128/gen_for_loop[73].FA/U2/Y (INVX1)            0.25      27.65 f
+  u_adder_128/gen_for_loop[73].FA/carry_out (full_adder_54)
+                                                          0.00      27.65 f
+  u_adder_128/gen_for_loop[74].FA/carry_in (full_adder_53)
+                                                          0.00      27.65 f
+  u_adder_128/gen_for_loop[74].FA/U3/Y (AOI22X1)          0.13      27.77 r
+  u_adder_128/gen_for_loop[74].FA/U2/Y (INVX1)            0.25      28.02 f
+  u_adder_128/gen_for_loop[74].FA/carry_out (full_adder_53)
+                                                          0.00      28.02 f
+  u_adder_128/gen_for_loop[75].FA/carry_in (full_adder_52)
+                                                          0.00      28.02 f
+  u_adder_128/gen_for_loop[75].FA/U3/Y (AOI22X1)          0.13      28.15 r
+  u_adder_128/gen_for_loop[75].FA/U2/Y (INVX1)            0.25      28.40 f
+  u_adder_128/gen_for_loop[75].FA/carry_out (full_adder_52)
+                                                          0.00      28.40 f
+  u_adder_128/gen_for_loop[76].FA/carry_in (full_adder_51)
+                                                          0.00      28.40 f
+  u_adder_128/gen_for_loop[76].FA/U3/Y (AOI22X1)          0.13      28.52 r
+  u_adder_128/gen_for_loop[76].FA/U2/Y (INVX1)            0.25      28.77 f
+  u_adder_128/gen_for_loop[76].FA/carry_out (full_adder_51)
+                                                          0.00      28.77 f
+  u_adder_128/gen_for_loop[77].FA/carry_in (full_adder_50)
+                                                          0.00      28.77 f
+  u_adder_128/gen_for_loop[77].FA/U3/Y (AOI22X1)          0.13      28.90 r
+  u_adder_128/gen_for_loop[77].FA/U2/Y (INVX1)            0.25      29.14 f
+  u_adder_128/gen_for_loop[77].FA/carry_out (full_adder_50)
+                                                          0.00      29.14 f
+  u_adder_128/gen_for_loop[78].FA/carry_in (full_adder_49)
+                                                          0.00      29.14 f
+  u_adder_128/gen_for_loop[78].FA/U3/Y (AOI22X1)          0.13      29.27 r
+  u_adder_128/gen_for_loop[78].FA/U2/Y (INVX1)            0.25      29.52 f
+  u_adder_128/gen_for_loop[78].FA/carry_out (full_adder_49)
+                                                          0.00      29.52 f
+  u_adder_128/gen_for_loop[79].FA/carry_in (full_adder_48)
+                                                          0.00      29.52 f
+  u_adder_128/gen_for_loop[79].FA/U3/Y (AOI22X1)          0.13      29.64 r
+  u_adder_128/gen_for_loop[79].FA/U2/Y (INVX1)            0.25      29.89 f
+  u_adder_128/gen_for_loop[79].FA/carry_out (full_adder_48)
+                                                          0.00      29.89 f
+  u_adder_128/gen_for_loop[80].FA/carry_in (full_adder_47)
+                                                          0.00      29.89 f
+  u_adder_128/gen_for_loop[80].FA/U3/Y (AOI22X1)          0.13      30.02 r
+  u_adder_128/gen_for_loop[80].FA/U2/Y (INVX1)            0.25      30.26 f
+  u_adder_128/gen_for_loop[80].FA/carry_out (full_adder_47)
+                                                          0.00      30.26 f
+  u_adder_128/gen_for_loop[81].FA/carry_in (full_adder_46)
+                                                          0.00      30.26 f
+  u_adder_128/gen_for_loop[81].FA/U3/Y (AOI22X1)          0.13      30.39 r
+  u_adder_128/gen_for_loop[81].FA/U2/Y (INVX1)            0.25      30.64 f
+  u_adder_128/gen_for_loop[81].FA/carry_out (full_adder_46)
+                                                          0.00      30.64 f
+  u_adder_128/gen_for_loop[82].FA/carry_in (full_adder_45)
+                                                          0.00      30.64 f
+  u_adder_128/gen_for_loop[82].FA/U3/Y (AOI22X1)          0.13      30.77 r
+  u_adder_128/gen_for_loop[82].FA/U2/Y (INVX1)            0.25      31.01 f
+  u_adder_128/gen_for_loop[82].FA/carry_out (full_adder_45)
+                                                          0.00      31.01 f
+  u_adder_128/gen_for_loop[83].FA/carry_in (full_adder_44)
+                                                          0.00      31.01 f
+  u_adder_128/gen_for_loop[83].FA/U3/Y (AOI22X1)          0.13      31.14 r
+  u_adder_128/gen_for_loop[83].FA/U2/Y (INVX1)            0.25      31.39 f
+  u_adder_128/gen_for_loop[83].FA/carry_out (full_adder_44)
+                                                          0.00      31.39 f
+  u_adder_128/gen_for_loop[84].FA/carry_in (full_adder_43)
+                                                          0.00      31.39 f
+  u_adder_128/gen_for_loop[84].FA/U3/Y (AOI22X1)          0.13      31.51 r
+  u_adder_128/gen_for_loop[84].FA/U2/Y (INVX1)            0.25      31.76 f
+  u_adder_128/gen_for_loop[84].FA/carry_out (full_adder_43)
+                                                          0.00      31.76 f
+  u_adder_128/gen_for_loop[85].FA/carry_in (full_adder_42)
+                                                          0.00      31.76 f
+  u_adder_128/gen_for_loop[85].FA/U3/Y (AOI22X1)          0.13      31.89 r
+  u_adder_128/gen_for_loop[85].FA/U2/Y (INVX1)            0.25      32.13 f
+  u_adder_128/gen_for_loop[85].FA/carry_out (full_adder_42)
+                                                          0.00      32.13 f
+  u_adder_128/gen_for_loop[86].FA/carry_in (full_adder_41)
+                                                          0.00      32.13 f
+  u_adder_128/gen_for_loop[86].FA/U3/Y (AOI22X1)          0.13      32.26 r
+  u_adder_128/gen_for_loop[86].FA/U2/Y (INVX1)            0.25      32.51 f
+  u_adder_128/gen_for_loop[86].FA/carry_out (full_adder_41)
+                                                          0.00      32.51 f
+  u_adder_128/gen_for_loop[87].FA/carry_in (full_adder_40)
+                                                          0.00      32.51 f
+  u_adder_128/gen_for_loop[87].FA/U3/Y (AOI22X1)          0.13      32.64 r
+  u_adder_128/gen_for_loop[87].FA/U2/Y (INVX1)            0.25      32.88 f
+  u_adder_128/gen_for_loop[87].FA/carry_out (full_adder_40)
+                                                          0.00      32.88 f
+  u_adder_128/gen_for_loop[88].FA/carry_in (full_adder_39)
+                                                          0.00      32.88 f
+  u_adder_128/gen_for_loop[88].FA/U3/Y (AOI22X1)          0.13      33.01 r
+  u_adder_128/gen_for_loop[88].FA/U2/Y (INVX1)            0.25      33.26 f
+  u_adder_128/gen_for_loop[88].FA/carry_out (full_adder_39)
+                                                          0.00      33.26 f
+  u_adder_128/gen_for_loop[89].FA/carry_in (full_adder_38)
+                                                          0.00      33.26 f
+  u_adder_128/gen_for_loop[89].FA/U3/Y (AOI22X1)          0.13      33.38 r
+  u_adder_128/gen_for_loop[89].FA/U2/Y (INVX1)            0.25      33.63 f
+  u_adder_128/gen_for_loop[89].FA/carry_out (full_adder_38)
+                                                          0.00      33.63 f
+  u_adder_128/gen_for_loop[90].FA/carry_in (full_adder_37)
+                                                          0.00      33.63 f
+  u_adder_128/gen_for_loop[90].FA/U3/Y (AOI22X1)          0.13      33.76 r
+  u_adder_128/gen_for_loop[90].FA/U2/Y (INVX1)            0.25      34.00 f
+  u_adder_128/gen_for_loop[90].FA/carry_out (full_adder_37)
+                                                          0.00      34.00 f
+  u_adder_128/gen_for_loop[91].FA/carry_in (full_adder_36)
+                                                          0.00      34.00 f
+  u_adder_128/gen_for_loop[91].FA/U3/Y (AOI22X1)          0.13      34.13 r
+  u_adder_128/gen_for_loop[91].FA/U2/Y (INVX1)            0.25      34.38 f
+  u_adder_128/gen_for_loop[91].FA/carry_out (full_adder_36)
+                                                          0.00      34.38 f
+  u_adder_128/gen_for_loop[92].FA/carry_in (full_adder_35)
+                                                          0.00      34.38 f
+  u_adder_128/gen_for_loop[92].FA/U3/Y (AOI22X1)          0.13      34.51 r
+  u_adder_128/gen_for_loop[92].FA/U2/Y (INVX1)            0.25      34.75 f
+  u_adder_128/gen_for_loop[92].FA/carry_out (full_adder_35)
+                                                          0.00      34.75 f
+  u_adder_128/gen_for_loop[93].FA/carry_in (full_adder_34)
+                                                          0.00      34.75 f
+  u_adder_128/gen_for_loop[93].FA/U3/Y (AOI22X1)          0.13      34.88 r
+  u_adder_128/gen_for_loop[93].FA/U2/Y (INVX1)            0.25      35.13 f
+  u_adder_128/gen_for_loop[93].FA/carry_out (full_adder_34)
+                                                          0.00      35.13 f
+  u_adder_128/gen_for_loop[94].FA/carry_in (full_adder_33)
+                                                          0.00      35.13 f
+  u_adder_128/gen_for_loop[94].FA/U3/Y (AOI22X1)          0.13      35.25 r
+  u_adder_128/gen_for_loop[94].FA/U2/Y (INVX1)            0.25      35.50 f
+  u_adder_128/gen_for_loop[94].FA/carry_out (full_adder_33)
+                                                          0.00      35.50 f
+  u_adder_128/gen_for_loop[95].FA/carry_in (full_adder_32)
+                                                          0.00      35.50 f
+  u_adder_128/gen_for_loop[95].FA/U3/Y (AOI22X1)          0.13      35.63 r
+  u_adder_128/gen_for_loop[95].FA/U2/Y (INVX1)            0.25      35.87 f
+  u_adder_128/gen_for_loop[95].FA/carry_out (full_adder_32)
+                                                          0.00      35.87 f
+  u_adder_128/gen_for_loop[96].FA/carry_in (full_adder_31)
+                                                          0.00      35.87 f
+  u_adder_128/gen_for_loop[96].FA/U3/Y (AOI22X1)          0.13      36.00 r
+  u_adder_128/gen_for_loop[96].FA/U2/Y (INVX1)            0.25      36.25 f
+  u_adder_128/gen_for_loop[96].FA/carry_out (full_adder_31)
+                                                          0.00      36.25 f
+  u_adder_128/gen_for_loop[97].FA/carry_in (full_adder_30)
+                                                          0.00      36.25 f
+  u_adder_128/gen_for_loop[97].FA/U3/Y (AOI22X1)          0.13      36.38 r
+  u_adder_128/gen_for_loop[97].FA/U2/Y (INVX1)            0.25      36.62 f
+  u_adder_128/gen_for_loop[97].FA/carry_out (full_adder_30)
+                                                          0.00      36.62 f
+  u_adder_128/gen_for_loop[98].FA/carry_in (full_adder_29)
+                                                          0.00      36.62 f
+  u_adder_128/gen_for_loop[98].FA/U3/Y (AOI22X1)          0.13      36.75 r
+  u_adder_128/gen_for_loop[98].FA/U2/Y (INVX1)            0.25      37.00 f
+  u_adder_128/gen_for_loop[98].FA/carry_out (full_adder_29)
+                                                          0.00      37.00 f
+  u_adder_128/gen_for_loop[99].FA/carry_in (full_adder_28)
+                                                          0.00      37.00 f
+  u_adder_128/gen_for_loop[99].FA/U3/Y (AOI22X1)          0.13      37.12 r
+  u_adder_128/gen_for_loop[99].FA/U2/Y (INVX1)            0.25      37.37 f
+  u_adder_128/gen_for_loop[99].FA/carry_out (full_adder_28)
+                                                          0.00      37.37 f
+  u_adder_128/gen_for_loop[100].FA/carry_in (full_adder_27)
+                                                          0.00      37.37 f
+  u_adder_128/gen_for_loop[100].FA/U3/Y (AOI22X1)         0.13      37.50 r
+  u_adder_128/gen_for_loop[100].FA/U2/Y (INVX1)           0.25      37.74 f
+  u_adder_128/gen_for_loop[100].FA/carry_out (full_adder_27)
+                                                          0.00      37.74 f
+  u_adder_128/gen_for_loop[101].FA/carry_in (full_adder_26)
+                                                          0.00      37.74 f
+  u_adder_128/gen_for_loop[101].FA/U3/Y (AOI22X1)         0.13      37.87 r
+  u_adder_128/gen_for_loop[101].FA/U2/Y (INVX1)           0.25      38.12 f
+  u_adder_128/gen_for_loop[101].FA/carry_out (full_adder_26)
+                                                          0.00      38.12 f
+  u_adder_128/gen_for_loop[102].FA/carry_in (full_adder_25)
+                                                          0.00      38.12 f
+  u_adder_128/gen_for_loop[102].FA/U3/Y (AOI22X1)         0.13      38.25 r
+  u_adder_128/gen_for_loop[102].FA/U2/Y (INVX1)           0.25      38.49 f
+  u_adder_128/gen_for_loop[102].FA/carry_out (full_adder_25)
+                                                          0.00      38.49 f
+  u_adder_128/gen_for_loop[103].FA/carry_in (full_adder_24)
+                                                          0.00      38.49 f
+  u_adder_128/gen_for_loop[103].FA/U3/Y (AOI22X1)         0.13      38.62 r
+  u_adder_128/gen_for_loop[103].FA/U2/Y (INVX1)           0.25      38.87 f
+  u_adder_128/gen_for_loop[103].FA/carry_out (full_adder_24)
+                                                          0.00      38.87 f
+  u_adder_128/gen_for_loop[104].FA/carry_in (full_adder_23)
+                                                          0.00      38.87 f
+  u_adder_128/gen_for_loop[104].FA/U3/Y (AOI22X1)         0.13      38.99 r
+  u_adder_128/gen_for_loop[104].FA/U2/Y (INVX1)           0.25      39.24 f
+  u_adder_128/gen_for_loop[104].FA/carry_out (full_adder_23)
+                                                          0.00      39.24 f
+  u_adder_128/gen_for_loop[105].FA/carry_in (full_adder_22)
+                                                          0.00      39.24 f
+  u_adder_128/gen_for_loop[105].FA/U3/Y (AOI22X1)         0.13      39.37 r
+  u_adder_128/gen_for_loop[105].FA/U2/Y (INVX1)           0.25      39.61 f
+  u_adder_128/gen_for_loop[105].FA/carry_out (full_adder_22)
+                                                          0.00      39.61 f
+  u_adder_128/gen_for_loop[106].FA/carry_in (full_adder_21)
+                                                          0.00      39.61 f
+  u_adder_128/gen_for_loop[106].FA/U3/Y (AOI22X1)         0.13      39.74 r
+  u_adder_128/gen_for_loop[106].FA/U2/Y (INVX1)           0.25      39.99 f
+  u_adder_128/gen_for_loop[106].FA/carry_out (full_adder_21)
+                                                          0.00      39.99 f
+  u_adder_128/gen_for_loop[107].FA/carry_in (full_adder_20)
+                                                          0.00      39.99 f
+  u_adder_128/gen_for_loop[107].FA/U3/Y (AOI22X1)         0.13      40.12 r
+  u_adder_128/gen_for_loop[107].FA/U2/Y (INVX1)           0.25      40.36 f
+  u_adder_128/gen_for_loop[107].FA/carry_out (full_adder_20)
+                                                          0.00      40.36 f
+  u_adder_128/gen_for_loop[108].FA/carry_in (full_adder_19)
+                                                          0.00      40.36 f
+  u_adder_128/gen_for_loop[108].FA/U3/Y (AOI22X1)         0.13      40.49 r
+  u_adder_128/gen_for_loop[108].FA/U2/Y (INVX1)           0.25      40.74 f
+  u_adder_128/gen_for_loop[108].FA/carry_out (full_adder_19)
+                                                          0.00      40.74 f
+  u_adder_128/gen_for_loop[109].FA/carry_in (full_adder_18)
+                                                          0.00      40.74 f
+  u_adder_128/gen_for_loop[109].FA/U3/Y (AOI22X1)         0.13      40.86 r
+  u_adder_128/gen_for_loop[109].FA/U2/Y (INVX1)           0.25      41.11 f
+  u_adder_128/gen_for_loop[109].FA/carry_out (full_adder_18)
+                                                          0.00      41.11 f
+  u_adder_128/gen_for_loop[110].FA/carry_in (full_adder_17)
+                                                          0.00      41.11 f
+  u_adder_128/gen_for_loop[110].FA/U3/Y (AOI22X1)         0.13      41.24 r
+  u_adder_128/gen_for_loop[110].FA/U2/Y (INVX1)           0.25      41.48 f
+  u_adder_128/gen_for_loop[110].FA/carry_out (full_adder_17)
+                                                          0.00      41.48 f
+  u_adder_128/gen_for_loop[111].FA/carry_in (full_adder_16)
+                                                          0.00      41.48 f
+  u_adder_128/gen_for_loop[111].FA/U3/Y (AOI22X1)         0.13      41.61 r
+  u_adder_128/gen_for_loop[111].FA/U2/Y (INVX1)           0.25      41.86 f
+  u_adder_128/gen_for_loop[111].FA/carry_out (full_adder_16)
+                                                          0.00      41.86 f
+  u_adder_128/gen_for_loop[112].FA/carry_in (full_adder_15)
+                                                          0.00      41.86 f
+  u_adder_128/gen_for_loop[112].FA/U3/Y (AOI22X1)         0.13      41.98 r
+  u_adder_128/gen_for_loop[112].FA/U2/Y (INVX1)           0.25      42.23 f
+  u_adder_128/gen_for_loop[112].FA/carry_out (full_adder_15)
+                                                          0.00      42.23 f
+  u_adder_128/gen_for_loop[113].FA/carry_in (full_adder_14)
+                                                          0.00      42.23 f
+  u_adder_128/gen_for_loop[113].FA/U3/Y (AOI22X1)         0.13      42.36 r
+  u_adder_128/gen_for_loop[113].FA/U2/Y (INVX1)           0.25      42.61 f
+  u_adder_128/gen_for_loop[113].FA/carry_out (full_adder_14)
+                                                          0.00      42.61 f
+  u_adder_128/gen_for_loop[114].FA/carry_in (full_adder_13)
+                                                          0.00      42.61 f
+  u_adder_128/gen_for_loop[114].FA/U3/Y (AOI22X1)         0.13      42.73 r
+  u_adder_128/gen_for_loop[114].FA/U2/Y (INVX1)           0.25      42.98 f
+  u_adder_128/gen_for_loop[114].FA/carry_out (full_adder_13)
+                                                          0.00      42.98 f
+  u_adder_128/gen_for_loop[115].FA/carry_in (full_adder_12)
+                                                          0.00      42.98 f
+  u_adder_128/gen_for_loop[115].FA/U3/Y (AOI22X1)         0.13      43.11 r
+  u_adder_128/gen_for_loop[115].FA/U2/Y (INVX1)           0.25      43.35 f
+  u_adder_128/gen_for_loop[115].FA/carry_out (full_adder_12)
+                                                          0.00      43.35 f
+  u_adder_128/gen_for_loop[116].FA/carry_in (full_adder_11)
+                                                          0.00      43.35 f
+  u_adder_128/gen_for_loop[116].FA/U3/Y (AOI22X1)         0.13      43.48 r
+  u_adder_128/gen_for_loop[116].FA/U2/Y (INVX1)           0.25      43.73 f
+  u_adder_128/gen_for_loop[116].FA/carry_out (full_adder_11)
+                                                          0.00      43.73 f
+  u_adder_128/gen_for_loop[117].FA/carry_in (full_adder_10)
+                                                          0.00      43.73 f
+  u_adder_128/gen_for_loop[117].FA/U3/Y (AOI22X1)         0.13      43.85 r
+  u_adder_128/gen_for_loop[117].FA/U2/Y (INVX1)           0.25      44.10 f
+  u_adder_128/gen_for_loop[117].FA/carry_out (full_adder_10)
+                                                          0.00      44.10 f
+  u_adder_128/gen_for_loop[118].FA/carry_in (full_adder_9)
+                                                          0.00      44.10 f
+  u_adder_128/gen_for_loop[118].FA/U3/Y (AOI22X1)         0.13      44.23 r
+  u_adder_128/gen_for_loop[118].FA/U2/Y (INVX1)           0.25      44.48 f
+  u_adder_128/gen_for_loop[118].FA/carry_out (full_adder_9)
+                                                          0.00      44.48 f
+  u_adder_128/gen_for_loop[119].FA/carry_in (full_adder_8)
+                                                          0.00      44.48 f
+  u_adder_128/gen_for_loop[119].FA/U3/Y (AOI22X1)         0.13      44.60 r
+  u_adder_128/gen_for_loop[119].FA/U2/Y (INVX1)           0.25      44.85 f
+  u_adder_128/gen_for_loop[119].FA/carry_out (full_adder_8)
+                                                          0.00      44.85 f
+  u_adder_128/gen_for_loop[120].FA/carry_in (full_adder_7)
+                                                          0.00      44.85 f
+  u_adder_128/gen_for_loop[120].FA/U3/Y (AOI22X1)         0.13      44.98 r
+  u_adder_128/gen_for_loop[120].FA/U2/Y (INVX1)           0.25      45.22 f
+  u_adder_128/gen_for_loop[120].FA/carry_out (full_adder_7)
+                                                          0.00      45.22 f
+  u_adder_128/gen_for_loop[121].FA/carry_in (full_adder_6)
+                                                          0.00      45.22 f
+  u_adder_128/gen_for_loop[121].FA/U3/Y (AOI22X1)         0.13      45.35 r
+  u_adder_128/gen_for_loop[121].FA/U2/Y (INVX1)           0.25      45.60 f
+  u_adder_128/gen_for_loop[121].FA/carry_out (full_adder_6)
+                                                          0.00      45.60 f
+  u_adder_128/gen_for_loop[122].FA/carry_in (full_adder_5)
+                                                          0.00      45.60 f
+  u_adder_128/gen_for_loop[122].FA/U3/Y (AOI22X1)         0.13      45.72 r
+  u_adder_128/gen_for_loop[122].FA/U2/Y (INVX1)           0.25      45.97 f
+  u_adder_128/gen_for_loop[122].FA/carry_out (full_adder_5)
+                                                          0.00      45.97 f
+  u_adder_128/gen_for_loop[123].FA/carry_in (full_adder_4)
+                                                          0.00      45.97 f
+  u_adder_128/gen_for_loop[123].FA/U3/Y (AOI22X1)         0.13      46.10 r
+  u_adder_128/gen_for_loop[123].FA/U2/Y (INVX1)           0.25      46.35 f
+  u_adder_128/gen_for_loop[123].FA/carry_out (full_adder_4)
+                                                          0.00      46.35 f
+  u_adder_128/gen_for_loop[124].FA/carry_in (full_adder_3)
+                                                          0.00      46.35 f
+  u_adder_128/gen_for_loop[124].FA/U3/Y (AOI22X1)         0.13      46.47 r
+  u_adder_128/gen_for_loop[124].FA/U2/Y (INVX1)           0.25      46.72 f
+  u_adder_128/gen_for_loop[124].FA/carry_out (full_adder_3)
+                                                          0.00      46.72 f
+  u_adder_128/gen_for_loop[125].FA/carry_in (full_adder_2)
+                                                          0.00      46.72 f
+  u_adder_128/gen_for_loop[125].FA/U3/Y (AOI22X1)         0.13      46.85 r
+  u_adder_128/gen_for_loop[125].FA/U2/Y (INVX1)           0.25      47.09 f
+  u_adder_128/gen_for_loop[125].FA/carry_out (full_adder_2)
+                                                          0.00      47.09 f
+  u_adder_128/gen_for_loop[126].FA/carry_in (full_adder_1)
+                                                          0.00      47.09 f
+  u_adder_128/gen_for_loop[126].FA/U3/Y (AOI22X1)         0.13      47.22 r
+  u_adder_128/gen_for_loop[126].FA/U2/Y (INVX1)           0.25      47.47 f
+  u_adder_128/gen_for_loop[126].FA/carry_out (full_adder_1)
+                                                          0.00      47.47 f
+  u_adder_128/gen_for_loop[127].FA/carry_in (full_adder_0)
+                                                          0.00      47.47 f
+  u_adder_128/gen_for_loop[127].FA/U3/Y (AOI22X1)         0.13      47.59 r
+  u_adder_128/gen_for_loop[127].FA/U2/Y (INVX1)           0.05      47.65 f
+  u_adder_128/gen_for_loop[127].FA/carry_out (full_adder_0)
+                                                          0.00      47.65 f
+  u_adder_128/carry_out (adder_nbit_N128)                 0.00      47.65 f
+  s[128] (out)                                            0.00      47.65 f
+  data arrival time                                                 47.65
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : adder_128bit
+Version: W-2024.09-SP4
+Date   : Sun Feb  1 23:08:56 2026
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db)
+
+Number of ports:                         1411
+Number of nets:                          1795
+Number of cells:                          642
+Number of combinational cells:            512
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                        128
+Number of references:                       1
+
+Combinational area:             193536.000000
+Buf/Inv area:                    18432.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                193536.000000
+Total area:                 undefined
+1
+Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : adder_128bit
+Version: W-2024.09-SP4
+Date   : Sun Feb  1 23:08:56 2026
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 106.3790 mW   (65%)
+  Net Switching Power  =  58.3133 mW   (35%)
+                         ---------
+Total Dynamic Power    = 164.6922 mW  (100%)
+
+Cell Leakage Power     =  61.8367 nW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational    106.3789           58.3132           61.8367          164.6923  ( 100.00%)
+--------------------------------------------------------------------------------------------------
+Total            106.3789 mW        58.3132 mW        61.8367 nW       164.6923 mW
+1

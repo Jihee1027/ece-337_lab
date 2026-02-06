@@ -45,9 +45,9 @@ module tb_stp_4bit ();
 
         // Test 1: Power on reset
         reset_dut;
-        $display("Test 1: Reset - parallel_out = %b (Expected: 0000)", parallel_out);
+        $display("Test 1: Reset - parallel_out = %b (Expected: 1111)", parallel_out);
 
-        if (parallel_out !== 4'b0000) begin
+        if (parallel_out !== 4'b1111) begin
             $error("RESET FAILED: parallel_out = %b", parallel_out);
         end
 

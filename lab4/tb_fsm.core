@@ -1,0 +1,14 @@
+CAPI=2:
+name: "u337mg204:ece337:tb_fsm:1.0.0"
+
+filesets:
+    tb:
+        files:
+            - "testbench/tb_fsm.sv"
+        file_type: systemVerilogSource
+
+targets:
+    default:
+        filesets:
+            - tb
+
