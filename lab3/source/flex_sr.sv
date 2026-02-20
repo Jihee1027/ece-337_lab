@@ -27,7 +27,7 @@ module flex_sr #(
     end
 
     always_comb begin
-         next_parallel_out = parallel_out;
+        next_parallel_out = parallel_out;
         if (shift_enable) begin
             if (MSB_FIRST) begin
                 next_parallel_out = {parallel_out[SIZE-2:0], serial_in};

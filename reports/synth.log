@@ -32,19 +32,19 @@ Please use '-no_save' simv switch to avoid this.
                         https://solvnetplus.synopsys.com)
 Initializing...
 Initializing gui preferences from file  /home/ecegridfs/a/337mg204/.synopsys_dc_gui/preferences.tcl
-Current time:       Tue Feb  3 12:57:08 2026
+Current time:       Thu Feb 19 00:18:28 2026
 Hostname:           ececomp2.ecn.purdue.edu
 CPU Model:          AMD EPYC 7513 32-Core Processor
 CPU Details:        Cores = 128 : Sockets = 2 : Cache Size = 512 KB : Freq = 2.60 GHz
 OS:                 Linux 4.18.0-553.89.1.el8_10.x86_64
-RAM:                502 GB (Free 119 GB)
+RAM:                502 GB (Free 107 GB)
 Swap:                63 GB (Free  63 GB)
 Work Filesystem:    /home/ecegridfs/a mounted to ecegridfs.ecn.purdue.edu:/export/home/a
 Tmp Filesystem:     /tmp mounted to tmpfs
-Work Disk:          2968 GB (Free 496 GB)
-Tmp Disk:            19 GB (Free  18 GB)
+Work Disk:          2968 GB (Free 318 GB)
+Tmp Disk:            19 GB (Free  19 GB)
 
-CPU Load: 8%, Ram Free: 119 GB, Swap Free: 63 GB, Work Disk Free: 496 GB, Tmp Disk Free: 18 GB
+CPU Load: 11%, Ram Free: 107 GB, Swap Free: 63 GB, Work Disk Free: 318 GB, Tmp Disk Free: 19 GB
 ############################################
 #
 # Auto-generated project tcl file:
@@ -53,13 +53,13 @@ CPU Load: 8%, Ram Free: 119 GB, Swap Free: 63 GB, Work Disk Free: 496 GB, Tmp Di
 #
 ############################################
 sh date
-Tue Feb  3 12:57:08 EST 2026
-set TOP_MODULE adder_comparison
-adder_comparison
+Thu Feb 19 00:18:28 EST 2026
+set TOP_MODULE sr_9bit
+sr_9bit
 set DC_SCRIPT synth.tcl
 synth.tcl
-set READ_SOURCES u337mg204_ece337_adder_comparison_1.0.0-read-sources
-u337mg204_ece337_adder_comparison_1.0.0-read-sources
+set READ_SOURCES u337mg204_ece337_sr_9bit_1.0.0-read-sources
+u337mg204_ece337_sr_9bit_1.0.0-read-sources
 set SCRIPT_DIR src/u337mg204_ece337_synfiles_0
 src/u337mg204_ece337_synfiles_0
 set REPORT_DIR reports
@@ -76,79 +76,39 @@ set link_library   [concat "*"  /home/ecegrid/a/ece337/summer24-refactor/tech/am
 ############################################
 source ${SCRIPT_DIR}/${DC_SCRIPT}
 Running PRESTO HDLC
-Compiling source file ./src/u337mg204_ece337_full_adder_1.0.0/source/full_adder.sv
+Compiling source file ./src/u337mg204_ece337_flex_sr_1.0.0/source/flex_sr.sv
 Presto compilation completed successfully.
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
 Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/dw_foundation.sldb'
 Running PRESTO HDLC
-Compiling source file ./src/u337mg204_ece337_adder_nbit_0/source/adder_nbit.sv
-Presto compilation completed successfully.
-Running PRESTO HDLC
-Compiling source file ./src/u337mg204_ece337_adder_128bit_1.0.0/source/adder_128bit.sv
-Presto compilation completed successfully.
-Running PRESTO HDLC
-Compiling source file ./src/u337mg204_ece337_pipelined_adder_1.0.0/source/pipelined_adder.sv
-Presto compilation completed successfully.
-Running PRESTO HDLC
-Compiling source file ./src/u337mg204_ece337_adder_comparison_1.0.0/source/adder_comparison.sv
+Compiling source file ./src/u337mg204_ece337_sr_9bit_1.0.0/source/sr_9bit.sv
 Presto compilation completed successfully.
 Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/gtech.db'
 Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/standard.sldb'
   Loading link library 'osu05_stdcells'
   Loading link library 'gtech'
 Running PRESTO HDLC
-Presto compilation completed successfully. (adder_comparison)
-Module: adder_comparison, Ports: 772, Input: 514, Output: 258, Inout: 0
-Module: adder_comparison, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Information: Module adder_comparison report end. (ELAB-965)
+Presto compilation completed successfully. (sr_9bit)
+Module: sr_9bit, Ports: 13, Input: 4, Output: 9, Inout: 0
+Module: sr_9bit, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module sr_9bit report end. (ELAB-965)
 Elaborated 1 design.
-Current design is now 'adder_comparison'.
-Information: Building the design 'adder_128bit'. (HDL-193)
-Presto compilation completed successfully. (adder_128bit)
-Module: adder_128bit, Ports: 385, Input: 256, Output: 129, Inout: 0
-Module: adder_128bit, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Information: Module adder_128bit report end. (ELAB-965)
-Information: Building the design 'pipelined_adder'. (HDL-193)
+Current design is now 'sr_9bit'.
+Information: Building the design 'flex_sr' instantiated from design 'sr_9bit' with
+	the parameters "SIZE=9,MSB_FIRST=0". (HDL-193)
 
-Inferred memory devices in process in routine 'pipelined_adder' in file
-	 ./src/u337mg204_ece337_pipelined_adder_1.0.0/source/pipelined_adder.sv'.
+Inferred memory devices in process in routine 'flex_sr_SIZE9_MSB_FIRST0' in file
+	 ./src/u337mg204_ece337_flex_sr_1.0.0/source/flex_sr.sv'.
 ==================================================================================
 |    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
 ==================================================================================
-|      c3_p_reg       | Flip-flop |   1   |  N  | N  | None  | Async | N  |  23  |
-|      s1_p1_reg      | Flip-flop |  32   |  Y  | N  | None  | Async | N  |  23  |
-|      s1_p3_reg      | Flip-flop |  32   |  Y  | N  | None  | Async | N  |  23  |
-|      c1_p_reg       | Flip-flop |   1   |  N  | N  | None  | Async | N  |  23  |
-|      s2_p2_reg      | Flip-flop |  32   |  Y  | N  | None  | Async | N  |  23  |
-|      s2_p3_reg      | Flip-flop |  32   |  Y  | N  | None  | Async | N  |  23  |
-|      c2_p_reg       | Flip-flop |   1   |  N  | N  | None  | Async | N  |  23  |
-|      s3_p3_reg      | Flip-flop |  32   |  Y  | N  | None  | Async | N  |  23  |
-|        s_reg        | Flip-flop |  129  |  Y  | N  | None  | Async | N  |  51  |
+|  parallel_out_reg   | Flip-flop |   9   |  Y  | N  | Async | None  | N  |  19  |
 ==================================================================================
-Presto compilation completed successfully. (pipelined_adder)
-Module: pipelined_adder, Ports: 387, Input: 258, Output: 129, Inout: 0
-Module: pipelined_adder, Registers: 292, Async set/reset: 292, Sync set/reset: 0
-Information: Module pipelined_adder report end. (ELAB-965)
-Information: Building the design 'adder_nbit' instantiated from design 'adder_128bit' with
-	the parameters "N=128". (HDL-193)
-Presto compilation completed successfully. (adder_nbit_N128)
-Module: adder_nbit_N128, Ports: 386, Input: 257, Output: 129, Inout: 0
-Module: adder_nbit_N128, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Information: Module adder_nbit_N128 report end. (ELAB-965)
-Information: Building the design 'adder_nbit' instantiated from design 'pipelined_adder' with
-	the parameters "N=32". (HDL-193)
-Presto compilation completed successfully. (adder_nbit_N32)
-Module: adder_nbit_N32, Ports: 98, Input: 65, Output: 33, Inout: 0
-Module: adder_nbit_N32, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Information: Module adder_nbit_N32 report end. (ELAB-965)
-Information: Building the design 'full_adder'. (HDL-193)
-Presto compilation completed successfully. (full_adder)
-Module: full_adder, Ports: 5, Input: 3, Output: 2, Inout: 0
-Module: full_adder, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Information: Module full_adder report end. (ELAB-965)
-Information: Uniquified 4 instances of design 'adder_nbit_N32'. (OPT-1056)
-Information: Uniquified 256 instances of design 'full_adder'. (OPT-1056)
-CPU Load: 8%, Ram Free: 119 GB, Swap Free: 63 GB, Work Disk Free: 496 GB, Tmp Disk Free: 18 GB
+Presto compilation completed successfully. (flex_sr_SIZE9_MSB_FIRST0)
+Module: flex_sr_SIZE9_MSB_FIRST0, Ports: 24, Input: 14, Output: 10, Inout: 0
+Module: flex_sr_SIZE9_MSB_FIRST0, Registers: 9, Async set/reset: 9, Sync set/reset: 0
+Information: Module flex_sr_SIZE9_MSB_FIRST0 report end. (ELAB-965)
+CPU Load: 11%, Ram Free: 107 GB, Swap Free: 63 GB, Work Disk Free: 318 GB, Tmp Disk Free: 19 GB
 Information: Checking out the license 'DesignWare'. (SEC-104)
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
@@ -167,571 +127,68 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 | Design Information                                      | Value                                  |
 ====================================================================================================
 | Number of Scenarios                                     | 0                                      |
-| Leaf Cell Count                                         | 2597                                   |
-| Number of User Hierarchies                              | 263                                    |
-| Sequential Cell Count                                   | 292                                    |
+| Leaf Cell Count                                         | 21                                     |
+| Number of User Hierarchies                              | 1                                      |
+| Sequential Cell Count                                   | 9                                      |
 | Macro Count                                             | 0                                      |
 | Pad Count                                               | 0                                      |
 | Number of Power Domains                                 | 0                                      |
 | Number of Path Groups                                   | 1                                      |
 | Number of VT Class                                      | 0                                      |
 | Number of Clocks                                        | 0                                      |
-| Number of Dont Touch Cells                              | 0                                      |
+| Number of Dont Touch Cells                              | 8                                      |
 | Number of Dont Touch Nets                               | 0                                      |
 | Number of Size Only Cells                               | 0                                      |
 | Design with Target Library Subset (with clock_path)     | false  (false )                        |
 | Design with UPF Data                                    | false                                  |
 ====================================================================================================
 
-Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 13 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
   Beginning Pass 1 Mapping
   ------------------------
-  Processing 'full_adder_0'
-  Processing 'adder_nbit_N32_0'
-  Processing 'pipelined_adder'
-  Processing 'adder_nbit_N128'
-  Processing 'adder_128bit'
-  Processing 'adder_comparison'
+  Processing 'flex_sr_SIZE9_MSB_FIRST0'
+Module: DW01_MUX, Ports: 4, Input: 3, Output: 1, Inout: 0
+Module: DW01_MUX, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_mmux_width2, Ports: 7, Input: 5, Output: 2, Inout: 0
+Module: DW01_mmux_width2, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_mmux_width3, Ports: 10, Input: 7, Output: 3, Inout: 0
+Module: DW01_mmux_width3, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_mmux_width4, Ports: 13, Input: 9, Output: 4, Inout: 0
+Module: DW01_mmux_width4, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_mmux_width5, Ports: 16, Input: 11, Output: 5, Inout: 0
+Module: DW01_mmux_width5, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_NOT, Ports: 2, Input: 1, Output: 1, Inout: 0
+Module: DW01_NOT, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'sr_9bit'
 
   Updating timing information
 Information: Updating design information... (UID-85)
-Information: Design 'adder_comparison' has no optimization constraints set. (OPT-108)
+Information: Design 'sr_9bit' has no optimization constraints set. (OPT-108)
 
   Beginning Mapping Optimizations  (Medium effort)
   -------------------------------
-  Structuring 'full_adder_254'
-  Mapping 'full_adder_254'
-  Structuring 'full_adder_253'
-  Mapping 'full_adder_253'
-  Structuring 'full_adder_252'
-  Mapping 'full_adder_252'
-  Structuring 'full_adder_251'
-  Mapping 'full_adder_251'
-  Structuring 'full_adder_250'
-  Mapping 'full_adder_250'
-  Structuring 'full_adder_249'
-  Mapping 'full_adder_249'
-  Structuring 'full_adder_248'
-  Mapping 'full_adder_248'
-  Structuring 'full_adder_247'
-  Mapping 'full_adder_247'
-  Structuring 'full_adder_246'
-  Mapping 'full_adder_246'
-  Structuring 'full_adder_245'
-  Mapping 'full_adder_245'
-  Structuring 'full_adder_244'
-  Mapping 'full_adder_244'
-  Structuring 'full_adder_243'
-  Mapping 'full_adder_243'
-  Structuring 'full_adder_242'
-  Mapping 'full_adder_242'
-  Structuring 'full_adder_241'
-  Mapping 'full_adder_241'
-  Structuring 'full_adder_240'
-  Mapping 'full_adder_240'
-  Structuring 'full_adder_239'
-  Mapping 'full_adder_239'
-  Structuring 'full_adder_238'
-  Mapping 'full_adder_238'
-  Structuring 'full_adder_237'
-  Mapping 'full_adder_237'
-  Structuring 'full_adder_236'
-  Mapping 'full_adder_236'
-  Structuring 'full_adder_235'
-  Mapping 'full_adder_235'
-  Structuring 'full_adder_234'
-  Mapping 'full_adder_234'
-  Structuring 'full_adder_233'
-  Mapping 'full_adder_233'
-  Structuring 'full_adder_232'
-  Mapping 'full_adder_232'
-  Structuring 'full_adder_231'
-  Mapping 'full_adder_231'
-  Structuring 'full_adder_230'
-  Mapping 'full_adder_230'
-  Structuring 'full_adder_229'
-  Mapping 'full_adder_229'
-  Structuring 'full_adder_228'
-  Mapping 'full_adder_228'
-  Structuring 'full_adder_227'
-  Mapping 'full_adder_227'
-  Structuring 'full_adder_226'
-  Mapping 'full_adder_226'
-  Structuring 'full_adder_225'
-  Mapping 'full_adder_225'
-  Structuring 'full_adder_224'
-  Mapping 'full_adder_224'
-  Structuring 'full_adder_223'
-  Mapping 'full_adder_223'
-  Structuring 'full_adder_222'
-  Mapping 'full_adder_222'
-  Structuring 'full_adder_221'
-  Mapping 'full_adder_221'
-  Structuring 'full_adder_220'
-  Mapping 'full_adder_220'
-  Structuring 'full_adder_219'
-  Mapping 'full_adder_219'
-  Structuring 'full_adder_218'
-  Mapping 'full_adder_218'
-  Structuring 'full_adder_217'
-  Mapping 'full_adder_217'
-  Structuring 'full_adder_216'
-  Mapping 'full_adder_216'
-  Structuring 'full_adder_215'
-  Mapping 'full_adder_215'
-  Structuring 'full_adder_214'
-  Mapping 'full_adder_214'
-  Structuring 'full_adder_213'
-  Mapping 'full_adder_213'
-  Structuring 'full_adder_212'
-  Mapping 'full_adder_212'
-  Structuring 'full_adder_211'
-  Mapping 'full_adder_211'
-  Structuring 'full_adder_210'
-  Mapping 'full_adder_210'
-  Structuring 'full_adder_209'
-  Mapping 'full_adder_209'
-  Structuring 'full_adder_208'
-  Mapping 'full_adder_208'
-  Structuring 'full_adder_207'
-  Mapping 'full_adder_207'
-  Structuring 'full_adder_206'
-  Mapping 'full_adder_206'
-  Structuring 'full_adder_205'
-  Mapping 'full_adder_205'
-  Structuring 'full_adder_204'
-  Mapping 'full_adder_204'
-  Structuring 'full_adder_203'
-  Mapping 'full_adder_203'
-  Structuring 'full_adder_202'
-  Mapping 'full_adder_202'
-  Structuring 'full_adder_201'
-  Mapping 'full_adder_201'
-  Structuring 'full_adder_200'
-  Mapping 'full_adder_200'
-  Structuring 'full_adder_199'
-  Mapping 'full_adder_199'
-  Structuring 'full_adder_198'
-  Mapping 'full_adder_198'
-  Structuring 'full_adder_197'
-  Mapping 'full_adder_197'
-  Structuring 'full_adder_196'
-  Mapping 'full_adder_196'
-  Structuring 'full_adder_195'
-  Mapping 'full_adder_195'
-  Structuring 'full_adder_194'
-  Mapping 'full_adder_194'
-  Structuring 'full_adder_193'
-  Mapping 'full_adder_193'
-  Structuring 'full_adder_192'
-  Mapping 'full_adder_192'
-  Structuring 'full_adder_191'
-  Mapping 'full_adder_191'
-  Structuring 'full_adder_190'
-  Mapping 'full_adder_190'
-  Structuring 'full_adder_189'
-  Mapping 'full_adder_189'
-  Structuring 'full_adder_188'
-  Mapping 'full_adder_188'
-  Structuring 'full_adder_187'
-  Mapping 'full_adder_187'
-  Structuring 'full_adder_186'
-  Mapping 'full_adder_186'
-  Structuring 'full_adder_185'
-  Mapping 'full_adder_185'
-  Structuring 'full_adder_184'
-  Mapping 'full_adder_184'
-  Structuring 'full_adder_183'
-  Mapping 'full_adder_183'
-  Structuring 'full_adder_182'
-  Mapping 'full_adder_182'
-  Structuring 'full_adder_181'
-  Mapping 'full_adder_181'
-  Structuring 'full_adder_180'
-  Mapping 'full_adder_180'
-  Structuring 'full_adder_179'
-  Mapping 'full_adder_179'
-  Structuring 'full_adder_178'
-  Mapping 'full_adder_178'
-  Structuring 'full_adder_177'
-  Mapping 'full_adder_177'
-  Structuring 'full_adder_176'
-  Mapping 'full_adder_176'
-  Structuring 'full_adder_175'
-  Mapping 'full_adder_175'
-  Structuring 'full_adder_174'
-  Mapping 'full_adder_174'
-  Structuring 'full_adder_173'
-  Mapping 'full_adder_173'
-  Structuring 'full_adder_172'
-  Mapping 'full_adder_172'
-  Structuring 'full_adder_171'
-  Mapping 'full_adder_171'
-  Structuring 'full_adder_170'
-  Mapping 'full_adder_170'
-  Structuring 'full_adder_169'
-  Mapping 'full_adder_169'
-  Structuring 'full_adder_168'
-  Mapping 'full_adder_168'
-  Structuring 'full_adder_167'
-  Mapping 'full_adder_167'
-  Structuring 'full_adder_166'
-  Mapping 'full_adder_166'
-  Structuring 'full_adder_165'
-  Mapping 'full_adder_165'
-  Structuring 'full_adder_164'
-  Mapping 'full_adder_164'
-  Structuring 'full_adder_163'
-  Mapping 'full_adder_163'
-  Structuring 'full_adder_162'
-  Mapping 'full_adder_162'
-  Structuring 'full_adder_161'
-  Mapping 'full_adder_161'
-  Structuring 'full_adder_160'
-  Mapping 'full_adder_160'
-  Structuring 'full_adder_159'
-  Mapping 'full_adder_159'
-  Structuring 'full_adder_158'
-  Mapping 'full_adder_158'
-  Structuring 'full_adder_157'
-  Mapping 'full_adder_157'
-  Structuring 'full_adder_156'
-  Mapping 'full_adder_156'
-  Structuring 'full_adder_155'
-  Mapping 'full_adder_155'
-  Structuring 'full_adder_154'
-  Mapping 'full_adder_154'
-  Structuring 'full_adder_153'
-  Mapping 'full_adder_153'
-  Structuring 'full_adder_152'
-  Mapping 'full_adder_152'
-  Structuring 'full_adder_151'
-  Mapping 'full_adder_151'
-  Structuring 'full_adder_150'
-  Mapping 'full_adder_150'
-  Structuring 'full_adder_149'
-  Mapping 'full_adder_149'
-  Structuring 'full_adder_148'
-  Mapping 'full_adder_148'
-  Structuring 'full_adder_147'
-  Mapping 'full_adder_147'
-  Structuring 'full_adder_146'
-  Mapping 'full_adder_146'
-  Structuring 'full_adder_145'
-  Mapping 'full_adder_145'
-  Structuring 'full_adder_144'
-  Mapping 'full_adder_144'
-  Structuring 'full_adder_143'
-  Mapping 'full_adder_143'
-  Structuring 'full_adder_142'
-  Mapping 'full_adder_142'
-  Structuring 'full_adder_141'
-  Mapping 'full_adder_141'
-  Structuring 'full_adder_140'
-  Mapping 'full_adder_140'
-  Structuring 'full_adder_139'
-  Mapping 'full_adder_139'
-  Structuring 'full_adder_138'
-  Mapping 'full_adder_138'
-  Structuring 'full_adder_137'
-  Mapping 'full_adder_137'
-  Structuring 'full_adder_136'
-  Mapping 'full_adder_136'
-  Structuring 'full_adder_135'
-  Mapping 'full_adder_135'
-  Structuring 'full_adder_134'
-  Mapping 'full_adder_134'
-  Structuring 'full_adder_133'
-  Mapping 'full_adder_133'
-  Structuring 'full_adder_132'
-  Mapping 'full_adder_132'
-  Structuring 'full_adder_131'
-  Mapping 'full_adder_131'
-  Structuring 'full_adder_130'
-  Mapping 'full_adder_130'
-  Structuring 'full_adder_129'
-  Mapping 'full_adder_129'
-  Structuring 'full_adder_128'
-  Mapping 'full_adder_128'
-  Structuring 'full_adder_127'
-  Mapping 'full_adder_127'
-  Structuring 'full_adder_126'
-  Mapping 'full_adder_126'
-  Structuring 'full_adder_125'
-  Mapping 'full_adder_125'
-  Structuring 'full_adder_124'
-  Mapping 'full_adder_124'
-  Structuring 'full_adder_123'
-  Mapping 'full_adder_123'
-  Structuring 'full_adder_122'
-  Mapping 'full_adder_122'
-  Structuring 'full_adder_121'
-  Mapping 'full_adder_121'
-  Structuring 'full_adder_120'
-  Mapping 'full_adder_120'
-  Structuring 'full_adder_119'
-  Mapping 'full_adder_119'
-  Structuring 'full_adder_118'
-  Mapping 'full_adder_118'
-  Structuring 'full_adder_117'
-  Mapping 'full_adder_117'
-  Structuring 'full_adder_116'
-  Mapping 'full_adder_116'
-  Structuring 'full_adder_115'
-  Mapping 'full_adder_115'
-  Structuring 'full_adder_114'
-  Mapping 'full_adder_114'
-  Structuring 'full_adder_113'
-  Mapping 'full_adder_113'
-  Structuring 'full_adder_112'
-  Mapping 'full_adder_112'
-  Structuring 'full_adder_111'
-  Mapping 'full_adder_111'
-  Structuring 'full_adder_110'
-  Mapping 'full_adder_110'
-  Structuring 'full_adder_109'
-  Mapping 'full_adder_109'
-  Structuring 'full_adder_108'
-  Mapping 'full_adder_108'
-  Structuring 'full_adder_107'
-  Mapping 'full_adder_107'
-  Structuring 'full_adder_106'
-  Mapping 'full_adder_106'
-  Structuring 'full_adder_105'
-  Mapping 'full_adder_105'
-  Structuring 'full_adder_104'
-  Mapping 'full_adder_104'
-  Structuring 'full_adder_103'
-  Mapping 'full_adder_103'
-  Structuring 'full_adder_102'
-  Mapping 'full_adder_102'
-  Structuring 'full_adder_101'
-  Mapping 'full_adder_101'
-  Structuring 'full_adder_100'
-  Mapping 'full_adder_100'
-  Structuring 'full_adder_99'
-  Mapping 'full_adder_99'
-  Structuring 'full_adder_98'
-  Mapping 'full_adder_98'
-  Structuring 'full_adder_97'
-  Mapping 'full_adder_97'
-  Structuring 'full_adder_96'
-  Mapping 'full_adder_96'
-  Structuring 'full_adder_95'
-  Mapping 'full_adder_95'
-  Structuring 'full_adder_94'
-  Mapping 'full_adder_94'
-  Structuring 'full_adder_93'
-  Mapping 'full_adder_93'
-  Structuring 'full_adder_92'
-  Mapping 'full_adder_92'
-  Structuring 'full_adder_91'
-  Mapping 'full_adder_91'
-  Structuring 'full_adder_90'
-  Mapping 'full_adder_90'
-  Structuring 'full_adder_89'
-  Mapping 'full_adder_89'
-  Structuring 'full_adder_88'
-  Mapping 'full_adder_88'
-  Structuring 'full_adder_87'
-  Mapping 'full_adder_87'
-  Structuring 'full_adder_86'
-  Mapping 'full_adder_86'
-  Structuring 'full_adder_85'
-  Mapping 'full_adder_85'
-  Structuring 'full_adder_84'
-  Mapping 'full_adder_84'
-  Structuring 'full_adder_83'
-  Mapping 'full_adder_83'
-  Structuring 'full_adder_82'
-  Mapping 'full_adder_82'
-  Structuring 'full_adder_81'
-  Mapping 'full_adder_81'
-  Structuring 'full_adder_80'
-  Mapping 'full_adder_80'
-  Structuring 'full_adder_79'
-  Mapping 'full_adder_79'
-  Structuring 'full_adder_78'
-  Mapping 'full_adder_78'
-  Structuring 'full_adder_77'
-  Mapping 'full_adder_77'
-  Structuring 'full_adder_76'
-  Mapping 'full_adder_76'
-  Structuring 'full_adder_75'
-  Mapping 'full_adder_75'
-  Structuring 'full_adder_74'
-  Mapping 'full_adder_74'
-  Structuring 'full_adder_73'
-  Mapping 'full_adder_73'
-  Structuring 'full_adder_72'
-  Mapping 'full_adder_72'
-  Structuring 'full_adder_71'
-  Mapping 'full_adder_71'
-  Structuring 'full_adder_70'
-  Mapping 'full_adder_70'
-  Structuring 'full_adder_69'
-  Mapping 'full_adder_69'
-  Structuring 'full_adder_68'
-  Mapping 'full_adder_68'
-  Structuring 'full_adder_67'
-  Mapping 'full_adder_67'
-  Structuring 'full_adder_66'
-  Mapping 'full_adder_66'
-  Structuring 'full_adder_65'
-  Mapping 'full_adder_65'
-  Structuring 'full_adder_64'
-  Mapping 'full_adder_64'
-  Structuring 'full_adder_63'
-  Mapping 'full_adder_63'
-  Structuring 'full_adder_62'
-  Mapping 'full_adder_62'
-  Structuring 'full_adder_61'
-  Mapping 'full_adder_61'
-  Structuring 'full_adder_60'
-  Mapping 'full_adder_60'
-  Structuring 'full_adder_59'
-  Mapping 'full_adder_59'
-  Structuring 'full_adder_58'
-  Mapping 'full_adder_58'
-  Structuring 'full_adder_57'
-  Mapping 'full_adder_57'
-  Structuring 'full_adder_56'
-  Mapping 'full_adder_56'
-  Structuring 'full_adder_55'
-  Mapping 'full_adder_55'
-  Structuring 'full_adder_54'
-  Mapping 'full_adder_54'
-  Structuring 'full_adder_53'
-  Mapping 'full_adder_53'
-  Structuring 'full_adder_52'
-  Mapping 'full_adder_52'
-  Structuring 'full_adder_51'
-  Mapping 'full_adder_51'
-  Structuring 'full_adder_50'
-  Mapping 'full_adder_50'
-  Structuring 'full_adder_49'
-  Mapping 'full_adder_49'
-  Structuring 'full_adder_48'
-  Mapping 'full_adder_48'
-  Structuring 'full_adder_47'
-  Mapping 'full_adder_47'
-  Structuring 'full_adder_46'
-  Mapping 'full_adder_46'
-  Structuring 'full_adder_45'
-  Mapping 'full_adder_45'
-  Structuring 'full_adder_44'
-  Mapping 'full_adder_44'
-  Structuring 'full_adder_43'
-  Mapping 'full_adder_43'
-  Structuring 'full_adder_42'
-  Mapping 'full_adder_42'
-  Structuring 'full_adder_41'
-  Mapping 'full_adder_41'
-  Structuring 'full_adder_40'
-  Mapping 'full_adder_40'
-  Structuring 'full_adder_39'
-  Mapping 'full_adder_39'
-  Structuring 'full_adder_38'
-  Mapping 'full_adder_38'
-  Structuring 'full_adder_37'
-  Mapping 'full_adder_37'
-  Structuring 'full_adder_36'
-  Mapping 'full_adder_36'
-  Structuring 'full_adder_35'
-  Mapping 'full_adder_35'
-  Structuring 'full_adder_34'
-  Mapping 'full_adder_34'
-  Structuring 'full_adder_33'
-  Mapping 'full_adder_33'
-  Structuring 'full_adder_32'
-  Mapping 'full_adder_32'
-  Structuring 'full_adder_31'
-  Mapping 'full_adder_31'
-  Structuring 'full_adder_30'
-  Mapping 'full_adder_30'
-  Structuring 'full_adder_29'
-  Mapping 'full_adder_29'
-  Structuring 'full_adder_28'
-  Mapping 'full_adder_28'
-  Structuring 'full_adder_27'
-  Mapping 'full_adder_27'
-  Structuring 'full_adder_26'
-  Mapping 'full_adder_26'
-  Structuring 'full_adder_25'
-  Mapping 'full_adder_25'
-  Structuring 'full_adder_24'
-  Mapping 'full_adder_24'
-  Structuring 'full_adder_23'
-  Mapping 'full_adder_23'
-  Structuring 'full_adder_22'
-  Mapping 'full_adder_22'
-  Structuring 'full_adder_21'
-  Mapping 'full_adder_21'
-  Structuring 'full_adder_20'
-  Mapping 'full_adder_20'
-  Structuring 'full_adder_19'
-  Mapping 'full_adder_19'
-  Structuring 'full_adder_18'
-  Mapping 'full_adder_18'
-  Structuring 'full_adder_17'
-  Mapping 'full_adder_17'
-  Structuring 'full_adder_16'
-  Mapping 'full_adder_16'
-  Structuring 'full_adder_15'
-  Mapping 'full_adder_15'
-  Structuring 'full_adder_14'
-  Mapping 'full_adder_14'
-  Structuring 'full_adder_13'
-  Mapping 'full_adder_13'
-  Structuring 'full_adder_12'
-  Mapping 'full_adder_12'
-  Structuring 'full_adder_11'
-  Mapping 'full_adder_11'
-  Structuring 'full_adder_10'
-  Mapping 'full_adder_10'
-  Structuring 'full_adder_9'
-  Mapping 'full_adder_9'
-  Structuring 'full_adder_8'
-  Mapping 'full_adder_8'
-  Structuring 'full_adder_7'
-  Mapping 'full_adder_7'
-  Structuring 'full_adder_6'
-  Mapping 'full_adder_6'
-  Structuring 'full_adder_5'
-  Mapping 'full_adder_5'
-  Structuring 'full_adder_4'
-  Mapping 'full_adder_4'
-  Structuring 'full_adder_3'
-  Mapping 'full_adder_3'
-  Structuring 'full_adder_2'
-  Mapping 'full_adder_2'
-  Structuring 'full_adder_1'
-  Mapping 'full_adder_1'
-  Structuring 'full_adder_0'
-  Mapping 'full_adder_0'
-  Structuring 'full_adder_255'
-  Mapping 'full_adder_255'
+  Structuring 'flex_sr_SIZE9_MSB_FIRST0'
+  Mapping 'flex_sr_SIZE9_MSB_FIRST0'
 
                                   TOTAL                                      
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:01  868320.0      0.00       0.0       0.0                          
-    0:00:01  868320.0      0.00       0.0       0.0                          
-    0:00:01  868320.0      0.00       0.0       0.0                          
-    0:00:01  868320.0      0.00       0.0       0.0                          
-    0:00:01  868320.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
 
 
 
@@ -742,11 +199,11 @@ Information: Design 'adder_comparison' has no optimization constraints set. (OPT
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -756,17 +213,17 @@ Information: Design 'adder_comparison' has no optimization constraints set. (OPT
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
-    0:00:01  863640.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   21303.0      0.00       0.0       0.0                          
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
 
 
@@ -775,7 +232,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 8%, Ram Free: 119 GB, Swap Free: 63 GB, Work Disk Free: 496 GB, Tmp Disk Free: 18 GB
+CPU Load: 10%, Ram Free: 107 GB, Swap Free: 63 GB, Work Disk Free: 318 GB, Tmp Disk Free: 19 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -799,24 +256,47 @@ Unmapped MV Cells
 ****************************************
 check_design summary:
 Version:     W-2024.09-SP4
-Date:        Tue Feb  3 12:57:10 2026
+Date:        Thu Feb 19 00:18:29 2026
 ****************************************
 
                    Name                                            Total
 --------------------------------------------------------------------------------
-Cells                                                               2
-    Connected to power or ground (LINT-32)                          2
+Inputs/Outputs                                                      1
+    Shorted outputs (LINT-31)                                       1
+
+Cells                                                              11
+    Connected to power or ground (LINT-32)                         10
+    Nets connected to multiple pins on same cell (LINT-33)          1
 --------------------------------------------------------------------------------
 
-Warning: In design 'adder_128bit', a pin on submodule 'u_adder_128' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'carry_in' is connected to logic 0. 
-Warning: In design 'pipelined_adder', a pin on submodule 'stage1' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'carry_in' is connected to logic 0. 
-Writing verilog file '/home/ecegridfs/a/337mg204/ece337/tmp/build/u337mg204_ece337_adder_comparison_1.0.0/syn-design_compiler/adder_comparison.v'.
+Warning: In design 'flex_sr_SIZE9_MSB_FIRST0', output port 'serial_out' is connected directly to output port 'parallel_out[0]'. (LINT-31)
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'load_enable' is connected to logic 0. 
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'parallel_in[8]' is connected to logic 0. 
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'parallel_in[7]' is connected to logic 0. 
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'parallel_in[6]' is connected to logic 0. 
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'parallel_in[5]' is connected to logic 0. 
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'parallel_in[4]' is connected to logic 0. 
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'parallel_in[3]' is connected to logic 0. 
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'parallel_in[2]' is connected to logic 0. 
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'parallel_in[1]' is connected to logic 0. 
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'parallel_in[0]' is connected to logic 0. 
+Warning: In design 'sr_9bit', the same net is connected to more than one pin on submodule 'CORE'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'load_enable', 'parallel_in[8]'', 'parallel_in[7]', 'parallel_in[6]', 'parallel_in[5]', 'parallel_in[4]', 'parallel_in[3]', 'parallel_in[2]', 'parallel_in[1]', 'parallel_in[0]'.
+Writing verilog file '/home/ecegridfs/a/337mg204/ece337/tmp/build/u337mg204_ece337_sr_9bit_1.0.0/syn-design_compiler/sr_9bit.v'.
 
-Memory usage for this session 140 Mbytes.
-Memory usage for this session including child processes 140 Mbytes.
-CPU usage for this session 4 seconds ( 0.00 hours ).
-Elapsed time for this session 6 seconds ( 0.00 hours ).
+Memory usage for this session 136 Mbytes.
+Memory usage for this session including child processes 136 Mbytes.
+CPU usage for this session 3 seconds ( 0.00 hours ).
+Elapsed time for this session 5 seconds ( 0.00 hours ).
 
 Thank you...
