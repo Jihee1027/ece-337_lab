@@ -32,19 +32,19 @@ Please use '-no_save' simv switch to avoid this.
                         https://solvnetplus.synopsys.com)
 Initializing...
 Initializing gui preferences from file  /home/ecegridfs/a/337mg204/.synopsys_dc_gui/preferences.tcl
-Current time:       Thu Feb 19 00:18:28 2026
-Hostname:           ececomp2.ecn.purdue.edu
+Current time:       Fri Feb 20 12:49:06 2026
+Hostname:           ececomp1.ecn.purdue.edu
 CPU Model:          AMD EPYC 7513 32-Core Processor
 CPU Details:        Cores = 128 : Sockets = 2 : Cache Size = 512 KB : Freq = 2.60 GHz
 OS:                 Linux 4.18.0-553.89.1.el8_10.x86_64
-RAM:                502 GB (Free 107 GB)
-Swap:                63 GB (Free  63 GB)
+RAM:                502 GB (Free  93 GB)
+Swap:                63 GB (Free  46 GB)
 Work Filesystem:    /home/ecegridfs/a mounted to ecegridfs.ecn.purdue.edu:/export/home/a
 Tmp Filesystem:     /tmp mounted to tmpfs
-Work Disk:          2968 GB (Free 318 GB)
+Work Disk:          2968 GB (Free 312 GB)
 Tmp Disk:            19 GB (Free  19 GB)
 
-CPU Load: 11%, Ram Free: 107 GB, Swap Free: 63 GB, Work Disk Free: 318 GB, Tmp Disk Free: 19 GB
+CPU Load: 11%, Ram Free: 93 GB, Swap Free: 46 GB, Work Disk Free: 312 GB, Tmp Disk Free: 19 GB
 ############################################
 #
 # Auto-generated project tcl file:
@@ -53,13 +53,13 @@ CPU Load: 11%, Ram Free: 107 GB, Swap Free: 63 GB, Work Disk Free: 318 GB, Tmp D
 #
 ############################################
 sh date
-Thu Feb 19 00:18:28 EST 2026
-set TOP_MODULE sr_9bit
-sr_9bit
+Fri Feb 20 12:49:06 EST 2026
+set TOP_MODULE pwm
+pwm
 set DC_SCRIPT synth.tcl
 synth.tcl
-set READ_SOURCES u337mg204_ece337_sr_9bit_1.0.0-read-sources
-u337mg204_ece337_sr_9bit_1.0.0-read-sources
+set READ_SOURCES u337mg204_ece337_pwm_1.0.0-read-sources
+u337mg204_ece337_pwm_1.0.0-read-sources
 set SCRIPT_DIR src/u337mg204_ece337_synfiles_0
 src/u337mg204_ece337_synfiles_0
 set REPORT_DIR reports
@@ -76,39 +76,34 @@ set link_library   [concat "*"  /home/ecegrid/a/ece337/summer24-refactor/tech/am
 ############################################
 source ${SCRIPT_DIR}/${DC_SCRIPT}
 Running PRESTO HDLC
-Compiling source file ./src/u337mg204_ece337_flex_sr_1.0.0/source/flex_sr.sv
+Compiling source file ./src/u337mg204_ece337_pwm_1.0.0/source/pwm.sv
 Presto compilation completed successfully.
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
 Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/dw_foundation.sldb'
-Running PRESTO HDLC
-Compiling source file ./src/u337mg204_ece337_sr_9bit_1.0.0/source/sr_9bit.sv
-Presto compilation completed successfully.
 Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/gtech.db'
 Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/standard.sldb'
   Loading link library 'osu05_stdcells'
   Loading link library 'gtech'
 Running PRESTO HDLC
-Presto compilation completed successfully. (sr_9bit)
-Module: sr_9bit, Ports: 13, Input: 4, Output: 9, Inout: 0
-Module: sr_9bit, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Information: Module sr_9bit report end. (ELAB-965)
-Elaborated 1 design.
-Current design is now 'sr_9bit'.
-Information: Building the design 'flex_sr' instantiated from design 'sr_9bit' with
-	the parameters "SIZE=9,MSB_FIRST=0". (HDL-193)
 
-Inferred memory devices in process in routine 'flex_sr_SIZE9_MSB_FIRST0' in file
-	 ./src/u337mg204_ece337_flex_sr_1.0.0/source/flex_sr.sv'.
+Inferred memory devices in process in routine 'pwm' in file
+	 ./src/u337mg204_ece337_pwm_1.0.0/source/pwm.sv'.
 ==================================================================================
 |    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
 ==================================================================================
-|  parallel_out_reg   | Flip-flop |   9   |  Y  | N  | Async | None  | N  |  19  |
+|   pwm_a_next_reg    |   Latch   |   8   |  Y  | N  | None  | None  | -  |  20  |
+|   pwm_b_next_reg    |   Latch   |   8   |  Y  | N  | None  | None  | -  |  20  |
+|      pwm_b_reg      | Flip-flop |   8   |  Y  | N  | None  | Async | N  |  33  |
+|      pwm_a_reg      | Flip-flop |   8   |  Y  | N  | None  | Async | N  |  33  |
 ==================================================================================
-Presto compilation completed successfully. (flex_sr_SIZE9_MSB_FIRST0)
-Module: flex_sr_SIZE9_MSB_FIRST0, Ports: 24, Input: 14, Output: 10, Inout: 0
-Module: flex_sr_SIZE9_MSB_FIRST0, Registers: 9, Async set/reset: 9, Sync set/reset: 0
-Information: Module flex_sr_SIZE9_MSB_FIRST0 report end. (ELAB-965)
-CPU Load: 11%, Ram Free: 107 GB, Swap Free: 63 GB, Work Disk Free: 318 GB, Tmp Disk Free: 19 GB
+Warning:  ./src/u337mg204_ece337_pwm_1.0.0/source/pwm.sv:20: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully. (pwm)
+Module: pwm, Ports: 45, Input: 29, Output: 16, Inout: 0
+Module: pwm, Registers: 32, Async set/reset: 16, Sync set/reset: 0
+Information: Module pwm report end. (ELAB-965)
+Elaborated 1 design.
+Current design is now 'pwm'.
+CPU Load: 11%, Ram Free: 93 GB, Swap Free: 46 GB, Work Disk Free: 312 GB, Tmp Disk Free: 19 GB
 Information: Checking out the license 'DesignWare'. (SEC-104)
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
@@ -127,29 +122,29 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 | Design Information                                      | Value                                  |
 ====================================================================================================
 | Number of Scenarios                                     | 0                                      |
-| Leaf Cell Count                                         | 21                                     |
-| Number of User Hierarchies                              | 1                                      |
-| Sequential Cell Count                                   | 9                                      |
+| Leaf Cell Count                                         | 44                                     |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 32                                     |
 | Macro Count                                             | 0                                      |
 | Pad Count                                               | 0                                      |
 | Number of Power Domains                                 | 0                                      |
 | Number of Path Groups                                   | 1                                      |
 | Number of VT Class                                      | 0                                      |
 | Number of Clocks                                        | 0                                      |
-| Number of Dont Touch Cells                              | 8                                      |
+| Number of Dont Touch Cells                              | 4                                      |
 | Number of Dont Touch Nets                               | 0                                      |
 | Number of Size Only Cells                               | 0                                      |
 | Design with Target Library Subset (with clock_path)     | false  (false )                        |
 | Design with UPF Data                                    | false                                  |
 ====================================================================================================
 
-Information: There are 13 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 8 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
   Beginning Pass 1 Mapping
   ------------------------
-  Processing 'flex_sr_SIZE9_MSB_FIRST0'
+  Processing 'pwm'
 Module: DW01_MUX, Ports: 4, Input: 3, Output: 1, Inout: 0
 Module: DW01_MUX, Registers: 0, Async set/reset: 0, Sync set/reset: 0
 Module: DW01_mmux_width2, Ports: 7, Input: 5, Output: 2, Inout: 0
@@ -162,33 +157,32 @@ Module: DW01_mmux_width5, Ports: 16, Input: 11, Output: 5, Inout: 0
 Module: DW01_mmux_width5, Registers: 0, Async set/reset: 0, Sync set/reset: 0
 Module: DW01_NOT, Ports: 2, Input: 1, Output: 1, Inout: 0
 Module: DW01_NOT, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-  Processing 'sr_9bit'
 
   Updating timing information
 Information: Updating design information... (UID-85)
-Information: Design 'sr_9bit' has no optimization constraints set. (OPT-108)
+Information: Design 'pwm' has no optimization constraints set. (OPT-108)
 
   Beginning Mapping Optimizations  (Medium effort)
   -------------------------------
-  Structuring 'flex_sr_SIZE9_MSB_FIRST0'
-  Mapping 'flex_sr_SIZE9_MSB_FIRST0'
+  Structuring 'pwm'
+  Mapping 'pwm'
 
                                   TOTAL                                      
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
 
 
 
@@ -199,11 +193,11 @@ Information: Design 'sr_9bit' has no optimization constraints set. (OPT-108)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -213,17 +207,17 @@ Information: Design 'sr_9bit' has no optimization constraints set. (OPT-108)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
-    0:00:00   21303.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
+    0:00:00   30447.0      0.00       0.0       0.0                          
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
 
 
@@ -232,7 +226,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 10%, Ram Free: 107 GB, Swap Free: 63 GB, Work Disk Free: 318 GB, Tmp Disk Free: 19 GB
+CPU Load: 11%, Ram Free: 92 GB, Swap Free: 46 GB, Work Disk Free: 312 GB, Tmp Disk Free: 19 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -256,47 +250,28 @@ Unmapped MV Cells
 ****************************************
 check_design summary:
 Version:     W-2024.09-SP4
-Date:        Thu Feb 19 00:18:29 2026
+Date:        Fri Feb 20 12:49:07 2026
 ****************************************
 
                    Name                                            Total
 --------------------------------------------------------------------------------
-Inputs/Outputs                                                      1
-    Shorted outputs (LINT-31)                                       1
-
-Cells                                                              11
-    Connected to power or ground (LINT-32)                         10
-    Nets connected to multiple pins on same cell (LINT-33)          1
+Inputs/Outputs                                                      8
+    Unconnected ports (LINT-28)                                     8
 --------------------------------------------------------------------------------
 
-Warning: In design 'flex_sr_SIZE9_MSB_FIRST0', output port 'serial_out' is connected directly to output port 'parallel_out[0]'. (LINT-31)
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'load_enable' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[8]' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[7]' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[6]' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[5]' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[4]' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[3]' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[2]' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[1]' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[0]' is connected to logic 0. 
-Warning: In design 'sr_9bit', the same net is connected to more than one pin on submodule 'CORE'. (LINT-33)
-   Net '*Logic0*' is connected to pins 'load_enable', 'parallel_in[8]'', 'parallel_in[7]', 'parallel_in[6]', 'parallel_in[5]', 'parallel_in[4]', 'parallel_in[3]', 'parallel_in[2]', 'parallel_in[1]', 'parallel_in[0]'.
-Writing verilog file '/home/ecegridfs/a/337mg204/ece337/tmp/build/u337mg204_ece337_sr_9bit_1.0.0/syn-design_compiler/sr_9bit.v'.
+Warning: In design 'pwm', port 'cc_a[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'pwm', port 'cc_a[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'pwm', port 'cc_a[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'pwm', port 'cc_a[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'pwm', port 'cc_a[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'pwm', port 'cc_a[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'pwm', port 'cc_a[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'pwm', port 'cc_a[0]' is not connected to any nets. (LINT-28)
+Writing verilog file '/home/ecegridfs/a/337mg204/ece337/tmp/build/u337mg204_ece337_pwm_1.0.0/syn-design_compiler/pwm.v'.
 
-Memory usage for this session 136 Mbytes.
-Memory usage for this session including child processes 136 Mbytes.
+Memory usage for this session 135 Mbytes.
+Memory usage for this session including child processes 135 Mbytes.
 CPU usage for this session 3 seconds ( 0.00 hours ).
-Elapsed time for this session 5 seconds ( 0.00 hours ).
+Elapsed time for this session 4 seconds ( 0.00 hours ).
 
 Thank you...

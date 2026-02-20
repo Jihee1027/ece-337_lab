@@ -1,0 +1,67 @@
+CAPI=2:
+name: "u337mg204:ece337:verify_ptl_sp26v4:1.0.0"
+description: ""
+
+filesets:
+    rtl:
+        files:
+            - "source/verify_ptl_sp26v4.v"
+        file_type: systemVerilogSource
+        depend:
+            - "ece337:tech:AMI_05_LIB"
+
+    tb:
+        files:
+            - "testbench/tb_verify_ptl_sp26v4.sv"
+            - "waves/verify_ptl_sp26v4.do": { file_type: user }
+            - "waves/verify_ptl_sp26v4.gtkw": { file_type: user }
+        file_type: systemVerilogSource
+        depend:
+            - "u337mg204:ece337:questafiles"
+
+targets:
+    default: &default
+        filesets:
+            - rtl
+        toplevel: verify_ptl_sp26v4
+
+    sim: &sim
+        <<: *default
+        default_tool: verilator
+        filesets_append:
+            - tb
+        toplevel: tb_verify_ptl_sp26v4
+        tools:
+            modelsim:
+                vsim_options:
+                    - -vopt
+                    - -voptargs='+acc'
+                    - -t ps
+                    - -do "source waves.tcl ; load_wave waves/verify_ptl_sp26v4.do"
+                    - -onfinish stop
+                    - -do "set PrefSource(OpenOnFinish) 0 ; set PrefMain(LinePrefix) \"\" ; set PrefMain(colorizeTranscript) 1"
+                    - -coverage
+                vlog_options:
+                    - +cover
+            verilator:
+                verilator_options:
+                    - --cc
+                    - --trace
+                    - --main
+                    - --timing
+                    - --coverage
+                make_options:
+                    - -j
+
+    lint:
+        <<: *default
+        default_tool: verilator
+        filesets_append:
+            - tb
+        tools:
+            verilator:
+                mode: lint-only
+                verilator_options:
+                    - --timing
+                    - -Wall
+
