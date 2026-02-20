@@ -6,6 +6,18 @@ module tb_timer ();
     localparam CLK_PERIOD = 10ns;
 
     logic clk, n_rst;
+    logic enable_timer;
+    logic shift_enable;
+    logic packet_done;
+
+    // DUT installation
+    timer dut (
+        .clk(clk),
+        .n_rst(n_rst),
+        .enable_timer(enable_timer),
+        .shift_enable(shift_enable),
+        .packet_done(packet_done)
+    );
 
     // clockgen
     always begin
@@ -29,7 +41,6 @@ module tb_timer ();
 
     initial begin
         n_rst = 1;
-
         reset_dut();
 
         $finish;
