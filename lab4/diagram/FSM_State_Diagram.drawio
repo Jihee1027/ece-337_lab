@@ -1,0 +1,77 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.3.7">
+  <diagram name="Page-1" id="5vk34rQaFp2KeG2y7yk_">
+    <mxGraphModel dx="1226" dy="906" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-48" edge="1" parent="1" source="z4WDTE267BqiuvRfJkg4-1" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="UNfr_ODFlPWHDLVbcDoP-26" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z4WDTE267BqiuvRfJkg4-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="IDLE&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="80" x="290" y="563" as="geometry" />
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;rotation=-115;" value="start" vertex="1">
+          <mxGeometry height="27" width="60" x="240" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-47" edge="1" parent="1" source="UNfr_ODFlPWHDLVbcDoP-26" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0.058;entryY=0.617;entryDx=0;entryDy=0;entryPerimeter=0;" target="UNfr_ODFlPWHDLVbcDoP-27" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="213" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-26" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="SOF_LOAD&lt;div&gt;&lt;font size=&quot;1&quot;&gt;const_select = 0&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;load = 1&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;data_out[7:0] = data_const[7:0]&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="100" x="210" y="333" as="geometry" />
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-50" edge="1" parent="1" source="UNfr_ODFlPWHDLVbcDoP-27" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="UNfr_ODFlPWHDLVbcDoP-49" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-27" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="SOF_WAIT" vertex="1">
+          <mxGeometry height="80" width="80" x="390" y="193" as="geometry" />
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-53" edge="1" parent="1" source="UNfr_ODFlPWHDLVbcDoP-49" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="UNfr_ODFlPWHDLVbcDoP-52" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-49" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="LOAD_DATA&lt;div&gt;&lt;font size=&quot;1&quot;&gt;load = 1&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: x-small; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;data_out[7:0] =&amp;nbsp;&lt;/span&gt;&lt;font size=&quot;1&quot;&gt;data_dyn[7:0]&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="90" x="600" y="188" as="geometry" />
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-51" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;rotation=0;" value="done" vertex="1">
+          <mxGeometry height="27" width="60" x="500" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-67" edge="1" parent="1" source="UNfr_ODFlPWHDLVbcDoP-52" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="UNfr_ODFlPWHDLVbcDoP-66" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-52" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="DATA_WAIT" vertex="1">
+          <mxGeometry height="80" width="80" x="800" y="293" as="geometry" />
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-54" edge="1" parent="1" source="UNfr_ODFlPWHDLVbcDoP-52" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=-0.031;exitY=0.613;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.745;entryY=1.015;entryDx=0;entryDy=0;entryPerimeter=0;" target="UNfr_ODFlPWHDLVbcDoP-49" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="363" />
+            </Array>
+            <mxPoint x="710" y="393" as="sourcePoint" />
+            <mxPoint x="660" y="333" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-55" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;rotation=15;" value="done &amp;amp; !end_packet" vertex="1">
+          <mxGeometry height="20" width="148.71" x="619.3" y="342.17" as="geometry" />
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-70" edge="1" parent="1" source="UNfr_ODFlPWHDLVbcDoP-66" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="UNfr_ODFlPWHDLVbcDoP-69" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-66" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="EOF_LOAD&lt;div&gt;&lt;font size=&quot;1&quot;&gt;const_select = 1&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;load = 1&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;data_out[7:0] = data_const[7:0]&lt;/span&gt;&lt;font size=&quot;1&quot;&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="107" width="110" x="730" y="503" as="geometry" />
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-68" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;rotation=105;" value="done &amp;amp; end_packet" vertex="1">
+          <mxGeometry height="20" width="148.71" x="768.014605264749" y="433.00374836148865" as="geometry" />
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-72" edge="1" parent="1" source="UNfr_ODFlPWHDLVbcDoP-69" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="z4WDTE267BqiuvRfJkg4-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="623" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UNfr_ODFlPWHDLVbcDoP-69" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="EOF_WAIT" vertex="1">
+          <mxGeometry height="80" width="80" x="530" y="583" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

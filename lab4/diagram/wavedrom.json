@@ -1,0 +1,25 @@
+{ signal: [
+  ['Power of 2',
+  {name: 'clk',          wave: 'P..................'},
+  {name: 'n_rst',        wave: '10.1...............'},
+  {name: 'enable',       wave: '0...1..............'},
+  {name: 'clear',        wave: '0.............10...'},
+  {name: 'rollover_val', wave: '2..................', data:['8']},
+  {name: 'count_out',    wave: 'x2...34567892342345', data:[
+      '0','1','2','3','4','5','6','7','8','1','2', '0','1','2','3']},
+  {name: 'rollover_flag', wave:'x0..........10.....', data:[]},
+  ],
+
+  ['Arbitrary Rollover',
+  {name: 'clk',          wave: 'P|.................'},
+  {name: 'n_rst',        wave: '10.1...............'},
+  {name: 'enable',       wave: '0...1..0..1........'},
+  {name: 'clear',        wave: '0.......10......10.'},
+  {name: 'rollover_val', wave: '2..................', data:['6']},
+  {name: 'count_out',    wave: 'x.2..345.2.34567823', data:[
+      '0','1','2','3','0','1','2','3','4','5','6','0','1']},
+  {name: 'rollover_flag', wave:'x0..............10.', data:[]},
+  ],
+],
+ config: { hscale: 1 }
+}
