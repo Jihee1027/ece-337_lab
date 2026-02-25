@@ -7,8 +7,14 @@ filesets:
         files:
             - "source/rcv_block.sv"
         file_type: systemVerilogSource
-        # depend:
-        #     - "fusesoc:core:name"
+        depend:
+            - "u337mg204:ece337:rcu:1.0.0"
+            - "u337mg204:ece337:sr_9bit:1.0.0"
+            - "ece337:course-lib:rx_data_buff:1.0.0"
+            - "ece337:course-lib:start_bit_det:1.0.0"
+            - "ece337:course-lib:stop_bit_chk:1.0.0"
+            - "u337mg204:ece337:timer:1.0.0"
+            - "u337mg204:ece337:sync"
 
     synth:
         depend:

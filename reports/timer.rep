@@ -5,27 +5,27 @@ Report : timing
         -path full
         -delay max
         -max_paths 1
-Design : flex_counter
+Design : timer
 Version: W-2024.09-SP4
-Date   : Sun Feb 22 07:10:01 2026
+Date   : Sun Feb 22 07:09:13 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
 Wire Load Model Mode: top
 
-  Startpoint: count_out_reg[3]
+  Startpoint: shift_strobe_reg
               (rising edge-triggered flip-flop)
-  Endpoint: count_out[3]
+  Endpoint: shift_strobe
             (output port)
   Path Group: (none)
   Path Type: max
 
   Point                                    Incr       Path
   -----------------------------------------------------------
-  count_out_reg[3]/CLK (DFFSR)             0.00       0.00 r
-  count_out_reg[3]/Q (DFFSR)               0.60       0.60 f
-  count_out[3] (out)                       0.00       0.60 f
-  data arrival time                                   0.60
+  shift_strobe_reg/CLK (DFFSR)             0.00       0.00 r
+  shift_strobe_reg/Q (DFFSR)               0.53       0.53 f
+  shift_strobe (out)                       0.00       0.53 f
+  data arrival time                                   0.53
   -----------------------------------------------------------
   (Path is unconstrained)
 
@@ -34,31 +34,31 @@ Wire Load Model Mode: top
  
 ****************************************
 Report : area
-Design : flex_counter
+Design : timer
 Version: W-2024.09-SP4
-Date   : Sun Feb 22 07:10:01 2026
+Date   : Sun Feb 22 07:09:13 2026
 ****************************************
 
 Library(s) Used:
 
     osu05_stdcells (File: /home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db)
 
-Number of ports:                           37
-Number of nets:                           144
-Number of cells:                          111
-Number of combinational cells:             92
-Number of sequential cells:                 9
+Number of ports:                          116
+Number of nets:                           471
+Number of cells:                          355
+Number of combinational cells:            291
+Number of sequential cells:                28
 Number of macros/black boxes:               0
-Number of buf/inv:                         30
+Number of buf/inv:                         93
 Number of references:                      10
 
-Combinational area:              21951.000000
-Buf/Inv area:                     4320.000000
-Noncombinational area:           14256.000000
+Combinational area:              69228.000000
+Buf/Inv area:                    13392.000000
+Noncombinational area:           44352.000000
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                 36207.000000
+Total cell area:                113580.000000
 Total area:                 undefined
 1
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
@@ -70,9 +70,9 @@ Warning: Design has unannotated sequential cell outputs. (PWR-415)
 ****************************************
 Report : power
         -analysis_effort low
-Design : flex_counter
+Design : timer
 Version: W-2024.09-SP4
-Date   : Sun Feb 22 07:10:01 2026
+Date   : Sun Feb 22 07:09:13 2026
 ****************************************
 
 
@@ -99,12 +99,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   2.4002 mW   (56%)
-  Net Switching Power  =   1.9194 mW   (44%)
+  Cell Internal Power  =   3.7557 mW   (72%)
+  Net Switching Power  =   1.4905 mW   (28%)
                          ---------
-Total Dynamic Power    =   4.3196 mW  (100%)
+Total Dynamic Power    =   5.2462 mW  (100%)
 
-Cell Leakage Power     =  11.3039 nW
+Cell Leakage Power     =  35.3444 nW
 
 Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
 
@@ -116,8 +116,8 @@ memory             0.0000            0.0000            0.0000            0.0000 
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
 register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
-sequential         1.1301        2.8484e-03            4.7968            1.1329  (  26.23%)
-combinational      1.2702            1.9165            6.5071            3.1867  (  73.77%)
+sequential         3.1363        1.7723e-02           14.9234            3.1540  (  60.12%)
+combinational      0.6194            1.4728           20.4210            2.0922  (  39.88%)
 --------------------------------------------------------------------------------------------------
-Total              2.4002 mW         1.9194 mW        11.3039 nW         4.3196 mW
+Total              3.7557 mW         1.4905 mW        35.3444 nW         5.2462 mW
 1

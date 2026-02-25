@@ -15,18 +15,6 @@ module tb_pwm ();
     logic [7:0] pwm_a;
     logic [7:0] pwm_b;
 
-    pwm dut(
-        .clk(clk),
-        .n_rst(n_rst),
-        .en(en),
-        .inv_a(inv_a),
-        .inv_b(inv_b),
-        .top(top),
-        .cc_a(cc_a),
-        .cc_b(cc_b),
-        .pwm_a(pwm_a),
-        .pwm_b(pwm_b)
-    );
 
 
     // clockgen

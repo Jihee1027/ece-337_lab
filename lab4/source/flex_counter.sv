@@ -28,11 +28,11 @@ module flex_counter #(
         end
     end
 
-     // Optimized
+    // Optimized
     always_comb begin
         rollover_next = 1'b0;
         if (!clear) begin
-            rollover_next = (count_next == rollover_val);
+            rollover_next = (count_next >= rollover_val);
         end
     end
 

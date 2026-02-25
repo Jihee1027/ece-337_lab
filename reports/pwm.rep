@@ -7,24 +7,24 @@ Report : timing
         -max_paths 1
 Design : pwm
 Version: W-2024.09-SP4
-Date   : Fri Feb 20 12:49:07 2026
+Date   : Fri Feb 20 14:00:24 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
 Wire Load Model Mode: top
 
-  Startpoint: pwm_a_reg[7]
+  Startpoint: pwm_b_reg[7]
               (rising edge-triggered flip-flop)
-  Endpoint: pwm_a[7] (output port)
+  Endpoint: pwm_b[7] (output port)
   Path Group: (none)
   Path Type: max
 
   Point                                    Incr       Path
   -----------------------------------------------------------
-  pwm_a_reg[7]/CLK (DFFSR)                 0.00       0.00 r
-  pwm_a_reg[7]/Q (DFFSR)                   0.42       0.42 f
-  pwm_a[7] (out)                           0.00       0.42 f
-  data arrival time                                   0.42
+  pwm_b_reg[7]/CLK (DFFSR)                 0.00       0.00 r
+  pwm_b_reg[7]/Q (DFFSR)                   0.49       0.49 f
+  pwm_b[7] (out)                           0.00       0.49 f
+  data arrival time                                   0.49
   -----------------------------------------------------------
   (Path is unconstrained)
 
@@ -35,7 +35,7 @@ Wire Load Model Mode: top
 Report : area
 Design : pwm
 Version: W-2024.09-SP4
-Date   : Fri Feb 20 12:49:07 2026
+Date   : Fri Feb 20 14:00:24 2026
 ****************************************
 
 Library(s) Used:
@@ -43,21 +43,21 @@ Library(s) Used:
     osu05_stdcells (File: /home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db)
 
 Number of ports:                           45
-Number of nets:                            88
-Number of cells:                           67
-Number of combinational cells:             19
-Number of sequential cells:                32
+Number of nets:                           106
+Number of cells:                           77
+Number of combinational cells:             45
+Number of sequential cells:                16
 Number of macros/black boxes:               0
-Number of buf/inv:                          2
-Number of references:                       5
+Number of buf/inv:                         18
+Number of references:                       7
 
-Combinational area:               5103.000000
-Buf/Inv area:                      288.000000
+Combinational area:              11448.000000
+Buf/Inv area:                     2592.000000
 Noncombinational area:           25344.000000
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                 30447.000000
+Total cell area:                 36792.000000
 Total area:                 undefined
 1
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
@@ -71,7 +71,7 @@ Report : power
         -analysis_effort low
 Design : pwm
 Version: W-2024.09-SP4
-Date   : Fri Feb 20 12:49:07 2026
+Date   : Fri Feb 20 14:00:24 2026
 ****************************************
 
 
@@ -98,12 +98,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   7.5813 mW   (88%)
-  Net Switching Power  =   1.0318 mW   (12%)
+  Cell Internal Power  =   7.0962 mW   (76%)
+  Net Switching Power  =   2.2713 mW   (24%)
                          ---------
-Total Dynamic Power    =   8.6131 mW  (100%)
+Total Dynamic Power    =   9.3675 mW  (100%)
 
-Cell Leakage Power     =  12.8835 nW
+Cell Leakage Power     =  11.7363 nW
 
 Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
 
@@ -115,8 +115,8 @@ memory             0.0000            0.0000            0.0000            0.0000 
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
 register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
-sequential         6.8288            0.1880           10.8735            7.0168  (  81.47%)
-combinational      0.7525            0.8438            2.0100            1.5963  (  18.53%)
+sequential         4.2700        5.0305e-02            8.5276            4.3203  (  46.12%)
+combinational      2.8262            2.2210            3.2086            5.0472  (  53.88%)
 --------------------------------------------------------------------------------------------------
-Total              7.5813 mW         1.0318 mW        12.8835 nW         8.6131 mW
+Total              7.0962 mW         2.2713 mW        11.7363 nW         9.3675 mW
 1

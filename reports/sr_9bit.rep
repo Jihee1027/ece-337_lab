@@ -7,7 +7,7 @@ Report : timing
         -max_paths 1
 Design : sr_9bit
 Version: W-2024.09-SP4
-Date   : Thu Feb 19 00:18:29 2026
+Date   : Sun Feb 22 07:09:27 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
@@ -37,7 +37,7 @@ Wire Load Model Mode: top
 Report : area
 Design : sr_9bit
 Version: W-2024.09-SP4
-Date   : Thu Feb 19 00:18:29 2026
+Date   : Sun Feb 22 07:09:27 2026
 ****************************************
 
 Library(s) Used:
@@ -73,7 +73,7 @@ Report : power
         -analysis_effort low
 Design : sr_9bit
 Version: W-2024.09-SP4
-Date   : Thu Feb 19 00:18:29 2026
+Date   : Sun Feb 22 07:09:27 2026
 ****************************************
 
 

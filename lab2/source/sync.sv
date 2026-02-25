@@ -11,9 +11,8 @@ module sync #(
 
     logic stage1;
 
-    always_ff @( posedge clk, negedge n_rst )
-    begin : sync_ff
-        if(1'b0 == n_rst) begin
+    always_ff @( posedge clk, negedge n_rst ) begin : sync_ff
+        if(!n_rst) begin
             stage1 <= RST_VAL;
             sync_out <= RST_VAL;
         end

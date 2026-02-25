@@ -28,6 +28,8 @@ module pwm #(
     end
 
     always_comb begin
+        pwm_a_next = pwm_a;
+        pwm_b_next = pwm_b;
         if (en) begin
             if (!inv_a) begin
                 pwm_a_next = {cc_a[SIZE-1:0]};
