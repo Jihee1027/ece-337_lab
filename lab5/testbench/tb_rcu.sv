@@ -94,7 +94,7 @@ module tb_rcu ();
         check_outputs(0, 0, 0, 0, sbc_clear, sbc_enable, load_buffer, enable_timer);
 
         // Test 7: Recieve -> IDLE;
-        new_packet_detected = 1;
+        new_packet_detected = 0;
         @(negedge clk);
         n_rst = 0;
         @(negedge clk);
@@ -105,4 +105,5 @@ module tb_rcu ();
 endmodule
 
 /* verilator coverage_on */
+
 

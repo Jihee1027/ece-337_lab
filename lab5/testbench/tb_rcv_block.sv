@@ -155,6 +155,17 @@ module tb_rcv_block ();
         serial_in = 1'b1;
         #(2*24.04ns);
 
+        // Framing Error
+        send_packet(8'b00001111, 1'b0, 24.04ns);
+        wait (data_ready === 1'b1);
+        @(negedge clk);
+        check_outputs(8'b00001111, 8'd1, 8'd0, 8'd1, rx_data, data_ready, overrun_error, framing_error);
+        @(negedge clk);
+        data_read = 1'b1;
+        @(negedge clk);
+        data_read = 1'b0;
+        serial_in = 1'b1;
+        #(2*24.04ns);
 
         $finish;
     end
