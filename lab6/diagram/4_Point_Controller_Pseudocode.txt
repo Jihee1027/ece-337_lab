@@ -1,0 +1,81 @@
+accumulator         r0
+sample1 (newest)    r1
+sample2             r2
+sample3             r3
+sample4 (oldest)    r4
+coeff f0            r5
+coeff f1            r6
+coeff f2            r7
+coeff f3            r8
+mul scratch (temp)  r9
+
+IDLE:   modwait = 0;
+        err = 0;
+        if (lc == 1) goto LOAD_FO;
+        if (dr == 1) goto CHECK_DR;
+        goto IDLE;
+
+LOAD_FO:    modwait = 1;
+            clear = 1;
+            reg[5] = ext_data2;
+            goto LOAD_F1;
+
+LOAD_F1:    reg[6] = ext_data2;
+            goto LOAD_F2;
+
+LOAD_F2:    reg[7] = ext_data2;
+            goto LOAD_F3;
+
+LOAD_F3:    reg[8] = ext_data2;
+            goto IDLE;
+
+CHECK_DR:   modwait = 1;
+            if (dr == 0) goto DR_ERROR;
+            goto SHIFT_SAMPLES;
+
+DR_ERROR:   err = 1;
+            goto IDLE;
+
+SHIFT_SAMPLES:  reg[4] = reg[3];
+                reg[3] = reg[2];
+                reg[2] = reg[1];
+                reg[1] = ext_data1;
+                goto CLR_ACC;
+
+CLR_ACC:    reg[0] = 0;
+            goto MUL_0;
+
+MUL_0:  reg[9] = reg[1] * reg[5];
+        goto ACC_0;
+
+ACC_0:  reg[0] = reg[0] + reg[9];
+        if (overflow) goto OVERFLOW;
+        goto MUL_1;
+
+MUL_1:  reg[9] = reg[2] * reg[6];
+        goto ACC_1;
+
+ACC_1:  reg[0] = reg[0] - reg[9];
+        if (overflow) goto OVERFLOW;
+        goto MUL_2;
+
+MUL_2:  reg[9] = reg[3] * reg[7];
+        goto ACC_2;
+
+ACC_2:  reg[0] = reg[0] + reg[9];
+        if (overflow) goto OVERFLOW;
+        goto MUL_3;
+
+MUL_3:  reg[9] = reg[4] * reg[8];
+        goto ACC_3;
+
+ACC_3:  reg[0] = reg[0] - reg[9];
+        if (overflow) goto OVERFLOW;
+        goto DONE;
+
+DONE:   cnt_up = 1;
+        modwait = 0;
+        goto IDLE;
+
+OVERFLOW:   err = 1;
+            goto IDLE;
