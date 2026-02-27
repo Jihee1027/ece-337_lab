@@ -59,13 +59,17 @@ module tb_rcu ();
         // Test1: IDLE
         check_outputs(0, 0, 0, 0, sbc_clear, sbc_enable, load_buffer, enable_timer);
         
-        // Test 2: sbc_clear
+        // Test 2: CLR_ERR
         new_packet_detected = 1;
-        #(1);
+        @(negedge clk);
         check_outputs(1, 0, 0, 0, sbc_clear, sbc_enable, load_buffer, enable_timer);
 
         // Test 3: RECEIVE
         @(negedge clk);
+        check_outputs(0, 0, 0, 1, sbc_clear, sbc_enable, load_buffer, enable_timer);
+
+        // Test 3.2: RECIVE 100
+        repeat (10) @(negedge clk);
         check_outputs(0, 0, 0, 1, sbc_clear, sbc_enable, load_buffer, enable_timer);
 
         // Test 4: CHECK_STOP
@@ -86,6 +90,8 @@ module tb_rcu ();
         @(negedge clk);
         @(negedge clk);
         @(negedge clk);
+        @(negedge clk);
+        @(negedge clk);
         check_outputs(0, 0, 1, 0, sbc_clear, sbc_enable, load_buffer, enable_timer);
 
         // Test 6: Load -> IDLE
@@ -93,13 +99,20 @@ module tb_rcu ();
         @(negedge clk);
         check_outputs(0, 0, 0, 0, sbc_clear, sbc_enable, load_buffer, enable_timer);
 
-        // Test 7: Recieve -> IDLE;
-        new_packet_detected = 0;
+        // Test 7: CLR -> IDLE;
+        new_packet_detected = 1;
         @(negedge clk);
         n_rst = 0;
         @(negedge clk);
         check_outputs(0, 0, 0, 0, sbc_clear, sbc_enable, load_buffer, enable_timer);
 
+        // Test 8: RECEIVE -> IDLE;
+        new_packet_detected = 1;
+        @(negedge clk);
+        @(negedge clk);
+        n_rst = 0;
+        @(negedge clk);
+        check_outputs(0, 0, 0, 0, sbc_clear, sbc_enable, load_buffer, enable_timer);
         $finish;
     end
 endmodule

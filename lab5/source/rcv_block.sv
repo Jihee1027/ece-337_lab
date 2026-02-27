@@ -19,7 +19,7 @@ module rcv_block (
     logic packet_done;
     logic enable_timer;
     logic shift_strobe;
-    logic sync_out;
+    // logic sync_out;
 
     rcu reciver_control_unit(
         .clk(clk),
@@ -37,7 +37,7 @@ module rcv_block (
         .clk(clk),
         .n_rst(n_rst),
         .shift_strobe(shift_strobe),
-        .serial_in(sync_out),
+        .serial_in(serial_in),
         .packet_data(packet_data),
         .stop_bit(stop_bit)
     );
@@ -77,12 +77,12 @@ module rcv_block (
         .packet_done(packet_done)
     );
 
-    sync syncs(
-        .clk(clk),
-        .n_rst(n_rst),
-        .async_in(serial_in),
-        .sync_out(sync_out)
-    );
+    // sync syncs(
+    //     .clk(clk),
+    //     .n_rst(n_rst),
+    //     .async_in(serial_in),
+    //     .sync_out(sync_out)
+    // );
 
 endmodule
 

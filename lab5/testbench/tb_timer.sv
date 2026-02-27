@@ -63,18 +63,14 @@ module tb_timer ();
         check_outputs(0, packet_done);
         // Test 2: Check shift_strobe
         enable_timer = 1;
-
-        
-    
-        for (i = 0; i < 100; i ++) begin : gen_for_loop
-            @(negedge clk);
-        end
-        
+        repeat (14) @(negedge clk);
         check_outputs(1, shift_strobe);
         check_outputs(0, packet_done);
         // Test 3: Check packet_done
+        repeat (81) @(negedge clk);
         check_outputs(0,shift_strobe);
         check_outputs(1, packet_done);
+        repeat (100) @(negedge clk);
         $finish;
     end
 endmodule

@@ -1,0 +1,229 @@
+Simulating the u337mg204:ece337:rcv_block using QuestaSim GUI...
+make[1]: Entering directory '/home/ecegridfs/a/337mg204/ece337'
+Removing build files...
+make[1]: Leaving directory '/home/ecegridfs/a/337mg204/ece337'
+INFO: Preparing ece337:course-lib:rx_data_buff:1.0.0
+INFO: Preparing ece337:course-lib:start_bit_det:1.0.0
+INFO: Preparing ece337:course-lib:stop_bit_chk:1.0.0
+INFO: Preparing u337mg204:ece337:flex_counter:1.0.0
+INFO: Preparing u337mg204:ece337:flex_sr:1.0.0
+INFO: Preparing u337mg204:ece337:questafiles:0
+INFO: Preparing u337mg204:ece337:rcu:1.0.0
+INFO: Preparing u337mg204:ece337:sync:0
+INFO: Preparing u337mg204:ece337:sr_9bit:1.0.0
+INFO: Preparing u337mg204:ece337:timer:1.0.0
+INFO: Preparing u337mg204:ece337:rcv_block:1.0.0
+INFO: Setting up project
+INFO: Building
+make[1]: Entering directory '/home/ecegridfs/a/337mg204/ece337/tmp/build/u337mg204_ece337_rcv_block_1.0.0/sim-modelsim'
+/package/eda/mg/questa2021.4/questasim/bin/vsim -gui  -vopt -voptargs='+acc' -t ps -do "source waves.tcl ; load_wave waves/rcv_block.do" -onfinish stop -do "set PrefSource(OpenOnFinish) 0 ; set PrefMain(LinePrefix) \"\" ; set PrefMain(colorizeTranscript) 1" -coverage   tb_rcv_block
+make[1]: Leaving directory '/home/ecegridfs/a/337mg204/ece337/tmp/build/u337mg204_ece337_rcv_block_1.0.0/sim-modelsim'
+[337mg204@ececomp1]: ~/ece337 $ submit lab5-rc_block
+Could not find lab information for command "lab5-rc_block"
+[337mg204@ececomp1]: ~/ece337 $ submit lab5-rcv_block
+Quiz completed with required score
+
+Submitting attempt number 3 out of 4 for submission command lab5-rcv_block
+Replacing grade of 15.0
+
+Press CTRL-C if you wish to cancel. It will not count as a submission attempt
+Enter the approximate amount of hours you spent working on "Lab 5 UART Receiver Block"
+ > 20
+                         !!! ----- !!!
+            
+Do NOT stop the grading command using CTRL-C or closing the terminal
+after you confirm the submission. You will be locked out of submitting 
+until a TA manually unlocks it.
+            
+                         !!! ----- !!!
+
+Are you sure that you want to submit? [Y/N] Y
+
+
+Removing build files...
+Synthesizing the u337mg204:ece337:rcv_block design using design_compiler...
+INFO: Preparing ece337:course-lib:rx_data_buff:1.0.0
+INFO: Preparing ece337:course-lib:start_bit_det:1.0.0
+INFO: Preparing ece337:course-lib:stop_bit_chk:1.0.0
+INFO: Preparing u337mg204:ece337:flex_counter:1.0.0
+INFO: Preparing u337mg204:ece337:flex_sr:1.0.0
+INFO: Preparing u337mg204:ece337:rcu:1.0.0
+INFO: Preparing u337mg204:ece337:sync:0
+INFO: Preparing u337mg204:ece337:synfiles:0
+INFO: Preparing u337mg204:ece337:sr_9bit:1.0.0
+INFO: Preparing u337mg204:ece337:timer:1.0.0
+INFO: Preparing u337mg204:ece337:rcv_block:1.0.0
+INFO: Setting up project
+INFO: Building
+INFO: (running make, which runs dc_shell which has an unbelievably long lag before printing. be patient)
+INFO: Running
+Storing reports for the u337mg204:ece337:rcv_block design...
+Checking synthesis log for errors and warnings...
+Warning:  ./src/ece337_course-lib_rx_data_buff_1.0.0/source/rx_data_buff.sv:86: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./src/ece337_course-lib_rx_data_buff_1.0.0/source/rx_data_buff.sv:90: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./src/ece337_course-lib_rx_data_buff_1.0.0/source/rx_data_buff.sv:94: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./src/ece337_course-lib_rx_data_buff_1.0.0/source/rx_data_buff.sv:98: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./src/ece337_course-lib_rx_data_buff_1.0.0/source/rx_data_buff.sv:104: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./src/ece337_course-lib_rx_data_buff_1.0.0/source/rx_data_buff.sv:84: delay controls are ignored for synthesis. (VER-176)
+Warning:  ./src/ece337_course-lib_start_bit_det_1.0.0/source/start_bit_det.sv:47: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./src/ece337_course-lib_start_bit_det_1.0.0/source/start_bit_det.sv:51: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./src/ece337_course-lib_start_bit_det_1.0.0/source/start_bit_det.sv:55: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./src/ece337_course-lib_start_bit_det_1.0.0/source/start_bit_det.sv:45: delay controls are ignored for synthesis. (VER-176)
+Warning:  ./src/ece337_course-lib_stop_bit_chk_1.0.0/source/stop_bit_chk.sv:65: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./src/ece337_course-lib_stop_bit_chk_1.0.0/source/stop_bit_chk.sv:69: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./src/ece337_course-lib_stop_bit_chk_1.0.0/source/stop_bit_chk.sv:73: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./src/ece337_course-lib_stop_bit_chk_1.0.0/source/stop_bit_chk.sv:77: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./src/ece337_course-lib_stop_bit_chk_1.0.0/source/stop_bit_chk.sv:81: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./src/ece337_course-lib_stop_bit_chk_1.0.0/source/stop_bit_chk.sv:63: delay controls are ignored for synthesis. (VER-176)
+Warning:  ./src/ece337_course-lib_rx_data_buff_1.0.0/source/rx_data_buff.sv:82: Netlist for always block is empty. (ELAB-985)
+Warning:  ./src/ece337_course-lib_start_bit_det_1.0.0/source/start_bit_det.sv:43: Netlist for always block is empty. (ELAB-985)
+Warning:  ./src/ece337_course-lib_stop_bit_chk_1.0.0/source/stop_bit_chk.sv:61: Netlist for always block is empty. (ELAB-985)
+Warning: Unable to resolve reference 'flex_counter' in 'timer'. (LINK-5)
+Warning: Unable to resolve reference 'flex_counter' in 'timer'. (LINK-5)
+Warning: In design 'timer', input port 'clk' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'timer', input port 'n_rst' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'timer', input port 'enable_timer' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'flex_sr_SIZE9_MSB_FIRST0', output port 'serial_out' is connected directly to output port 'parallel_out[0]'. (LINT-31)
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
+Warning: In design 'sr_9bit', the same net is connected to more than one pin on submodule 'CORE'. (LINT-33)
+Warning: In design 'rcv_block', three-state bus 'enable_timer' has non three-state driver 'reciver_control_unit/U14/Y'. (LINT-34)
+Warning: In design 'rcv_block', three-state bus 'timers/clear_all' has non three-state driver 'timers/C8/Y'. (LINT-34)
+Warning: In design 'rcv_block', three-state bus 'timers/*Logic0*' has non three-state driver 'timers/U2/**logic_0**'. (LINT-34)
+Warning: In design 'rcv_block', three-state bus 'timers/*Logic1*' has non three-state driver 'timers/U1/**logic_1**'. (LINT-34)
+Warning: In design 'rcv_block', multiply-driven net 'timers/*Logic0*' is driven by constant 0. (LINT-54)
+Warning: In design 'rcv_block', multiply-driven net 'timers/*Logic1*' is driven by constant 1. (LINT-54)
+Error: Width mismatch on port 'count_out' of reference to 'flex_counter' in 'timer'. (LINK-3)
+Error: Width mismatch on port 'count_out' of reference to 'flex_counter' in 'timer'. (LINK-3)
+Error: Width mismatch on port 'count_out' of reference to 'flex_counter' in 'timer'. (LINK-3)
+Error: Width mismatch on port 'count_out' of reference to 'flex_counter' in 'timer'. (LINK-3)
+Storing the netlist for the u337mg204:ece337:rcv_block design...
+
+Design properties:
+    Critical path: 0.61 ns
+    Total area:    59724.000000 um^2
+    Dynamic power: 6.8097 mW
+    Static power:  19.0149 nW
+
+Simulating the ece337:lab5:rcv_block using QuestaSim CLI...
+Removing build files...
+INFO: Preparing ece337:tech:AMI_05_LIB:0
+INFO: Preparing u337mg204:ece337:rcv_block_syn:0
+INFO: Preparing uMG:ece337:rcv_block:0
+INFO: Preparing ece337:lab5:rcv_block:1.0.0
+INFO: Setting up project
+INFO: Building
+INFO: Preparing ece337:tech:AMI_05_LIB:0
+INFO: Preparing u337mg204:ece337:rcv_block_syn:0
+INFO: Preparing uMG:ece337:rcv_block:0
+INFO: Preparing ece337:lab5:rcv_block:1.0.0
+INFO: Running
+/package/eda/mg/questa2021.4/questasim/bin/vsim -c  -vopt -voptargs='+acc' -t ps +no_tchk_msg -onfinish stop -do "set PrefSource(OpenOnFinish) 0 ; set PrefMain(LinePrefix) \"\" ; set PrefMain(colorizeTranscript) 1" -coverage   -do "run -all; quit -code [expr [coverage attribute -name TESTSTATUS -concise] >= 2 ? [coverage attribute -name TESTSTATUS -concise] : 0]; exit" tb_rcv_block
+Reading pref.tcl
+
+# 2021.4
+
+# vsim -c -vopt -voptargs="+acc" -t ps "+no_tchk_msg" -onfinish stop -do "set PrefSource(OpenOnFinish) 0 ; set PrefMain(LinePrefix) "" ; set PrefMain(colorizeTranscript) 1" -do "run -all; quit -code [expr [coverage attribute -name TESTSTATUS -concise] >= 2 ? [coverage attribute -name TESTSTATUS -concise] : 0]; exit" -coverage tb_rcv_block 
+# Start time: 14:23:04 on Feb 25,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: src/u337mg204_ece337_rcv_block_syn_0/rcv_block.v(238): Module 'flex_counter' is not defined.
+#  For instance 'clk_counter' at path 'tb_rcv_block.DUT.timers'
+# ** Error: src/u337mg204_ece337_rcv_block_syn_0/rcv_block.v(241): Module 'flex_counter' is not defined.
+#  For instance 'bit_counter' at path 'tb_rcv_block.DUT.timers'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=0.
+# Error loading design
+Error loading design
+# End time: 14:23:04 on Feb 25,2026, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+make[1]: *** [Makefile:36: run] Error 12
+ERROR: Failed to run ece337:lab5:rcv_block:1.0.0 : '['make', 'run']' exited with an error: 2
+make: *** [Makefile:127: qsim_rcv_block_src] Error 1
+
+Could not run simulation.
+
+
+Grade: 0/30
+
+
+`timescale 1ns / 10ps
+
+module timer (
+    input logic clk,
+    input logic n_rst,
+    input logic enable_timer,
+    output logic shift_strobe,
+    output logic packet_done
+);
+    // logic strobe_enable;
+    logic clear_all;
+    // logic [3:0] strobe_count;
+    // logic clk_count_enable;
+    // logic [7:0] extra_count;
+    logic [3:0] clk_count;
+    logic [3:0] bit_count;
+    logic [3:0] unused1;
+    logic [3:0] unused2;
+    // logic unused3;
+    // logic unused4;
+    // logic next_shift_strobe;
+   
+    // always_comb begin : Clear_Logic
+    //     clear_all = (~enable_timer) | packet_done;
+
+    // end
+
+    // flex_counter clk_counter_enable_counter (
+    //     .clk(clk),
+    //     .n_rst(n_rst),
+    //     .clear(clear_all),
+    //     .count_enable(enable_timer),
+    //     .rollover_val(8'd100),
+    //     .count_out(extra_count),
+    //     .rollover_flag(unused4)
+    // );
+
+    flex_counter clk_counter (
+        .clk(clk),
+        .n_rst(n_rst),
+        .clear(clear_all),
+        .count_enable(enable_timer),
+        .rollover_val(8'd10),
+        .count_out(clk_count),
+        .rollover_flag(shift_strobe)
+    );
+
+    flex_counter bit_counter (
+        .clk(clk),
+        .n_rst(n_rst),
+        .clear(clear_all),
+        .count_enable(shift_strobe),
+        .rollover_val(8'd9),
+        .count_out(bit_count),
+        .rollover_flag(packet_done)
+    );
+
+    // always_ff @(posedge clk or negedge n_rst) begin
+    //     if (!n_rst) begin
+    //         shift_strobe <= 1'b0;
+    //     end else begin
+    //         shift_strobe <= next_shift_strobe;
+    //     end
+    // end
+
+    always_comb begin
+        clear_all = ~enable_timer | packet_done;
+        // clk_count_enable  =  extra_count >= 9;
+        // next_shift_strobe = clk_count == 10;
+        unused1 = clk_count;
+        unused2 = bit_count;
+    end 
+endmodule

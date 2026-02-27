@@ -32,19 +32,19 @@ Please use '-no_save' simv switch to avoid this.
                         https://solvnetplus.synopsys.com)
 Initializing...
 Initializing gui preferences from file  /home/ecegridfs/a/337mg204/.synopsys_dc_gui/preferences.tcl
-Current time:       Sun Feb 22 07:11:22 2026
+Current time:       Wed Feb 25 13:58:39 2026
 Hostname:           ececomp1.ecn.purdue.edu
 CPU Model:          AMD EPYC 7513 32-Core Processor
-CPU Details:        Cores = 128 : Sockets = 2 : Cache Size = 512 KB : Freq = 3.46 GHz
+CPU Details:        Cores = 128 : Sockets = 2 : Cache Size = 512 KB : Freq = 2.60 GHz
 OS:                 Linux 4.18.0-553.89.1.el8_10.x86_64
-RAM:                502 GB (Free  74 GB)
-Swap:                63 GB (Free  45 GB)
+RAM:                502 GB (Free  73 GB)
+Swap:                63 GB (Free  47 GB)
 Work Filesystem:    /home/ecegridfs/a mounted to ecegridfs.ecn.purdue.edu:/export/home/a
 Tmp Filesystem:     /tmp mounted to tmpfs
-Work Disk:          2968 GB (Free 211 GB)
+Work Disk:          2968 GB (Free 234 GB)
 Tmp Disk:            19 GB (Free  19 GB)
 
-CPU Load: 26%, Ram Free: 74 GB, Swap Free: 45 GB, Work Disk Free: 211 GB, Tmp Disk Free: 19 GB
+CPU Load: 8%, Ram Free: 73 GB, Swap Free: 47 GB, Work Disk Free: 234 GB, Tmp Disk Free: 19 GB
 ############################################
 #
 # Auto-generated project tcl file:
@@ -53,13 +53,13 @@ CPU Load: 26%, Ram Free: 74 GB, Swap Free: 45 GB, Work Disk Free: 211 GB, Tmp Di
 #
 ############################################
 sh date
-Sun Feb 22 07:11:22 EST 2026
-set TOP_MODULE rcv_block
-rcv_block
+Wed Feb 25 13:58:39 EST 2026
+set TOP_MODULE timer
+timer
 set DC_SCRIPT synth.tcl
 synth.tcl
-set READ_SOURCES u337mg204_ece337_rcv_block_1.0.0-read-sources
-u337mg204_ece337_rcv_block_1.0.0-read-sources
+set READ_SOURCES u337mg204_ece337_timer_1.0.0-read-sources
+u337mg204_ece337_timer_1.0.0-read-sources
 set SCRIPT_DIR src/u337mg204_ece337_synfiles_0
 src/u337mg204_ece337_synfiles_0
 set REPORT_DIR reports
@@ -76,137 +76,18 @@ set link_library   [concat "*"  /home/ecegrid/a/ece337/summer24-refactor/tech/am
 ############################################
 source ${SCRIPT_DIR}/${DC_SCRIPT}
 Running PRESTO HDLC
-Compiling source file ./src/ece337_course-lib_rx_data_buff_1.0.0/source/rx_data_buff.sv
-Warning:  ./src/ece337_course-lib_rx_data_buff_1.0.0/source/rx_data_buff.sv:86: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
-Warning:  ./src/ece337_course-lib_rx_data_buff_1.0.0/source/rx_data_buff.sv:90: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
-Warning:  ./src/ece337_course-lib_rx_data_buff_1.0.0/source/rx_data_buff.sv:94: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
-Warning:  ./src/ece337_course-lib_rx_data_buff_1.0.0/source/rx_data_buff.sv:98: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
-Warning:  ./src/ece337_course-lib_rx_data_buff_1.0.0/source/rx_data_buff.sv:104: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
-Warning:  ./src/ece337_course-lib_rx_data_buff_1.0.0/source/rx_data_buff.sv:84: delay controls are ignored for synthesis. (VER-176)
+Compiling source file ./src/u337mg204_ece337_flex_counter_1.0.0/source/flex_counter.sv
 Presto compilation completed successfully.
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
 Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/dw_foundation.sldb'
 Running PRESTO HDLC
-Compiling source file ./src/ece337_course-lib_start_bit_det_1.0.0/source/start_bit_det.sv
-Warning:  ./src/ece337_course-lib_start_bit_det_1.0.0/source/start_bit_det.sv:47: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
-Warning:  ./src/ece337_course-lib_start_bit_det_1.0.0/source/start_bit_det.sv:51: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
-Warning:  ./src/ece337_course-lib_start_bit_det_1.0.0/source/start_bit_det.sv:55: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
-Warning:  ./src/ece337_course-lib_start_bit_det_1.0.0/source/start_bit_det.sv:45: delay controls are ignored for synthesis. (VER-176)
-Presto compilation completed successfully.
-Running PRESTO HDLC
-Compiling source file ./src/ece337_course-lib_stop_bit_chk_1.0.0/source/stop_bit_chk.sv
-Warning:  ./src/ece337_course-lib_stop_bit_chk_1.0.0/source/stop_bit_chk.sv:65: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
-Warning:  ./src/ece337_course-lib_stop_bit_chk_1.0.0/source/stop_bit_chk.sv:69: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
-Warning:  ./src/ece337_course-lib_stop_bit_chk_1.0.0/source/stop_bit_chk.sv:73: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
-Warning:  ./src/ece337_course-lib_stop_bit_chk_1.0.0/source/stop_bit_chk.sv:77: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
-Warning:  ./src/ece337_course-lib_stop_bit_chk_1.0.0/source/stop_bit_chk.sv:81: The construct 'immediate assertion' is not supported in synthesis; it is ignored. (VER-708)
-Warning:  ./src/ece337_course-lib_stop_bit_chk_1.0.0/source/stop_bit_chk.sv:63: delay controls are ignored for synthesis. (VER-176)
-Presto compilation completed successfully.
-Running PRESTO HDLC
-Compiling source file ./src/u337mg204_ece337_flex_counter_1.0.0/source/flex_counter.sv
-Presto compilation completed successfully.
-Running PRESTO HDLC
-Compiling source file ./src/u337mg204_ece337_flex_sr_1.0.0/source/flex_sr.sv
-Presto compilation completed successfully.
-Running PRESTO HDLC
-Compiling source file ./src/u337mg204_ece337_rcu_1.0.0/source/rcu.sv
-Presto compilation completed successfully.
-Running PRESTO HDLC
-Compiling source file ./src/u337mg204_ece337_sync_0/source/sync.sv
-Presto compilation completed successfully.
-Running PRESTO HDLC
-Compiling source file ./src/u337mg204_ece337_sr_9bit_1.0.0/source/sr_9bit.sv
-Presto compilation completed successfully.
-Running PRESTO HDLC
 Compiling source file ./src/u337mg204_ece337_timer_1.0.0/source/timer.sv
-Presto compilation completed successfully.
-Running PRESTO HDLC
-Compiling source file ./src/u337mg204_ece337_rcv_block_1.0.0/source/rcv_block.sv
 Presto compilation completed successfully.
 Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/gtech.db'
 Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/standard.sldb'
   Loading link library 'osu05_stdcells'
   Loading link library 'gtech'
 Running PRESTO HDLC
-Presto compilation completed successfully. (rcv_block)
-Module: rcv_block, Ports: 15, Input: 4, Output: 11, Inout: 0
-Module: rcv_block, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Information: Module rcv_block report end. (ELAB-965)
-Elaborated 1 design.
-Current design is now 'rcv_block'.
-Information: Building the design 'rcu'. (HDL-193)
-
-Statistics for case statements in always block in file
-	'./src/u337mg204_ece337_rcu_1.0.0/source/rcu.sv'
-===========================================================
-|    Line    |  full/ parallel  |      block location     |
-===========================================================
-|     39     |    user/user     | always block at line 33 |
-===========================================================
-
-Inferred memory devices in process in routine 'rcu' in file
-	 ./src/u337mg204_ece337_rcu_1.0.0/source/rcu.sv'.
-==================================================================================
-|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
-==================================================================================
-|      state_reg      | Flip-flop |   3   |  Y  | N  | None  | Async | N  |  24  |
-==================================================================================
-Presto compilation completed successfully. (rcu)
-Module: rcu, Ports: 9, Input: 5, Output: 4, Inout: 0
-Module: rcu, Registers: 3, Async set/reset: 3, Sync set/reset: 0
-Information: Module rcu report end. (ELAB-965)
-Information: Building the design 'sr_9bit'. (HDL-193)
-Presto compilation completed successfully. (sr_9bit)
-Module: sr_9bit, Ports: 13, Input: 4, Output: 9, Inout: 0
-Module: sr_9bit, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Information: Module sr_9bit report end. (ELAB-965)
-Information: Building the design 'rx_data_buff'. (HDL-193)
-
-Inferred memory devices in process in routine 'rx_data_buff' in file
-	 ./src/ece337_course-lib_rx_data_buff_1.0.0/source/rx_data_buff.sv'.
-==================================================================================
-|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
-==================================================================================
-|   data_ready_reg    | Flip-flop |   1   |  N  | N  | None  | Async | N  |  28  |
-|  overrun_error_reg  | Flip-flop |   1   |  N  | N  | None  | Async | N  |  28  |
-|     rx_data_reg     | Flip-flop |   8   |  Y  | N  | Async | None  | N  |  28  |
-==================================================================================
-Warning:  ./src/ece337_course-lib_rx_data_buff_1.0.0/source/rx_data_buff.sv:82: Netlist for always block is empty. (ELAB-985)
-Presto compilation completed successfully. (rx_data_buff)
-Module: rx_data_buff, Ports: 22, Input: 12, Output: 10, Inout: 0
-Module: rx_data_buff, Registers: 10, Async set/reset: 10, Sync set/reset: 0
-Information: Module rx_data_buff report end. (ELAB-965)
-Information: Building the design 'start_bit_det'. (HDL-193)
-
-Inferred memory devices in process in routine 'start_bit_det' in file
-	 ./src/ece337_course-lib_start_bit_det_1.0.0/source/start_bit_det.sv'.
-==================================================================================
-|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
-==================================================================================
-|   new_sample_reg    | Flip-flop |   1   |  N  | N  | Async | None  | N  |  23  |
-|   sync_phase_reg    | Flip-flop |   1   |  N  | N  | Async | None  | N  |  23  |
-|   old_sample_reg    | Flip-flop |   1   |  N  | N  | Async | None  | N  |  23  |
-==================================================================================
-Warning:  ./src/ece337_course-lib_start_bit_det_1.0.0/source/start_bit_det.sv:43: Netlist for always block is empty. (ELAB-985)
-Presto compilation completed successfully. (start_bit_det)
-Module: start_bit_det, Ports: 4, Input: 3, Output: 1, Inout: 0
-Module: start_bit_det, Registers: 3, Async set/reset: 3, Sync set/reset: 0
-Information: Module start_bit_det report end. (ELAB-965)
-Information: Building the design 'stop_bit_chk'. (HDL-193)
-
-Inferred memory devices in process in routine 'stop_bit_chk' in file
-	 ./src/ece337_course-lib_stop_bit_chk_1.0.0/source/stop_bit_chk.sv'.
-==================================================================================
-|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
-==================================================================================
-|  framing_error_reg  | Flip-flop |   1   |  N  | N  | None  | Async | N  |  23  |
-==================================================================================
-Warning:  ./src/ece337_course-lib_stop_bit_chk_1.0.0/source/stop_bit_chk.sv:61: Netlist for always block is empty. (ELAB-985)
-Presto compilation completed successfully. (stop_bit_chk)
-Module: stop_bit_chk, Ports: 6, Input: 5, Output: 1, Inout: 0
-Module: stop_bit_chk, Registers: 1, Async set/reset: 1, Sync set/reset: 0
-Information: Module stop_bit_chk report end. (ELAB-965)
-Information: Building the design 'timer'. (HDL-193)
 
 Inferred memory devices in process in routine 'timer' in file
 	 ./src/u337mg204_ece337_timer_1.0.0/source/timer.sv'.
@@ -219,34 +100,10 @@ Presto compilation completed successfully. (timer)
 Module: timer, Ports: 5, Input: 3, Output: 2, Inout: 0
 Module: timer, Registers: 1, Async set/reset: 1, Sync set/reset: 0
 Information: Module timer report end. (ELAB-965)
-Information: Building the design 'sync'. (HDL-193)
-
-Inferred memory devices in process in routine 'sync' in file
-	 ./src/u337mg204_ece337_sync_0/source/sync.sv'.
-==================================================================================
-|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
-==================================================================================
-|     stage1_reg      | Flip-flop |   1   |  N  | N  | None  | Async | N  |  14  |
-|    sync_out_reg     | Flip-flop |   1   |  N  | N  | None  | Async | N  |  14  |
-==================================================================================
-Presto compilation completed successfully. (sync)
-Module: sync, Ports: 4, Input: 3, Output: 1, Inout: 0
-Module: sync, Registers: 2, Async set/reset: 2, Sync set/reset: 0
-Information: Module sync report end. (ELAB-965)
-Information: Building the design 'flex_sr' instantiated from design 'sr_9bit' with
-	the parameters "SIZE=9,MSB_FIRST=0". (HDL-193)
-
-Inferred memory devices in process in routine 'flex_sr_SIZE9_MSB_FIRST0' in file
-	 ./src/u337mg204_ece337_flex_sr_1.0.0/source/flex_sr.sv'.
-==================================================================================
-|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
-==================================================================================
-|  parallel_out_reg   | Flip-flop |   9   |  Y  | N  | Async | None  | N  |  19  |
-==================================================================================
-Presto compilation completed successfully. (flex_sr_SIZE9_MSB_FIRST0)
-Module: flex_sr_SIZE9_MSB_FIRST0, Ports: 24, Input: 14, Output: 10, Inout: 0
-Module: flex_sr_SIZE9_MSB_FIRST0, Registers: 9, Async set/reset: 9, Sync set/reset: 0
-Information: Module flex_sr_SIZE9_MSB_FIRST0 report end. (ELAB-965)
+Error:  ./src/u337mg204_ece337_timer_1.0.0/source/timer.sv:38: The width of port count_out on instance clk_counter of design flex_counter is inconsistent with other instantiations of the same design. (ELAB-369)
+Error:  ./src/u337mg204_ece337_timer_1.0.0/source/timer.sv:48: The width of port count_out on instance bit_counter of design flex_counter is inconsistent with other instantiations of the same design. (ELAB-369)
+Elaborated 1 design.
+Current design is now 'timer'.
 Information: Building the design 'flex_counter'. (HDL-193)
 
 Inferred memory devices in process in routine 'flex_counter' in file
@@ -262,7 +119,7 @@ Module: flex_counter, Ports: 21, Input: 12, Output: 9, Inout: 0
 Module: flex_counter, Registers: 9, Async set/reset: 9, Sync set/reset: 0
 Information: Module flex_counter report end. (ELAB-965)
 Information: Uniquified 3 instances of design 'flex_counter'. (OPT-1056)
-CPU Load: 26%, Ram Free: 74 GB, Swap Free: 45 GB, Work Disk Free: 211 GB, Tmp Disk Free: 19 GB
+CPU Load: 8%, Ram Free: 73 GB, Swap Free: 47 GB, Work Disk Free: 234 GB, Tmp Disk Free: 19 GB
 Information: Checking out the license 'DesignWare'. (SEC-104)
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
@@ -281,29 +138,28 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 | Design Information                                      | Value                                  |
 ====================================================================================================
 | Number of Scenarios                                     | 0                                      |
-| Leaf Cell Count                                         | 200                                    |
-| Number of User Hierarchies                              | 11                                     |
-| Sequential Cell Count                                   | 56                                     |
+| Leaf Cell Count                                         | 97                                     |
+| Number of User Hierarchies                              | 3                                      |
+| Sequential Cell Count                                   | 28                                     |
 | Macro Count                                             | 0                                      |
 | Pad Count                                               | 0                                      |
 | Number of Power Domains                                 | 0                                      |
 | Number of Path Groups                                   | 1                                      |
 | Number of VT Class                                      | 0                                      |
 | Number of Clocks                                        | 0                                      |
-| Number of Dont Touch Cells                              | 71                                     |
+| Number of Dont Touch Cells                              | 36                                     |
 | Number of Dont Touch Nets                               | 0                                      |
 | Number of Size Only Cells                               | 0                                      |
 | Design with Target Library Subset (with clock_path)     | false  (false )                        |
 | Design with UPF Data                                    | false                                  |
 ====================================================================================================
 
-Information: There are 62 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 45 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
   Beginning Pass 1 Mapping
   ------------------------
-  Processing 'sync'
   Processing 'flex_counter_0'
 Module: DW01_MUX, Ports: 4, Input: 3, Output: 1, Inout: 0
 Module: DW01_MUX, Registers: 0, Async set/reset: 0, Sync set/reset: 0
@@ -344,34 +200,25 @@ Module: DW01_inc_width9, Registers: 0, Async set/reset: 0, Sync set/reset: 0
 Module: DW02_mult_A_width1_B_width8, Ports: 19, Input: 10, Output: 9, Inout: 0
 Module: DW02_mult_A_width1_B_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
   Processing 'timer'
-  Processing 'stop_bit_chk'
-  Processing 'start_bit_det'
-  Processing 'rx_data_buff'
-  Processing 'flex_sr_SIZE9_MSB_FIRST0'
-  Processing 'sr_9bit'
-  Processing 'rcu'
-Information: The register 'state_reg[2]' is a constant and will be removed. (OPT-1206)
-  Processing 'rcv_block'
 
   Updating timing information
 Information: Updating design information... (UID-85)
-Information: Design 'rcv_block' has no optimization constraints set. (OPT-108)
+Information: Design 'timer' has no optimization constraints set. (OPT-108)
 
   Beginning Implementation Selection
   ----------------------------------
-  Processing 'timer_DW01_cmp2_0'
-  Processing 'flex_counter_0_DW01_cmp2_0_DW01_cmp2_1'
+  Processing 'flex_counter_0_DW01_cmp2_0'
   Processing 'flex_counter_0_DW01_inc_0_DW01_inc_1'
   Mapping 'flex_counter_0_DW_mult_uns_0'
-  Processing 'flex_counter_0_DW01_cmp2_1_DW01_cmp2_2'
-  Processing 'flex_counter_1_DW01_cmp2_0_DW01_cmp2_3'
+  Processing 'flex_counter_0_DW01_cmp2_1'
+  Processing 'flex_counter_1_DW01_cmp2_0_DW01_cmp2_2'
   Processing 'flex_counter_1_DW01_inc_0_DW01_inc_2'
   Mapping 'flex_counter_1_DW_mult_uns_0'
-  Processing 'flex_counter_1_DW01_cmp2_1_DW01_cmp2_4'
-  Processing 'flex_counter_2_DW01_cmp2_0_DW01_cmp2_5'
+  Processing 'flex_counter_1_DW01_cmp2_1_DW01_cmp2_3'
+  Processing 'flex_counter_2_DW01_cmp2_0_DW01_cmp2_4'
   Processing 'flex_counter_2_DW01_inc_0_DW01_inc_3'
   Mapping 'flex_counter_2_DW_mult_uns_0'
-  Processing 'flex_counter_2_DW01_cmp2_1_DW01_cmp2_6'
+  Processing 'flex_counter_2_DW01_cmp2_1_DW01_cmp2_5'
 
   Beginning Mapping Optimizations  (Medium effort)
   -------------------------------
@@ -384,35 +231,25 @@ Information: Added key list 'DesignWare' to design 'flex_counter_2'. (DDB-72)
   Mapping 'flex_counter_0'
   Structuring 'flex_counter_2'
   Mapping 'flex_counter_2'
-  Structuring 'flex_sr_SIZE9_MSB_FIRST0'
-  Mapping 'flex_sr_SIZE9_MSB_FIRST0'
   Structuring 'timer'
   Mapping 'timer'
-  Structuring 'stop_bit_chk'
-  Mapping 'stop_bit_chk'
-  Structuring 'start_bit_det'
-  Mapping 'start_bit_det'
-  Structuring 'rx_data_buff'
-  Mapping 'rx_data_buff'
-  Structuring 'rcu'
-  Mapping 'rcu'
 
                                   TOTAL                                      
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
 
 
 
@@ -423,11 +260,11 @@ Information: Added key list 'DesignWare' to design 'flex_counter_2'. (DDB-72)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -437,17 +274,17 @@ Information: Added key list 'DesignWare' to design 'flex_counter_2'. (DDB-72)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
-    0:00:02  173628.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:01  111393.0      0.00       0.0       0.0                          
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
 
 
@@ -456,7 +293,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 25%, Ram Free: 74 GB, Swap Free: 45 GB, Work Disk Free: 211 GB, Tmp Disk Free: 19 GB
+CPU Load: 8%, Ram Free: 73 GB, Swap Free: 47 GB, Work Disk Free: 234 GB, Tmp Disk Free: 19 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -480,40 +317,16 @@ Unmapped MV Cells
 ****************************************
 check_design summary:
 Version:     W-2024.09-SP4
-Date:        Sun Feb 22 07:11:24 2026
+Date:        Wed Feb 25 13:58:41 2026
 ****************************************
 
                    Name                                            Total
 --------------------------------------------------------------------------------
-Inputs/Outputs                                                      1
-    Shorted outputs (LINT-31)                                       1
-
-Cells                                                              41
-    Connected to power or ground (LINT-32)                         34
-    Nets connected to multiple pins on same cell (LINT-33)          7
+Cells                                                              30
+    Connected to power or ground (LINT-32)                         24
+    Nets connected to multiple pins on same cell (LINT-33)          6
 --------------------------------------------------------------------------------
 
-Warning: In design 'flex_sr_SIZE9_MSB_FIRST0', output port 'serial_out' is connected directly to output port 'parallel_out[0]'. (LINT-31)
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'load_enable' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[8]' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[7]' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[6]' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[5]' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[4]' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[3]' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[2]' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[1]' is connected to logic 0. 
-Warning: In design 'sr_9bit', a pin on submodule 'CORE' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'parallel_in[0]' is connected to logic 0. 
 Warning: In design 'timer', a pin on submodule 'clk_counter_enable_counter' is connected to logic 1 or logic 0. (LINT-32)
    Pin 'rollover_val[7]' is connected to logic 0. 
 Warning: In design 'timer', a pin on submodule 'clk_counter_enable_counter' is connected to logic 1 or logic 0. (LINT-32)
@@ -562,8 +375,6 @@ Warning: In design 'timer', a pin on submodule 'bit_counter' is connected to log
    Pin 'rollover_val[1]' is connected to logic 0. 
 Warning: In design 'timer', a pin on submodule 'bit_counter' is connected to logic 1 or logic 0. (LINT-32)
    Pin 'rollover_val[0]' is connected to logic 1. 
-Warning: In design 'sr_9bit', the same net is connected to more than one pin on submodule 'CORE'. (LINT-33)
-   Net '*Logic0*' is connected to pins 'load_enable', 'parallel_in[8]'', 'parallel_in[7]', 'parallel_in[6]', 'parallel_in[5]', 'parallel_in[4]', 'parallel_in[3]', 'parallel_in[2]', 'parallel_in[1]', 'parallel_in[0]'.
 Warning: In design 'timer', the same net is connected to more than one pin on submodule 'clk_counter_enable_counter'. (LINT-33)
    Net '*Logic0*' is connected to pins 'rollover_val[7]', 'rollover_val[4]'', 'rollover_val[3]', 'rollover_val[1]', 'rollover_val[0]'.
 Warning: In design 'timer', the same net is connected to more than one pin on submodule 'clk_counter_enable_counter'. (LINT-33)
@@ -576,10 +387,11 @@ Warning: In design 'timer', the same net is connected to more than one pin on su
    Net '*Logic0*' is connected to pins 'rollover_val[7]', 'rollover_val[6]'', 'rollover_val[5]', 'rollover_val[4]', 'rollover_val[2]', 'rollover_val[1]'.
 Warning: In design 'timer', the same net is connected to more than one pin on submodule 'bit_counter'. (LINT-33)
    Net '*Logic1*' is connected to pins 'rollover_val[3]', 'rollover_val[0]''.
-Writing verilog file '/home/ecegridfs/a/337mg204/ece337/tmp/build/u337mg204_ece337_rcv_block_1.0.0/syn-design_compiler/rcv_block.v'.
+Writing verilog file '/home/ecegridfs/a/337mg204/ece337/tmp/build/u337mg204_ece337_timer_1.0.0/syn-design_compiler/timer.v'.
+Warning: Verilog writer has added 4 nets to module timer using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
 
-Memory usage for this session 146 Mbytes.
-Memory usage for this session including child processes 146 Mbytes.
+Memory usage for this session 145 Mbytes.
+Memory usage for this session including child processes 145 Mbytes.
 CPU usage for this session 4 seconds ( 0.00 hours ).
 Elapsed time for this session 6 seconds ( 0.00 hours ).
 

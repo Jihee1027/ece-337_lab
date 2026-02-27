@@ -81,7 +81,8 @@ module tb_rcv_block ();
     endtask
 
     initial begin
-        n_rst = 1;
+        data_read = 0;
+        n_rst = 0;
         serial_in = 1'b1;
         @(negedge clk);
         @(negedge clk);
@@ -93,6 +94,7 @@ module tb_rcv_block ();
         @(negedge clk);
         @(negedge clk);
         reset_dut();
+        n_rst = 1;
 
         // First data
         data_read = 1'b0;
@@ -129,7 +131,7 @@ module tb_rcv_block ();
         @(negedge clk);
         data_read = 1'b0;
         serial_in = 1'b1;
-        #(2*26ns);
+        #(2*26.04ns);
 
         // Forth data
         send_packet(8'b00110011, 1'b1, 26.04ns);
@@ -141,7 +143,7 @@ module tb_rcv_block ();
         @(negedge clk);
         data_read = 1'b0;
         serial_in = 1'b1;
-        #(2*26ns);
+        #(2*26.04ns);
 
         // Fifth data
         send_packet(8'b00001111, 1'b1, 24.04ns);
@@ -157,15 +159,31 @@ module tb_rcv_block ();
 
         // Framing Error
         send_packet(8'b00001111, 1'b0, 24.04ns);
-        wait (data_ready === 1'b1);
+        wait (framing_error === 1'b1);
         @(negedge clk);
-        check_outputs(8'b00001111, 8'd1, 8'd0, 8'd1, rx_data, data_ready, overrun_error, framing_error);
+        check_outputs(8'b00001111, 8'd0, 8'd0, 8'd1, rx_data, data_ready, overrun_error, framing_error);
         @(negedge clk);
         data_read = 1'b1;
         @(negedge clk);
         data_read = 1'b0;
         serial_in = 1'b1;
         #(2*24.04ns);
+
+        // Overrun Error
+        send_packet(8'b00001111, 1'b1, 25ns);
+        @(negedge clk);
+        send_packet(8'b00001111, 1'b1, 25ns);
+        wait (overrun_error === 1'b1);
+        @(negedge clk);
+        check_outputs(8'b00001111, 8'd1, 8'd1, 8'd0, rx_data, data_ready, overrun_error, framing_error);
+        @(negedge clk);
+        data_read = 1'b1;
+        @(negedge clk);
+        data_read = 1'b0;
+        serial_in = 1'b1;
+        #(2*25ns);
+
+
 
         $finish;
     end

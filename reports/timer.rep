@@ -1,3 +1,4 @@
+Information: Updating graph... (UID-83)
 Information: Updating design information... (UID-85)
  
 ****************************************
@@ -7,7 +8,7 @@ Report : timing
         -max_paths 1
 Design : timer
 Version: W-2024.09-SP4
-Date   : Sun Feb 22 07:09:13 2026
+Date   : Wed Feb 25 13:58:41 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
@@ -36,7 +37,7 @@ Wire Load Model Mode: top
 Report : area
 Design : timer
 Version: W-2024.09-SP4
-Date   : Sun Feb 22 07:09:13 2026
+Date   : Wed Feb 25 13:58:42 2026
 ****************************************
 
 Library(s) Used:
@@ -44,35 +45,38 @@ Library(s) Used:
     osu05_stdcells (File: /home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db)
 
 Number of ports:                          116
-Number of nets:                           471
-Number of cells:                          355
-Number of combinational cells:            291
-Number of sequential cells:                28
+Number of nets:                           461
+Number of cells:                          349
+Number of combinational cells:            282
+Number of sequential cells:                29
 Number of macros/black boxes:               0
 Number of buf/inv:                         93
-Number of references:                      10
+Number of references:                       9
 
-Combinational area:              69228.000000
+Combinational area:              67041.000000
 Buf/Inv area:                    13392.000000
 Noncombinational area:           44352.000000
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                113580.000000
+Total cell area:                111393.000000
 Total area:                 undefined
+
+Information: This design contains unmapped logic. (RPT-7)
 1
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 Warning: There is no defined clock in the design. (PWR-80)
 Warning: Design has unannotated primary inputs. (PWR-414)
 Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
  
 ****************************************
 Report : power
         -analysis_effort low
 Design : timer
 Version: W-2024.09-SP4
-Date   : Sun Feb 22 07:09:13 2026
+Date   : Wed Feb 25 13:58:42 2026
 ****************************************
 
 
@@ -99,12 +103,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   3.7557 mW   (72%)
-  Net Switching Power  =   1.4905 mW   (28%)
+  Cell Internal Power  =   4.3068 mW   (68%)
+  Net Switching Power  =   2.0023 mW   (32%)
                          ---------
-Total Dynamic Power    =   5.2462 mW  (100%)
+Total Dynamic Power    =   6.3090 mW  (100%)
 
-Cell Leakage Power     =  35.3444 nW
+Cell Leakage Power     =  34.7223 nW
 
 Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
 
@@ -116,8 +120,8 @@ memory             0.0000            0.0000            0.0000            0.0000 
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
 register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
-sequential         3.1363        1.7723e-02           14.9234            3.1540  (  60.12%)
-combinational      0.6194            1.4728           20.4210            2.0922  (  39.88%)
+sequential         3.3708        1.5455e-02           14.9234            3.3862  (  53.67%)
+combinational      0.9360            1.9868           19.7989            2.9228  (  46.33%)
 --------------------------------------------------------------------------------------------------
-Total              3.7557 mW         1.4905 mW        35.3444 nW         5.2462 mW
+Total              4.3068 mW         2.0023 mW        34.7223 nW         6.3091 mW
 1
