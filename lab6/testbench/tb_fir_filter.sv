@@ -4,12 +4,13 @@
 module tb_fir_filter ();
 
     localparam CLK_PERIOD = 10ns;
+    
 
-    localparam coeff = 16'h8000; // 1.0
-    localparam coeff = 16'hC000; // 1.5
-    localparam coeff = 16'h4000; // 0.5
-    localparam coeff = 16'h2000; // 0.25
-    localparam coeff = 16'h1000; // 0.125
+    // localparam coeff = 16'h8000; // 1.0
+    // localparam coeff = 16'hC000; // 1.5
+    // localparam coeff = 16'h4000; // 0.5
+    // localparam coeff = 16'h2000; // 0.25
+    // localparam coeff = 16'h1000; // 0.125
 
     logic clk, n_rst;
     logic [15:0] sample_data;
@@ -20,6 +21,8 @@ module tb_fir_filter ();
     logic modwait;
     logic [15:0] fir_out;
     logic err;
+
+    fir_filter dut (.*);
 
     // clockgen
     always begin
@@ -56,11 +59,43 @@ module tb_fir_filter ();
     end
     endtask
 
+    task load_one_coeff(input logic [15:0] c);
+    begin
+        wait (modwait == 0);
+        @(negedge clk);
+        fir_coefficient = c;
+        load_coeff = 1;   
+        @(negedge clk);
+        load_coeff = 0;
+    end
+    endtask
+
+    task send_sample(input logic [15:0] s);
+    begin
+        wait (modwait == 0);
+        @(negedge clk);
+        sample_data = s;
+        data_ready = 1;
+        @(negedge clk);
+        @(negedge clk);  
+        data_ready = 0;
+    end
+    endtask
+
     initial begin
-        n_rst = 1;
+        n_rst=1; sample_data=0; fir_coefficient=0; load_coeff=0; data_ready=0;
         reset_dut();
 
+        // Test 1
+        load_one_coeff(16'h8000); // F0
+        load_one_coeff(16'h0000); // F1
+        load_one_coeff(16'h0000); // F2
+        load_one_coeff(16'h0000); // F3
+        send_sample(16'h4000);
 
+        wait (modwait == 0);
+        repeat (5) @(negedge clk);
+        $display("fir_out=%h err=%b", fir_out, err);
         $finish;
     end
 endmodule

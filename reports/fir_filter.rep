@@ -1,0 +1,146 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : fir_filter
+Version: W-2024.09-SP4
+Date   : Sun Mar  1 12:30:39 2026
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: datapath/RF/genblk1[0].REGX/value_reg[1]
+              (rising edge-triggered flip-flop)
+  Endpoint: fir_out[15]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  datapath/RF/genblk1[0].REGX/value_reg[1]/CLK (DFFSR)
+                                                          0.00       0.00 r
+  datapath/RF/genblk1[0].REGX/value_reg[1]/Q (DFFSR)      0.68       0.68 r
+  datapath/RF/genblk1[0].REGX/current_value[1] (flex_sreg_NUM_BITS17_15)
+                                                          0.00       0.68 r
+  datapath/RF/outreg_data[1] (register_file)              0.00       0.68 r
+  datapath/outreg_data[1] (datapath)                      0.00       0.68 r
+  magnitude/in[1] (magnitude)                             0.00       0.68 r
+  magnitude/U49/Y (OR2X1)                                 0.30       0.98 r
+  magnitude/U46/Y (OR2X1)                                 0.23       1.21 r
+  magnitude/U42/Y (NOR2X1)                                0.22       1.43 f
+  magnitude/U38/Y (NAND2X1)                               0.20       1.63 r
+  magnitude/U34/Y (NOR2X1)                                0.23       1.87 f
+  magnitude/U31/Y (NAND2X1)                               0.20       2.07 r
+  magnitude/U27/Y (NOR2X1)                                0.23       2.30 f
+  magnitude/U24/Y (NAND2X1)                               0.20       2.50 r
+  magnitude/U20/Y (NOR2X1)                                0.23       2.73 f
+  magnitude/U17/Y (NAND2X1)                               0.20       2.93 r
+  magnitude/U13/Y (NOR2X1)                                0.23       3.16 f
+  magnitude/U10/Y (NAND2X1)                               0.20       3.36 r
+  magnitude/U7/Y (NOR2X1)                                 0.22       3.58 f
+  magnitude/U4/Y (INVX1)                                  0.13       3.72 r
+  magnitude/U3/Y (OAI21X1)                                0.15       3.87 f
+  magnitude/U2/Y (XNOR2X1)                                0.18       4.05 f
+  magnitude/out[15] (magnitude)                           0.00       4.05 f
+  fir_out[15] (out)                                       0.00       4.05 f
+  data arrival time                                                  4.05
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : fir_filter
+Version: W-2024.09-SP4
+Date   : Sun Mar  1 12:30:39 2026
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db)
+
+Number of ports:                         1172
+Number of nets:                          4311
+Number of cells:                         3100
+Number of combinational cells:           2488
+Number of sequential cells:               288
+Number of macros/black boxes:               0
+Number of buf/inv:                        706
+Number of references:                       4
+
+Combinational area:             788616.000000
+Buf/Inv area:                   106992.000000
+Noncombinational area:          456192.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:               1244808.000000
+Total area:                 undefined
+1
+Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : fir_filter
+Version: W-2024.09-SP4
+Date   : Sun Mar  1 12:30:39 2026
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =  58.0137 mW   (69%)
+  Net Switching Power  =  25.8223 mW   (31%)
+                         ---------
+Total Dynamic Power    =  83.8360 mW  (100%)
+
+Cell Leakage Power     = 384.2686 nW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential        51.7017            0.1874          153.4977           51.8893  (  61.89%)
+combinational      6.3119           25.6349          230.7709           31.9470  (  38.11%)
+--------------------------------------------------------------------------------------------------
+Total             58.0136 mW        25.8223 mW       384.2686 nW        83.8363 mW
+1

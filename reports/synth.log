@@ -32,19 +32,19 @@ Please use '-no_save' simv switch to avoid this.
                         https://solvnetplus.synopsys.com)
 Initializing...
 Initializing gui preferences from file  /home/ecegridfs/a/337mg204/.synopsys_dc_gui/preferences.tcl
-Current time:       Sat Feb 28 21:57:13 2026
-Hostname:           ececomp4.ecn.purdue.edu
+Current time:       Sun Mar  1 12:30:31 2026
+Hostname:           ececomp2.ecn.purdue.edu
 CPU Model:          AMD EPYC 7513 32-Core Processor
 CPU Details:        Cores = 128 : Sockets = 2 : Cache Size = 512 KB : Freq = 2.60 GHz
 OS:                 Linux 4.18.0-553.89.1.el8_10.x86_64
-RAM:                502 GB (Free  90 GB)
-Swap:                63 GB (Free  59 GB)
+RAM:                502 GB (Free 101 GB)
+Swap:                63 GB (Free  63 GB)
 Work Filesystem:    /home/ecegridfs/a mounted to ecegridfs.ecn.purdue.edu:/export/home/a
 Tmp Filesystem:     /tmp mounted to tmpfs
-Work Disk:          2968 GB (Free 260 GB)
-Tmp Disk:            19 GB (Free  19 GB)
+Work Disk:          2968 GB (Free 251 GB)
+Tmp Disk:            19 GB (Free  18 GB)
 
-CPU Load: 18%, Ram Free: 90 GB, Swap Free: 59 GB, Work Disk Free: 260 GB, Tmp Disk Free: 19 GB
+CPU Load: 9%, Ram Free: 101 GB, Swap Free: 63 GB, Work Disk Free: 251 GB, Tmp Disk Free: 18 GB
 ############################################
 #
 # Auto-generated project tcl file:
@@ -53,13 +53,13 @@ CPU Load: 18%, Ram Free: 90 GB, Swap Free: 59 GB, Work Disk Free: 260 GB, Tmp Di
 #
 ############################################
 sh date
-Sat Feb 28 21:57:14 EST 2026
-set TOP_MODULE controller
-controller
+Sun Mar  1 12:30:31 EST 2026
+set TOP_MODULE fir_filter
+fir_filter
 set DC_SCRIPT synth.tcl
 synth.tcl
-set READ_SOURCES u337mg204_ece337_controller_1.0.0-read-sources
-u337mg204_ece337_controller_1.0.0-read-sources
+set READ_SOURCES u337mg204_ece337_fir_filter_1.0.0-read-sources
+u337mg204_ece337_fir_filter_1.0.0-read-sources
 set SCRIPT_DIR src/u337mg204_ece337_synfiles_0
 src/u337mg204_ece337_synfiles_0
 set REPORT_DIR reports
@@ -76,25 +76,64 @@ set link_library   [concat "*"  /home/ecegrid/a/ece337/summer24-refactor/tech/am
 ############################################
 source ${SCRIPT_DIR}/${DC_SCRIPT}
 Running PRESTO HDLC
-Compiling source file ./src/u337mg204_ece337_controller_1.0.0/source/controller.sv
+Compiling source file ./src/ece337_course-lib_datapath_1.0.0/source/datapath.sv
 Presto compilation completed successfully.
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
 Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/dw_foundation.sldb'
+Running PRESTO HDLC
+Compiling source file ./src/ece337_course-lib_datapath_1.0.0/source/alu.sv
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./src/ece337_course-lib_datapath_1.0.0/source/datapath_decode.sv
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./src/ece337_course-lib_datapath_1.0.0/source/register_file.sv
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./src/ece337_course-lib_datapath_1.0.0/source/flex_sreg.sv
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./src/u337mg204_ece337_controller_1.0.0/source/controller.sv
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./src/u337mg204_ece337_flex_counter_1.0.0/source/flex_counter.sv
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./src/u337mg204_ece337_magnitude_1.0.0/source/magnitude.sv
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./src/u337mg204_ece337_counter_1.0.0/source/counter.sv
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./src/u337mg204_ece337_fir_filter_1.0.0/source/fir_filter.sv
+Presto compilation completed successfully.
 Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/gtech.db'
 Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/standard.sldb'
   Loading link library 'osu05_stdcells'
   Loading link library 'gtech'
 Running PRESTO HDLC
-Warning:  ./src/u337mg204_ece337_controller_1.0.0/source/controller.sv:177: Case statement marked unique does not cover all possible conditions. (VER-504)
-Warning:  ./src/u337mg204_ece337_controller_1.0.0/source/controller.sv:177: Case statement marked unique does not cover all possible conditions. (VER-504)
+Presto compilation completed successfully. (fir_filter)
+Module: fir_filter, Ports: 55, Input: 36, Output: 19, Inout: 0
+Module: fir_filter, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module fir_filter report end. (ELAB-965)
+Elaborated 1 design.
+Current design is now 'fir_filter'.
+Information: Building the design 'counter'. (HDL-193)
+Presto compilation completed successfully. (counter)
+Module: counter, Ports: 5, Input: 4, Output: 1, Inout: 0
+Module: counter, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module counter report end. (ELAB-965)
+Information: Building the design 'controller'. (HDL-193)
+Warning:  ./src/u337mg204_ece337_controller_1.0.0/source/controller.sv:190: Case statement marked unique does not cover all possible conditions. (VER-504)
+Warning:  ./src/u337mg204_ece337_controller_1.0.0/source/controller.sv:190: Case statement marked unique does not cover all possible conditions. (VER-504)
 
 Statistics for case statements in always block in file
 	'./src/u337mg204_ece337_controller_1.0.0/source/controller.sv'
 ============================================================
 |    Line    |  full/ parallel  |      block location      |
 ============================================================
-|     61     |    user/user     | always block at line 58  |
-|    177     |    user/user     | always block at line 167 |
+|     62     |    user/user     | always block at line 59  |
+|    190     |    user/user     | always block at line 180 |
 ============================================================
 
 Inferred memory devices in process in routine 'controller' in file
@@ -102,15 +141,111 @@ Inferred memory devices in process in routine 'controller' in file
 ==================================================================================
 |    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
 ==================================================================================
-|      state_reg      | Flip-flop |   5   |  Y  | N  | None  | Async | N  |  50  |
+|      state_reg      | Flip-flop |   5   |  Y  | N  | None  | Async | N  |  51  |
 ==================================================================================
 Presto compilation completed successfully. (controller)
 Module: controller, Ports: 24, Input: 5, Output: 19, Inout: 0
 Module: controller, Registers: 5, Async set/reset: 5, Sync set/reset: 0
 Information: Module controller report end. (ELAB-965)
-Elaborated 1 design.
-Current design is now 'controller'.
-CPU Load: 18%, Ram Free: 90 GB, Swap Free: 59 GB, Work Disk Free: 260 GB, Tmp Disk Free: 19 GB
+Information: Building the design 'datapath'. (HDL-193)
+Warning:  ./src/ece337_course-lib_datapath_1.0.0/source/datapath.sv:80: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./src/ece337_course-lib_datapath_1.0.0/source/datapath.sv:85: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block in file
+	'./src/ece337_course-lib_datapath_1.0.0/source/datapath.sv'
+===========================================================
+|    Line    |  full/ parallel  |      block location     |
+===========================================================
+|     77     |    auto/auto     | always block at line 70 |
+===========================================================
+Presto compilation completed successfully. (datapath)
+Module: datapath, Ports: 67, Input: 49, Output: 18, Inout: 0
+Module: datapath, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module datapath report end. (ELAB-965)
+Information: Building the design 'magnitude'. (HDL-193)
+Warning:  ./src/u337mg204_ece337_magnitude_1.0.0/source/magnitude.sv:8: signed to unsigned part selection occurs. (VER-318)
+Presto compilation completed successfully. (magnitude)
+Module: magnitude, Ports: 33, Input: 17, Output: 16, Inout: 0
+Module: magnitude, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module magnitude report end. (ELAB-965)
+Information: Building the design 'flex_counter' instantiated from design 'counter' with
+	the parameters "SIZE=10". (HDL-193)
+
+Inferred memory devices in process in routine 'flex_counter_SIZE10' in file
+	 ./src/u337mg204_ece337_flex_counter_1.0.0/source/flex_counter.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|  rollover_flag_reg  | Flip-flop |   1   |  N  | N  | None  | Async | N  |  39  |
+|    count_out_reg    | Flip-flop |  10   |  Y  | N  | None  | Async | N  |  39  |
+==================================================================================
+Presto compilation completed successfully. (flex_counter_SIZE10)
+Module: flex_counter_SIZE10, Ports: 25, Input: 14, Output: 11, Inout: 0
+Module: flex_counter_SIZE10, Registers: 11, Async set/reset: 11, Sync set/reset: 0
+Information: Module flex_counter_SIZE10 report end. (ELAB-965)
+Information: Building the design 'datapath_decode'. (HDL-193)
+
+Statistics for case statements in always block in file
+	'./src/ece337_course-lib_datapath_1.0.0/source/datapath_decode.sv'
+===========================================================
+|    Line    |  full/ parallel  |      block location     |
+===========================================================
+|     49     |     no/auto      | always block at line 39 |
+===========================================================
+Presto compilation completed successfully. (datapath_decode)
+Module: datapath_decode, Ports: 8, Input: 3, Output: 5, Inout: 0
+Module: datapath_decode, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module datapath_decode report end. (ELAB-965)
+Information: Building the design 'alu'. (HDL-193)
+Warning:  ./src/ece337_course-lib_datapath_1.0.0/source/alu.sv:34: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./src/ece337_course-lib_datapath_1.0.0/source/alu.sv:35: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./src/ece337_course-lib_datapath_1.0.0/source/alu.sv:63: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./src/ece337_course-lib_datapath_1.0.0/source/alu.sv:67: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./src/ece337_course-lib_datapath_1.0.0/source/alu.sv:71: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./src/ece337_course-lib_datapath_1.0.0/source/alu.sv:76: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./src/ece337_course-lib_datapath_1.0.0/source/alu.sv:80: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./src/ece337_course-lib_datapath_1.0.0/source/alu.sv:84: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./src/ece337_course-lib_datapath_1.0.0/source/alu.sv:93: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block in file
+	'./src/ece337_course-lib_datapath_1.0.0/source/alu.sv'
+===========================================================
+|    Line    |  full/ parallel  |      block location     |
+===========================================================
+|     55     |    auto/auto     | always block at line 49 |
+===========================================================
+Presto compilation completed successfully. (alu)
+Module: alu, Ports: 54, Input: 36, Output: 18, Inout: 0
+Module: alu, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module alu report end. (ELAB-965)
+Information: Building the design 'register_file'. (HDL-193)
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+| register_file/69 |   16   |   17    |      4       |
+| register_file/70 |   16   |   17    |      4       |
+======================================================
+Presto compilation completed successfully. (register_file)
+Module: register_file, Ports: 83, Input: 32, Output: 51, Inout: 0
+Module: register_file, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module register_file report end. (ELAB-965)
+Information: Building the design 'flex_sreg' instantiated from design 'register_file' with
+	the parameters "NUM_BITS=17". (HDL-193)
+
+Inferred memory devices in process in routine 'flex_sreg_NUM_BITS17' in file
+	 ./src/ece337_course-lib_datapath_1.0.0/source/flex_sreg.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|      value_reg      | Flip-flop |  17   |  Y  | N  | None  | Async | N  |  39  |
+==================================================================================
+Presto compilation completed successfully. (flex_sreg_NUM_BITS17)
+Module: flex_sreg_NUM_BITS17, Ports: 37, Input: 20, Output: 17, Inout: 0
+Module: flex_sreg_NUM_BITS17, Registers: 17, Async set/reset: 17, Sync set/reset: 0
+Information: Module flex_sreg_NUM_BITS17 report end. (ELAB-965)
+Information: Uniquified 16 instances of design 'flex_sreg_NUM_BITS17'. (OPT-1056)
+CPU Load: 9%, Ram Free: 101 GB, Swap Free: 63 GB, Work Disk Free: 251 GB, Tmp Disk Free: 18 GB
 Information: Checking out the license 'DesignWare'. (SEC-104)
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
@@ -129,29 +264,29 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 | Design Information                                      | Value                                  |
 ====================================================================================================
 | Number of Scenarios                                     | 0                                      |
-| Leaf Cell Count                                         | 328                                    |
-| Number of User Hierarchies                              | 0                                      |
-| Sequential Cell Count                                   | 5                                      |
+| Leaf Cell Count                                         | 790                                    |
+| Number of User Hierarchies                              | 24                                     |
+| Sequential Cell Count                                   | 288                                    |
 | Macro Count                                             | 0                                      |
 | Pad Count                                               | 0                                      |
 | Number of Power Domains                                 | 0                                      |
 | Number of Path Groups                                   | 1                                      |
 | Number of VT Class                                      | 0                                      |
 | Number of Clocks                                        | 0                                      |
-| Number of Dont Touch Cells                              | 200                                    |
+| Number of Dont Touch Cells                              | 275                                    |
 | Number of Dont Touch Nets                               | 0                                      |
 | Number of Size Only Cells                               | 0                                      |
 | Design with Target Library Subset (with clock_path)     | false  (false )                        |
 | Design with UPF Data                                    | false                                  |
 ====================================================================================================
 
-Information: There are 3 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 32 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
   Beginning Pass 1 Mapping
   ------------------------
-  Processing 'controller'
+  Processing 'magnitude'
 Module: DW01_MUX, Ports: 4, Input: 3, Output: 1, Inout: 0
 Module: DW01_MUX, Registers: 0, Async set/reset: 0, Sync set/reset: 0
 Module: DW01_mmux_width2, Ports: 7, Input: 5, Output: 2, Inout: 0
@@ -162,15 +297,130 @@ Module: DW01_mmux_width4, Ports: 13, Input: 9, Output: 4, Inout: 0
 Module: DW01_mmux_width4, Registers: 0, Async set/reset: 0, Sync set/reset: 0
 Module: DW01_mmux_width5, Ports: 16, Input: 11, Output: 5, Inout: 0
 Module: DW01_mmux_width5, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width16, Ports: 50, Input: 33, Output: 17, Inout: 0
+Module: DW01_sub_width16, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_NAND2, Ports: 3, Input: 2, Output: 1, Inout: 0
+Module: DW01_NAND2, Registers: 0, Async set/reset: 0, Sync set/reset: 0
 Module: DW01_NOT, Ports: 2, Input: 1, Output: 1, Inout: 0
 Module: DW01_NOT, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_cmp6_width17, Ports: 41, Input: 35, Output: 6, Inout: 0
+Module: DW01_cmp6_width17, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_cmp2_width17, Ports: 38, Input: 36, Output: 2, Inout: 0
+Module: DW01_cmp2_width17, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'flex_sreg_NUM_BITS17_0'
+  Processing 'register_file'
+  Processing 'alu'
+Module: DW01_add_width18, Ports: 56, Input: 37, Output: 19, Inout: 0
+Module: DW01_add_width18, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width18, Ports: 56, Input: 37, Output: 19, Inout: 0
+Module: DW01_sub_width18, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_cmp6_width2, Ports: 11, Input: 5, Output: 6, Inout: 0
+Module: DW01_cmp6_width2, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_cmp6_width16, Ports: 39, Input: 33, Output: 6, Inout: 0
+Module: DW01_cmp6_width16, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width31_B_width16, Ports: 95, Input: 48, Output: 47, Inout: 0
+Module: DW02_mult_A_width31_B_width16, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width45, Ports: 137, Input: 91, Output: 46, Inout: 0
+Module: DW01_add_width45, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width16_B_width31, Ports: 95, Input: 48, Output: 47, Inout: 0
+Module: DW02_mult_A_width16_B_width31, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_cmp2_width16, Ports: 36, Input: 34, Output: 2, Inout: 0
+Module: DW01_cmp2_width16, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'datapath_decode'
+  Processing 'datapath'
+  Processing 'controller'
+  Processing 'flex_counter_SIZE10'
+Module: DW01_inc_width10, Ports: 20, Input: 10, Output: 10, Inout: 0
+Module: DW01_inc_width10, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_cmp6_width10, Ports: 27, Input: 21, Output: 6, Inout: 0
+Module: DW01_cmp6_width10, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_cmp2_width10, Ports: 24, Input: 22, Output: 2, Inout: 0
+Module: DW01_cmp2_width10, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width10, Ports: 32, Input: 21, Output: 11, Inout: 0
+Module: DW01_add_width10, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_incdec_width10, Ports: 21, Input: 11, Output: 10, Inout: 0
+Module: DW01_incdec_width10, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width10_B_width1, Ports: 23, Input: 12, Output: 11, Inout: 0
+Module: DW02_mult_A_width10_B_width1, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_absval_width10, Ports: 20, Input: 10, Output: 10, Inout: 0
+Module: DW01_absval_width10, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_inc_width10, Ports: 20, Input: 10, Output: 10, Inout: 0
+Module: DW01_inc_width10, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_absval_width1, Ports: 2, Input: 1, Output: 1, Inout: 0
+Module: DW01_absval_width1, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_inc_width1, Ports: 2, Input: 1, Output: 1, Inout: 0
+Module: DW01_inc_width1, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_inc_width11, Ports: 22, Input: 11, Output: 11, Inout: 0
+Module: DW01_inc_width11, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width1_B_width10, Ports: 23, Input: 12, Output: 11, Inout: 0
+Module: DW02_mult_A_width1_B_width10, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'counter'
+  Processing 'fir_filter'
 
   Updating timing information
 Information: Updating design information... (UID-85)
-Information: Design 'controller' has no optimization constraints set. (OPT-108)
+Information: Design 'fir_filter' has no optimization constraints set. (OPT-108)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'magnitude_DW01_sub_0'
+  Processing 'magnitude_DW01_cmp2_0'
+  Processing 'alu_DW01_add_0'
+  Processing 'alu_DW01_cmp2_0_DW01_cmp2_1'
+  Mapping 'alu_DW_mult_uns_0'
+  Processing 'alu_DW01_sub_0_DW01_sub_1'
+  Processing 'flex_counter_SIZE10_DW01_cmp2_0_DW01_cmp2_2'
+  Processing 'flex_counter_SIZE10_DW01_inc_0_DW01_inc_1'
+  Mapping 'flex_counter_SIZE10_DW_mult_uns_0'
+  Processing 'flex_counter_SIZE10_DW01_cmp2_1_DW01_cmp2_3'
 
   Beginning Mapping Optimizations  (Medium effort)
   -------------------------------
+Information: Added key list 'DesignWare' to design 'flex_counter_SIZE10'. (DDB-72)
+  Structuring 'flex_sreg_NUM_BITS17_14'
+  Mapping 'flex_sreg_NUM_BITS17_14'
+  Structuring 'flex_sreg_NUM_BITS17_13'
+  Mapping 'flex_sreg_NUM_BITS17_13'
+  Structuring 'flex_sreg_NUM_BITS17_12'
+  Mapping 'flex_sreg_NUM_BITS17_12'
+  Structuring 'flex_sreg_NUM_BITS17_11'
+  Mapping 'flex_sreg_NUM_BITS17_11'
+  Structuring 'flex_sreg_NUM_BITS17_10'
+  Mapping 'flex_sreg_NUM_BITS17_10'
+  Structuring 'flex_sreg_NUM_BITS17_9'
+  Mapping 'flex_sreg_NUM_BITS17_9'
+  Structuring 'flex_sreg_NUM_BITS17_8'
+  Mapping 'flex_sreg_NUM_BITS17_8'
+  Structuring 'flex_sreg_NUM_BITS17_7'
+  Mapping 'flex_sreg_NUM_BITS17_7'
+  Structuring 'flex_sreg_NUM_BITS17_6'
+  Mapping 'flex_sreg_NUM_BITS17_6'
+  Structuring 'flex_sreg_NUM_BITS17_5'
+  Mapping 'flex_sreg_NUM_BITS17_5'
+  Structuring 'flex_sreg_NUM_BITS17_4'
+  Mapping 'flex_sreg_NUM_BITS17_4'
+  Structuring 'flex_sreg_NUM_BITS17_3'
+  Mapping 'flex_sreg_NUM_BITS17_3'
+  Structuring 'flex_sreg_NUM_BITS17_2'
+  Mapping 'flex_sreg_NUM_BITS17_2'
+  Structuring 'flex_sreg_NUM_BITS17_1'
+  Mapping 'flex_sreg_NUM_BITS17_1'
+  Structuring 'flex_sreg_NUM_BITS17_0'
+  Mapping 'flex_sreg_NUM_BITS17_0'
+  Structuring 'flex_sreg_NUM_BITS17_15'
+  Mapping 'flex_sreg_NUM_BITS17_15'
+  Structuring 'register_file'
+  Mapping 'register_file'
+  Structuring 'alu'
+  Mapping 'alu'
+  Structuring 'datapath_decode'
+  Mapping 'datapath_decode'
+  Structuring 'flex_counter_SIZE10'
+  Mapping 'flex_counter_SIZE10'
+  Structuring 'magnitude'
+  Mapping 'magnitude'
+  Structuring 'datapath'
+  Mapping 'datapath'
   Structuring 'controller'
   Mapping 'controller'
 
@@ -178,18 +428,23 @@ Information: Design 'controller' has no optimization constraints set. (OPT-108)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:06 1290960.0      0.00       0.0    1066.0                          
+    0:00:06 1290960.0      0.00       0.0    1066.0                          
+    0:00:06 1290960.0      0.00       0.0    1066.0                          
+    0:00:06 1290960.0      0.00       0.0    1066.0                          
+    0:00:06 1290960.0      0.00       0.0    1066.0                          
+    0:00:06 1238400.0      0.00       0.0    1066.0                          
+    0:00:06 1238400.0      0.00       0.0    1066.0                          
+    0:00:06 1238400.0      0.00       0.0    1066.0                          
+    0:00:06 1238400.0      0.00       0.0    1066.0                          
+    0:00:06 1238400.0      0.00       0.0    1066.0                          
+    0:00:06 1239696.0      0.00       0.0     861.7                          
+    0:00:06 1240776.0      0.00       0.0     658.1                          
+    0:00:06 1241640.0      0.00       0.0     493.2                          
+    0:00:06 1242504.0      0.00       0.0     319.2                          
+    0:00:06 1242504.0      0.00       0.0     319.2                          
+    0:00:06 1242504.0      0.00       0.0     319.2                          
+    0:00:06 1242504.0      0.00       0.0     319.2                          
 
 
 
@@ -200,11 +455,22 @@ Information: Design 'controller' has no optimization constraints set. (OPT-108)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:06 1242504.0      0.00       0.0     319.2                          
+    0:00:06 1242504.0      0.00       0.0     319.2                          
+    0:00:06 1242504.0      0.00       0.0     319.2                          
+    0:00:06 1242504.0      0.00       0.0     319.2                          
+    0:00:06 1242504.0      0.00       0.0     319.2                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:06 1242504.0      0.00       0.0     319.2                          
+    0:00:06 1252008.0      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -214,17 +480,20 @@ Information: Design 'controller' has no optimization constraints set. (OPT-108)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
-    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:06 1252008.0      0.00       0.0       0.0                          
+    0:00:06 1252008.0      0.00       0.0       0.0                          
+    0:00:06 1246752.0      0.00       0.0       0.0                          
+    0:00:06 1245096.0      0.00       0.0       0.0                          
+    0:00:06 1244880.0      0.00       0.0       0.0                          
+    0:00:06 1244808.0      0.00       0.0       0.0                          
+    0:00:06 1244808.0      0.00       0.0       0.0                          
+    0:00:06 1244808.0      0.00       0.0       0.0                          
+    0:00:06 1244808.0      0.00       0.0       0.0                          
+    0:00:06 1244808.0      0.00       0.0       0.0                          
+    0:00:06 1244808.0      0.00       0.0       0.0                          
+    0:00:06 1244808.0      0.00       0.0       0.0                          
+    0:00:06 1244808.0      0.00       0.0       0.0                          
+    0:00:06 1244808.0      0.00       0.0       0.0                          
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
 
 
@@ -233,7 +502,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 18%, Ram Free: 90 GB, Swap Free: 59 GB, Work Disk Free: 260 GB, Tmp Disk Free: 19 GB
+CPU Load: 9%, Ram Free: 101 GB, Swap Free: 63 GB, Work Disk Free: 251 GB, Tmp Disk Free: 18 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -257,24 +526,160 @@ Unmapped MV Cells
 ****************************************
 check_design summary:
 Version:     W-2024.09-SP4
-Date:        Sat Feb 28 21:57:14 2026
+Date:        Sun Mar  1 12:30:39 2026
 ****************************************
 
                    Name                                            Total
 --------------------------------------------------------------------------------
-Inputs/Outputs                                                      3
+Inputs/Outputs                                                     54
+    Unloaded inputs (LINT-8)                                        1
+    Unconnected ports (LINT-28)                                    49
+    Feedthrough (LINT-29)                                           1
     Shorted outputs (LINT-31)                                       1
     Constant outputs (LINT-52)                                      2
+
+Cells                                                              36
+    Connected to power or ground (LINT-32)                         29
+    Nets connected to multiple pins on same cell (LINT-33)          7
+
+Nets                                                                1
+    Unloaded nets (LINT-2)                                          1
 --------------------------------------------------------------------------------
 
+Warning: In design 'fir_filter', net 'datapath/CORE/sub_47/B[16]' driven by pin 'datapath/CORE/sub_47/B[16]' has no loads. (LINT-2)
+Warning: In design 'alu_DW01_sub_0_DW01_sub_1', input port 'B[16]' is unloaded. (LINT-8)
+Warning: In design 'alu_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_sub_0_DW01_sub_1', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_sub_0_DW01_sub_1', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'a[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'a[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'a[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'a[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'a[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'a[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'a[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'a[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'a[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'a[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'a[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'a[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'a[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'a[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'a[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_1', port 'product[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'magnitude', input port 'in[0]' is connected directly to output port 'out[0]'. (LINT-29)
 Warning: In design 'controller', output port 'cnt_up' is connected directly to output port 'src1[3]'. (LINT-31)
+Warning: In design 'fir_filter', a pin on submodule 'counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cnt_up' is connected to logic 0. 
+Warning: In design 'fir_filter', a pin on submodule 'datapath' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'src1[3]' is connected to logic 0. 
+Warning: In design 'counter', a pin on submodule 'counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[9]' is connected to logic 1. 
+Warning: In design 'counter', a pin on submodule 'counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[8]' is connected to logic 1. 
+Warning: In design 'counter', a pin on submodule 'counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[7]' is connected to logic 1. 
+Warning: In design 'counter', a pin on submodule 'counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[6]' is connected to logic 1. 
+Warning: In design 'counter', a pin on submodule 'counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[5]' is connected to logic 1. 
+Warning: In design 'counter', a pin on submodule 'counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[4]' is connected to logic 0. 
+Warning: In design 'counter', a pin on submodule 'counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[3]' is connected to logic 1. 
+Warning: In design 'counter', a pin on submodule 'counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[2]' is connected to logic 0. 
+Warning: In design 'counter', a pin on submodule 'counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[1]' is connected to logic 0. 
+Warning: In design 'counter', a pin on submodule 'counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'add_44' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'sub_47' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_38' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[14]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_38' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[13]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_38' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[12]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_38' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[11]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_38' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[10]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_38' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[9]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_38' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[8]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_38' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[7]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_38' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[6]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_38' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[5]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_38' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[4]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_38' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[3]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_38' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[2]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_38' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[1]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_38' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[0]' is connected to logic 0. 
+Warning: In design 'counter', the same net is connected to more than one pin on submodule 'counter'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'rollover_val[9]', 'rollover_val[8]'', 'rollover_val[7]', 'rollover_val[6]', 'rollover_val[5]', 'rollover_val[3]'.
+Warning: In design 'counter', the same net is connected to more than one pin on submodule 'counter'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'rollover_val[4]', 'rollover_val[2]'', 'rollover_val[1]', 'rollover_val[0]'.
+Warning: In design 'alu', the same net is connected to more than one pin on submodule 'add_44'. (LINT-33)
+   Net 'src1_data[16]' is connected to pins 'A[17]', 'A[16]''.
+Warning: In design 'alu', the same net is connected to more than one pin on submodule 'add_44'. (LINT-33)
+   Net 'src2_data[16]' is connected to pins 'B[17]', 'B[16]''.
+Warning: In design 'alu', the same net is connected to more than one pin on submodule 'sub_47'. (LINT-33)
+   Net 'src1_data[16]' is connected to pins 'A[17]', 'A[16]''.
+Warning: In design 'alu', the same net is connected to more than one pin on submodule 'sub_47'. (LINT-33)
+   Net 'src2_data[16]' is connected to pins 'B[17]', 'B[16]''.
+Warning: In design 'alu', the same net is connected to more than one pin on submodule 'mult_38'. (LINT-33)
+   Net 'n50' is connected to pins 'a[14]', 'a[13]'', 'a[12]', 'a[11]', 'a[10]', 'a[9]', 'a[8]', 'a[7]', 'a[6]', 'a[5]', 'a[4]', 'a[3]', 'a[2]', 'a[1]', 'a[0]'.
 Warning: In design 'controller', output port 'cnt_up' is connected directly to 'logic 0'. (LINT-52)
 Warning: In design 'controller', output port 'src1[3]' is connected directly to 'logic 0'. (LINT-52)
-Writing verilog file '/home/ecegridfs/a/337mg204/ece337/tmp/build/u337mg204_ece337_controller_1.0.0/syn-design_compiler/controller.v'.
+Writing verilog file '/home/ecegridfs/a/337mg204/ece337/tmp/build/u337mg204_ece337_fir_filter_1.0.0/syn-design_compiler/fir_filter.v'.
+Warning: Verilog writer has added 30 nets to module alu using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 1 nets to module fir_filter using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
 
-Memory usage for this session 137 Mbytes.
-Memory usage for this session including child processes 137 Mbytes.
-CPU usage for this session 3 seconds ( 0.00 hours ).
-Elapsed time for this session 5 seconds ( 0.00 hours ).
+Memory usage for this session 191 Mbytes.
+Memory usage for this session including child processes 191 Mbytes.
+CPU usage for this session 9 seconds ( 0.00 hours ).
+Elapsed time for this session 11 seconds ( 0.00 hours ).
 
 Thank you...

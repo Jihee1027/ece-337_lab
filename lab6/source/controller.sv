@@ -227,6 +227,10 @@ module controller (
             end
             CLR_ACC: begin
                 modwait = 1'd1;
+                op   = 3'd5;  
+                src1 = 4'd0;
+                src2 = 4'd0;
+                dest = 4'd0;
             end
             MUL_0: begin
                 modwait = 1'd1;
@@ -286,6 +290,7 @@ module controller (
             end
             DONE: begin
                 modwait = 1'd0;
+                cnt_up  = 1; 
             end
             LOAD_F0: begin
                 modwait = 1'd1;

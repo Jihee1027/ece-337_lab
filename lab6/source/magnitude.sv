@@ -1,12 +1,10 @@
-`timescale 1ns / 10ps
-
 module magnitude (
-    input logic [16:0] in,
-    output logic [15:0] out
+  input  logic signed [16:0] in,
+  output logic [15:0] out
 );
-    logic unused;
-    assign out = in [16:1];
-    assign unused = in [0];
-    
+  logic signed [16:0] abs;
+  always_comb begin
+    abs = (in < 0) ? -in : in;
+    out = abs[15:0];  
+  end
 endmodule
-
