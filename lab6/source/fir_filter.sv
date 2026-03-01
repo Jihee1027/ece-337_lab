@@ -12,8 +12,56 @@ module fir_filter (
     output logic [15:0] fir_out,
     output logic err
 );
+    logic cnt_up;
+    logic clear;
+    logic overflow;
+    logic [2:0] op;
+    logic [3:0] src1;
+    logic [3:0] src2;
+    logic [3:0] dest;
+    logic [16:0] outreg_data;
 
+    counter counter (
+        .clk(clk),
+        .n_rst(n_rst),
+        .cnt_up(cnt_up),
+        .clear(clear),
+        .one_k_samples(one_k_samples)
+    );
 
+    controller FIR_controller (
+        .clk(clk),
+        .n_rst(n_rst),
+        .dr(data_ready),
+        .lc(load_coeff),
+        .overflow(overflow),
+        .cnt_up(cnt_up),
+        .clear(clear),
+        .modwait(modwait),
+        .op(op),
+        .src1(src1),
+        .src2(src2),
+        .dest(dest),
+        .err(err)
+    );
+
+    datapath datapath (
+        .clk(clk),
+        .n_reset(n_rst),
+        .op(op),
+        .src1(src1),
+        .src2(src2),
+        .dest(dest),
+        .ext_data1(sample_data),
+        .ext_data2(fir_coefficient),
+        .outreg_data(outreg_data),
+        .overflow(overflow)
+    );
+
+    magnitude magnitude (
+        .in(outreg_data),
+        .out(fir_out)
+    );
 
 endmodule
 

@@ -10,13 +10,13 @@ coeff f3            r8
 mul scratch (temp)  r9
 
 IDLE:   modwait = 0;
-        err = 0;
         if (lc == 1) goto LOAD_FO;
         if (dr == 1) goto CHECK_DR;
         goto IDLE;
 
 LOAD_FO:    modwait = 1;
             clear = 1;
+            err = 0;
             reg[5] = ext_data2;
             goto LOAD_F1;
 

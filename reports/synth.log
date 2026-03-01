@@ -32,19 +32,19 @@ Please use '-no_save' simv switch to avoid this.
                         https://solvnetplus.synopsys.com)
 Initializing...
 Initializing gui preferences from file  /home/ecegridfs/a/337mg204/.synopsys_dc_gui/preferences.tcl
-Current time:       Wed Feb 25 13:58:39 2026
-Hostname:           ececomp1.ecn.purdue.edu
+Current time:       Sat Feb 28 21:57:13 2026
+Hostname:           ececomp4.ecn.purdue.edu
 CPU Model:          AMD EPYC 7513 32-Core Processor
 CPU Details:        Cores = 128 : Sockets = 2 : Cache Size = 512 KB : Freq = 2.60 GHz
 OS:                 Linux 4.18.0-553.89.1.el8_10.x86_64
-RAM:                502 GB (Free  73 GB)
-Swap:                63 GB (Free  47 GB)
+RAM:                502 GB (Free  90 GB)
+Swap:                63 GB (Free  59 GB)
 Work Filesystem:    /home/ecegridfs/a mounted to ecegridfs.ecn.purdue.edu:/export/home/a
 Tmp Filesystem:     /tmp mounted to tmpfs
-Work Disk:          2968 GB (Free 234 GB)
+Work Disk:          2968 GB (Free 260 GB)
 Tmp Disk:            19 GB (Free  19 GB)
 
-CPU Load: 8%, Ram Free: 73 GB, Swap Free: 47 GB, Work Disk Free: 234 GB, Tmp Disk Free: 19 GB
+CPU Load: 18%, Ram Free: 90 GB, Swap Free: 59 GB, Work Disk Free: 260 GB, Tmp Disk Free: 19 GB
 ############################################
 #
 # Auto-generated project tcl file:
@@ -53,13 +53,13 @@ CPU Load: 8%, Ram Free: 73 GB, Swap Free: 47 GB, Work Disk Free: 234 GB, Tmp Dis
 #
 ############################################
 sh date
-Wed Feb 25 13:58:39 EST 2026
-set TOP_MODULE timer
-timer
+Sat Feb 28 21:57:14 EST 2026
+set TOP_MODULE controller
+controller
 set DC_SCRIPT synth.tcl
 synth.tcl
-set READ_SOURCES u337mg204_ece337_timer_1.0.0-read-sources
-u337mg204_ece337_timer_1.0.0-read-sources
+set READ_SOURCES u337mg204_ece337_controller_1.0.0-read-sources
+u337mg204_ece337_controller_1.0.0-read-sources
 set SCRIPT_DIR src/u337mg204_ece337_synfiles_0
 src/u337mg204_ece337_synfiles_0
 set REPORT_DIR reports
@@ -76,50 +76,41 @@ set link_library   [concat "*"  /home/ecegrid/a/ece337/summer24-refactor/tech/am
 ############################################
 source ${SCRIPT_DIR}/${DC_SCRIPT}
 Running PRESTO HDLC
-Compiling source file ./src/u337mg204_ece337_flex_counter_1.0.0/source/flex_counter.sv
+Compiling source file ./src/u337mg204_ece337_controller_1.0.0/source/controller.sv
 Presto compilation completed successfully.
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
 Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/dw_foundation.sldb'
-Running PRESTO HDLC
-Compiling source file ./src/u337mg204_ece337_timer_1.0.0/source/timer.sv
-Presto compilation completed successfully.
 Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/gtech.db'
 Loading db file '/package/eda/synopsys/syn/W-2024.09-SP4/libraries/syn/standard.sldb'
   Loading link library 'osu05_stdcells'
   Loading link library 'gtech'
 Running PRESTO HDLC
+Warning:  ./src/u337mg204_ece337_controller_1.0.0/source/controller.sv:177: Case statement marked unique does not cover all possible conditions. (VER-504)
+Warning:  ./src/u337mg204_ece337_controller_1.0.0/source/controller.sv:177: Case statement marked unique does not cover all possible conditions. (VER-504)
 
-Inferred memory devices in process in routine 'timer' in file
-	 ./src/u337mg204_ece337_timer_1.0.0/source/timer.sv'.
+Statistics for case statements in always block in file
+	'./src/u337mg204_ece337_controller_1.0.0/source/controller.sv'
+============================================================
+|    Line    |  full/ parallel  |      block location      |
+============================================================
+|     61     |    user/user     | always block at line 58  |
+|    177     |    user/user     | always block at line 167 |
+============================================================
+
+Inferred memory devices in process in routine 'controller' in file
+	 ./src/u337mg204_ece337_controller_1.0.0/source/controller.sv'.
 ==================================================================================
 |    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
 ==================================================================================
-|  shift_strobe_reg   | Flip-flop |   1   |  N  | N  | None  | Async | N  |  58  |
+|      state_reg      | Flip-flop |   5   |  Y  | N  | None  | Async | N  |  50  |
 ==================================================================================
-Presto compilation completed successfully. (timer)
-Module: timer, Ports: 5, Input: 3, Output: 2, Inout: 0
-Module: timer, Registers: 1, Async set/reset: 1, Sync set/reset: 0
-Information: Module timer report end. (ELAB-965)
-Error:  ./src/u337mg204_ece337_timer_1.0.0/source/timer.sv:38: The width of port count_out on instance clk_counter of design flex_counter is inconsistent with other instantiations of the same design. (ELAB-369)
-Error:  ./src/u337mg204_ece337_timer_1.0.0/source/timer.sv:48: The width of port count_out on instance bit_counter of design flex_counter is inconsistent with other instantiations of the same design. (ELAB-369)
+Presto compilation completed successfully. (controller)
+Module: controller, Ports: 24, Input: 5, Output: 19, Inout: 0
+Module: controller, Registers: 5, Async set/reset: 5, Sync set/reset: 0
+Information: Module controller report end. (ELAB-965)
 Elaborated 1 design.
-Current design is now 'timer'.
-Information: Building the design 'flex_counter'. (HDL-193)
-
-Inferred memory devices in process in routine 'flex_counter' in file
-	 ./src/u337mg204_ece337_flex_counter_1.0.0/source/flex_counter.sv'.
-==================================================================================
-|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
-==================================================================================
-|  rollover_flag_reg  | Flip-flop |   1   |  N  | N  | None  | Async | N  |  39  |
-|    count_out_reg    | Flip-flop |   8   |  Y  | N  | None  | Async | N  |  39  |
-==================================================================================
-Presto compilation completed successfully. (flex_counter)
-Module: flex_counter, Ports: 21, Input: 12, Output: 9, Inout: 0
-Module: flex_counter, Registers: 9, Async set/reset: 9, Sync set/reset: 0
-Information: Module flex_counter report end. (ELAB-965)
-Information: Uniquified 3 instances of design 'flex_counter'. (OPT-1056)
-CPU Load: 8%, Ram Free: 73 GB, Swap Free: 47 GB, Work Disk Free: 234 GB, Tmp Disk Free: 19 GB
+Current design is now 'controller'.
+CPU Load: 18%, Ram Free: 90 GB, Swap Free: 59 GB, Work Disk Free: 260 GB, Tmp Disk Free: 19 GB
 Information: Checking out the license 'DesignWare'. (SEC-104)
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
@@ -138,29 +129,29 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 | Design Information                                      | Value                                  |
 ====================================================================================================
 | Number of Scenarios                                     | 0                                      |
-| Leaf Cell Count                                         | 97                                     |
-| Number of User Hierarchies                              | 3                                      |
-| Sequential Cell Count                                   | 28                                     |
+| Leaf Cell Count                                         | 328                                    |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 5                                      |
 | Macro Count                                             | 0                                      |
 | Pad Count                                               | 0                                      |
 | Number of Power Domains                                 | 0                                      |
 | Number of Path Groups                                   | 1                                      |
 | Number of VT Class                                      | 0                                      |
 | Number of Clocks                                        | 0                                      |
-| Number of Dont Touch Cells                              | 36                                     |
+| Number of Dont Touch Cells                              | 200                                    |
 | Number of Dont Touch Nets                               | 0                                      |
 | Number of Size Only Cells                               | 0                                      |
 | Design with Target Library Subset (with clock_path)     | false  (false )                        |
 | Design with UPF Data                                    | false                                  |
 ====================================================================================================
 
-Information: There are 45 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 3 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
   Beginning Pass 1 Mapping
   ------------------------
-  Processing 'flex_counter_0'
+  Processing 'controller'
 Module: DW01_MUX, Ports: 4, Input: 3, Output: 1, Inout: 0
 Module: DW01_MUX, Registers: 0, Async set/reset: 0, Sync set/reset: 0
 Module: DW01_mmux_width2, Ports: 7, Input: 5, Output: 2, Inout: 0
@@ -171,85 +162,34 @@ Module: DW01_mmux_width4, Ports: 13, Input: 9, Output: 4, Inout: 0
 Module: DW01_mmux_width4, Registers: 0, Async set/reset: 0, Sync set/reset: 0
 Module: DW01_mmux_width5, Ports: 16, Input: 11, Output: 5, Inout: 0
 Module: DW01_mmux_width5, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Module: DW01_inc_width8, Ports: 16, Input: 8, Output: 8, Inout: 0
-Module: DW01_inc_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Module: DW01_NAND2, Ports: 3, Input: 2, Output: 1, Inout: 0
-Module: DW01_NAND2, Registers: 0, Async set/reset: 0, Sync set/reset: 0
 Module: DW01_NOT, Ports: 2, Input: 1, Output: 1, Inout: 0
 Module: DW01_NOT, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Module: DW01_cmp6_width8, Ports: 23, Input: 17, Output: 6, Inout: 0
-Module: DW01_cmp6_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Module: DW01_cmp2_width8, Ports: 20, Input: 18, Output: 2, Inout: 0
-Module: DW01_cmp2_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Module: DW01_add_width8, Ports: 26, Input: 17, Output: 9, Inout: 0
-Module: DW01_add_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Module: DW01_incdec_width8, Ports: 17, Input: 9, Output: 8, Inout: 0
-Module: DW01_incdec_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Module: DW02_mult_A_width8_B_width1, Ports: 19, Input: 10, Output: 9, Inout: 0
-Module: DW02_mult_A_width8_B_width1, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Module: DW01_absval_width8, Ports: 16, Input: 8, Output: 8, Inout: 0
-Module: DW01_absval_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Module: DW01_inc_width8, Ports: 16, Input: 8, Output: 8, Inout: 0
-Module: DW01_inc_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Module: DW01_absval_width1, Ports: 2, Input: 1, Output: 1, Inout: 0
-Module: DW01_absval_width1, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Module: DW01_inc_width1, Ports: 2, Input: 1, Output: 1, Inout: 0
-Module: DW01_inc_width1, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Module: DW01_inc_width9, Ports: 18, Input: 9, Output: 9, Inout: 0
-Module: DW01_inc_width9, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-Module: DW02_mult_A_width1_B_width8, Ports: 19, Input: 10, Output: 9, Inout: 0
-Module: DW02_mult_A_width1_B_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
-  Processing 'timer'
 
   Updating timing information
 Information: Updating design information... (UID-85)
-Information: Design 'timer' has no optimization constraints set. (OPT-108)
-
-  Beginning Implementation Selection
-  ----------------------------------
-  Processing 'flex_counter_0_DW01_cmp2_0'
-  Processing 'flex_counter_0_DW01_inc_0_DW01_inc_1'
-  Mapping 'flex_counter_0_DW_mult_uns_0'
-  Processing 'flex_counter_0_DW01_cmp2_1'
-  Processing 'flex_counter_1_DW01_cmp2_0_DW01_cmp2_2'
-  Processing 'flex_counter_1_DW01_inc_0_DW01_inc_2'
-  Mapping 'flex_counter_1_DW_mult_uns_0'
-  Processing 'flex_counter_1_DW01_cmp2_1_DW01_cmp2_3'
-  Processing 'flex_counter_2_DW01_cmp2_0_DW01_cmp2_4'
-  Processing 'flex_counter_2_DW01_inc_0_DW01_inc_3'
-  Mapping 'flex_counter_2_DW_mult_uns_0'
-  Processing 'flex_counter_2_DW01_cmp2_1_DW01_cmp2_5'
+Information: Design 'controller' has no optimization constraints set. (OPT-108)
 
   Beginning Mapping Optimizations  (Medium effort)
   -------------------------------
-Information: Added key list 'DesignWare' to design 'flex_counter_0'. (DDB-72)
-Information: Added key list 'DesignWare' to design 'flex_counter_1'. (DDB-72)
-Information: Added key list 'DesignWare' to design 'flex_counter_2'. (DDB-72)
-  Structuring 'flex_counter_1'
-  Mapping 'flex_counter_1'
-  Structuring 'flex_counter_0'
-  Mapping 'flex_counter_0'
-  Structuring 'flex_counter_2'
-  Mapping 'flex_counter_2'
-  Structuring 'timer'
-  Mapping 'timer'
+  Structuring 'controller'
+  Mapping 'controller'
 
                                   TOTAL                                      
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
 
 
 
@@ -260,11 +200,11 @@ Information: Added key list 'DesignWare' to design 'flex_counter_2'. (DDB-72)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -274,17 +214,17 @@ Information: Added key list 'DesignWare' to design 'flex_counter_2'. (DDB-72)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
-    0:00:01  111393.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
+    0:00:00   37539.0      0.00       0.0       0.0                          
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
 
 
@@ -293,7 +233,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 8%, Ram Free: 73 GB, Swap Free: 47 GB, Work Disk Free: 234 GB, Tmp Disk Free: 19 GB
+CPU Load: 18%, Ram Free: 90 GB, Swap Free: 59 GB, Work Disk Free: 260 GB, Tmp Disk Free: 19 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -317,82 +257,24 @@ Unmapped MV Cells
 ****************************************
 check_design summary:
 Version:     W-2024.09-SP4
-Date:        Wed Feb 25 13:58:41 2026
+Date:        Sat Feb 28 21:57:14 2026
 ****************************************
 
                    Name                                            Total
 --------------------------------------------------------------------------------
-Cells                                                              30
-    Connected to power or ground (LINT-32)                         24
-    Nets connected to multiple pins on same cell (LINT-33)          6
+Inputs/Outputs                                                      3
+    Shorted outputs (LINT-31)                                       1
+    Constant outputs (LINT-52)                                      2
 --------------------------------------------------------------------------------
 
-Warning: In design 'timer', a pin on submodule 'clk_counter_enable_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[7]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'clk_counter_enable_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[6]' is connected to logic 1. 
-Warning: In design 'timer', a pin on submodule 'clk_counter_enable_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[5]' is connected to logic 1. 
-Warning: In design 'timer', a pin on submodule 'clk_counter_enable_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[4]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'clk_counter_enable_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[3]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'clk_counter_enable_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[2]' is connected to logic 1. 
-Warning: In design 'timer', a pin on submodule 'clk_counter_enable_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[1]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'clk_counter_enable_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[0]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'clk_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[7]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'clk_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[6]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'clk_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[5]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'clk_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[4]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'clk_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[3]' is connected to logic 1. 
-Warning: In design 'timer', a pin on submodule 'clk_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[2]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'clk_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[1]' is connected to logic 1. 
-Warning: In design 'timer', a pin on submodule 'clk_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[0]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'bit_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[7]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'bit_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[6]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'bit_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[5]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'bit_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[4]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'bit_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[3]' is connected to logic 1. 
-Warning: In design 'timer', a pin on submodule 'bit_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[2]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'bit_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[1]' is connected to logic 0. 
-Warning: In design 'timer', a pin on submodule 'bit_counter' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rollover_val[0]' is connected to logic 1. 
-Warning: In design 'timer', the same net is connected to more than one pin on submodule 'clk_counter_enable_counter'. (LINT-33)
-   Net '*Logic0*' is connected to pins 'rollover_val[7]', 'rollover_val[4]'', 'rollover_val[3]', 'rollover_val[1]', 'rollover_val[0]'.
-Warning: In design 'timer', the same net is connected to more than one pin on submodule 'clk_counter_enable_counter'. (LINT-33)
-   Net '*Logic1*' is connected to pins 'rollover_val[6]', 'rollover_val[5]'', 'rollover_val[2]'.
-Warning: In design 'timer', the same net is connected to more than one pin on submodule 'clk_counter'. (LINT-33)
-   Net '*Logic0*' is connected to pins 'rollover_val[7]', 'rollover_val[6]'', 'rollover_val[5]', 'rollover_val[4]', 'rollover_val[2]', 'rollover_val[0]'.
-Warning: In design 'timer', the same net is connected to more than one pin on submodule 'clk_counter'. (LINT-33)
-   Net '*Logic1*' is connected to pins 'rollover_val[3]', 'rollover_val[1]''.
-Warning: In design 'timer', the same net is connected to more than one pin on submodule 'bit_counter'. (LINT-33)
-   Net '*Logic0*' is connected to pins 'rollover_val[7]', 'rollover_val[6]'', 'rollover_val[5]', 'rollover_val[4]', 'rollover_val[2]', 'rollover_val[1]'.
-Warning: In design 'timer', the same net is connected to more than one pin on submodule 'bit_counter'. (LINT-33)
-   Net '*Logic1*' is connected to pins 'rollover_val[3]', 'rollover_val[0]''.
-Writing verilog file '/home/ecegridfs/a/337mg204/ece337/tmp/build/u337mg204_ece337_timer_1.0.0/syn-design_compiler/timer.v'.
-Warning: Verilog writer has added 4 nets to module timer using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: In design 'controller', output port 'cnt_up' is connected directly to output port 'src1[3]'. (LINT-31)
+Warning: In design 'controller', output port 'cnt_up' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'controller', output port 'src1[3]' is connected directly to 'logic 0'. (LINT-52)
+Writing verilog file '/home/ecegridfs/a/337mg204/ece337/tmp/build/u337mg204_ece337_controller_1.0.0/syn-design_compiler/controller.v'.
 
-Memory usage for this session 145 Mbytes.
-Memory usage for this session including child processes 145 Mbytes.
-CPU usage for this session 4 seconds ( 0.00 hours ).
-Elapsed time for this session 6 seconds ( 0.00 hours ).
+Memory usage for this session 137 Mbytes.
+Memory usage for this session including child processes 137 Mbytes.
+CPU usage for this session 3 seconds ( 0.00 hours ).
+Elapsed time for this session 5 seconds ( 0.00 hours ).
 
 Thank you...
