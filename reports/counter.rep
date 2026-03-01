@@ -5,35 +5,29 @@ Report : timing
         -path full
         -delay max
         -max_paths 1
-Design : controller
+Design : counter
 Version: W-2024.09-SP4
-Date   : Sun Mar  1 17:26:59 2026
+Date   : Sun Mar  1 17:15:02 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
 Wire Load Model Mode: top
 
-  Startpoint: state_reg[2]
+  Startpoint: counter/rollover_flag_reg
               (rising edge-triggered flip-flop)
-  Endpoint: dest[2] (output port)
+  Endpoint: one_k_samples
+            (output port)
   Path Group: (none)
   Path Type: max
 
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  state_reg[2]/CLK (DFFSR)                 0.00       0.00 r
-  state_reg[2]/Q (DFFSR)                   0.81       0.81 r
-  U288/Y (INVX1)                           0.60       1.41 f
-  U287/Y (NAND2X1)                         0.43       1.84 r
-  U286/Y (INVX1)                           0.35       2.19 f
-  U284/Y (NAND2X1)                         0.60       2.79 r
-  U275/Y (NOR2X1)                          0.42       3.21 f
-  U274/Y (INVX1)                           0.20       3.41 r
-  U249/Y (AND2X1)                          0.13       3.54 r
-  U248/Y (OAI21X1)                         0.05       3.59 f
-  dest[2] (out)                            0.00       3.59 f
-  data arrival time                                   3.59
-  -----------------------------------------------------------
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  counter/rollover_flag_reg/CLK (DFFSR)                   0.00       0.00 r
+  counter/rollover_flag_reg/Q (DFFSR)                     0.42       0.42 f
+  counter/rollover_flag (flex_counter_SIZE10)             0.00       0.42 f
+  one_k_samples (out)                                     0.00       0.42 f
+  data arrival time                                                  0.42
+  --------------------------------------------------------------------------
   (Path is unconstrained)
 
 
@@ -41,31 +35,31 @@ Wire Load Model Mode: top
  
 ****************************************
 Report : area
-Design : controller
+Design : counter
 Version: W-2024.09-SP4
-Date   : Sun Mar  1 17:26:59 2026
+Date   : Sun Mar  1 17:15:02 2026
 ****************************************
 
 Library(s) Used:
 
     osu05_stdcells (File: /home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db)
 
-Number of ports:                           24
-Number of nets:                           158
-Number of cells:                          153
-Number of combinational cells:            140
-Number of sequential cells:                 6
+Number of ports:                           50
+Number of nets:                           187
+Number of cells:                          142
+Number of combinational cells:            116
+Number of sequential cells:                11
 Number of macros/black boxes:               0
-Number of buf/inv:                         34
-Number of references:                      12
+Number of buf/inv:                         38
+Number of references:                       1
 
-Combinational area:              33552.000000
-Buf/Inv area:                     4896.000000
-Noncombinational area:            9504.000000
+Combinational area:              27639.000000
+Buf/Inv area:                     5472.000000
+Noncombinational area:           17424.000000
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                 43056.000000
+Total cell area:                 45063.000000
 Total area:                 undefined
 1
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
@@ -77,9 +71,9 @@ Warning: Design has unannotated sequential cell outputs. (PWR-415)
 ****************************************
 Report : power
         -analysis_effort low
-Design : controller
+Design : counter
 Version: W-2024.09-SP4
-Date   : Sun Mar  1 17:26:59 2026
+Date   : Sun Mar  1 17:15:02 2026
 ****************************************
 
 
@@ -106,12 +100,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   2.2836 mW   (62%)
-  Net Switching Power  =   1.4078 mW   (38%)
+  Cell Internal Power  =   1.6987 mW   (65%)
+  Net Switching Power  = 918.3269 uW   (35%)
                          ---------
-Total Dynamic Power    =   3.6914 mW  (100%)
+Total Dynamic Power    =   2.6170 mW  (100%)
 
-Cell Leakage Power     =  12.0447 nW
+Cell Leakage Power     =  14.0824 nW
 
 Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
 
@@ -123,8 +117,8 @@ memory             0.0000            0.0000            0.0000            0.0000 
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
 register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
-sequential         1.1256        8.1152e-02            3.1979            1.2067  (  32.69%)
-combinational      1.1580            1.3267            8.8469            2.4847  (  67.31%)
+sequential         1.3365        2.8115e-03            5.8628            1.3393  (  51.18%)
+combinational      0.3622            0.9155            8.2196            1.2777  (  48.82%)
 --------------------------------------------------------------------------------------------------
-Total              2.2836 mW         1.4078 mW        12.0447 nW         3.6914 mW
+Total              1.6987 mW         0.9183 mW        14.0824 nW         2.6170 mW
 1

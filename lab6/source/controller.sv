@@ -15,6 +15,9 @@ module controller (
     output logic [3:0] dest,
     output logic err
 );
+    logic busy_modwait_next;
+    logic cnt_up_one_next;
+    logic clear_one_next;
 
     typedef enum logic [4:0] {
         IDLE = 5'd0,
@@ -53,6 +56,35 @@ module controller (
             state <= IDLE;
         end else begin
             state <= state_next;
+        end
+    end
+
+    always_comb begin
+        busy_modwait_next = !(state_next == IDLE || 
+                              state_next == LOAD_F0_WAIT || 
+                              state_next == LOAD_F1_WAIT || 
+                              state_next == LOAD_F2_WAIT || 
+                              state_next == LOAD_F3_WAIT || 
+                              state_next == DONE || 
+                              state_next == DR_ERROR || 
+                              state_next == CHECK_DR_ERR ||
+                              state_next == OVERFLOW);
+    end
+
+    always_comb begin
+        cnt_up_one_next = (state_next == DONE);
+        clear_one_next = (state_next == LOAD_F0);
+    end
+
+    always_ff @(posedge clk or negedge n_rst) begin
+        if (!n_rst) begin
+            modwait <= 1'b0;
+            cnt_up <= 1'b0;
+            clear <= 1'b0;
+        end else begin
+            modwait <= busy_modwait_next;
+            cnt_up <= cnt_up_one_next;
+            clear <= clear_one_next;
         end
     end
 
@@ -147,7 +179,7 @@ module controller (
                 state_next = IDLE;
             end
             LOAD_F0: begin
-                state_next = LOAD_F1_WAIT;
+                state_next = LOAD_F0_WAIT;
             end
             LOAD_F0_WAIT: begin
                 state_next = LOAD_F1;
@@ -171,16 +203,17 @@ module controller (
                 state_next = IDLE;
             end
             OVERFLOW: begin
-                state_next = IDLE;
+                if (lc) begin
+                    state_next = LOAD_F0;
+                end else if (dr) begin
+                    state_next = CHECK_DR;
+                end
             end
             default: state_next = IDLE;
         endcase
     end
 
     always_comb begin
-        cnt_up = 1'd0;
-        clear = 1'd0;
-        modwait = 1'd0;
         op = 3'd0;
         src1 = 4'd0;
         src2 = 4'd0;
@@ -189,11 +222,9 @@ module controller (
 
         unique case (state)
             IDLE: begin
-               modwait = 1'd0;
             end
             CHECK_DR: begin
                 err = 1'd0;
-                modwait = 1'd1;
             end
             DR_ERROR: begin
                 err = 1'd1;
@@ -202,128 +233,104 @@ module controller (
                 err = 1'd1;
             end
             SHIFT4_3: begin
-                modwait = 1'd1;
                 op = 3'd1;
                 src1 = 4'd3;
                 dest = 4'd4;
             end
             SHIFT3_2: begin
-                modwait = 1'd1;
                 op = 3'd1;
                 src1 = 4'd2;
                 dest = 4'd3;
             end
-            SHIFT2_1: begin
-                modwait = 1'd1; 
+            SHIFT2_1: begin 
                 op = 3'd1;
                 src1 = 4'd1;
                 dest = 4'd2;
             end
             SHIFT1_0: begin
-                modwait = 1'd1;
                 op = 3'd2;
                 src1 = 4'd0;
                 dest = 4'd1;
             end
             CLR_ACC: begin
-                modwait = 1'd1;
                 op   = 3'd5;  
                 src1 = 4'd0;
                 src2 = 4'd0;
                 dest = 4'd0;
             end
             MUL_0: begin
-                modwait = 1'd1;
                 op = 3'd6;
                 src1 = 4'd1;
                 src2 = 4'd5;
                 dest = 4'd9;
             end
             ACC_0: begin
-                modwait = 1'd1;
                 op = 3'd4;
                 src1 = 4'd0;
                 src2 = 4'd9;
                 dest = 4'd0;
             end
             MUL_1: begin
-                modwait = 1'd1;
                 op = 3'd6;
                 src1 = 4'd2;
                 src2 = 4'd6;
                 dest = 4'd9;
             end
             ACC_1: begin
-                modwait = 1'd1;
                 op = 3'd5;
                 src1 = 4'd0;
                 src2 = 4'd9;
                 dest = 4'd0;
             end
             MUL_2: begin
-                modwait = 1'd1;
                 op = 3'd6;
                 src1 = 4'd3;
                 src2 = 4'd7;
                 dest = 4'd9;
             end
             ACC_2: begin
-                modwait = 1'd1;
                 op = 3'd4;
                 src1 = 4'd0;
                 src2 = 4'd9;
                 dest = 4'd0;
             end
             MUL_3: begin
-                modwait = 1'd1;
                 op = 3'd6;
                 src1 = 4'd4;
                 src2 = 4'd8;
                 dest = 4'd9;
             end
             ACC_3: begin
-                modwait = 1'd1;
                 op = 3'd5;
                 src1 = 4'd0;
                 src2 = 4'd9;
                 dest = 4'd0;
             end
             DONE: begin
-                modwait = 1'd0;
-                cnt_up  = 1; 
             end
             LOAD_F0: begin
-                modwait = 1'd1;
-                clear = 1'd1;
                 op = 3'd3;
                 dest = 4'd5;
             end
             LOAD_F0_WAIT: begin
-                modwait = 1'd0;
             end
             LOAD_F1: begin
-                modwait = 1'd1;
                 op = 3'd3;
                 dest = 4'd6;
             end
             LOAD_F1_WAIT: begin
-                modwait = 1'd0;
             end
             LOAD_F2: begin
-                modwait = 1'd1;
                 op = 3'd3;
                 dest = 4'd7;
             end
             LOAD_F2_WAIT: begin
-                modwait = 1'd0;
             end
             LOAD_F3: begin
-                modwait = 1'd1;
                 op = 3'd3;
                 dest = 4'd8;
             end
             LOAD_F3_WAIT: begin
-                modwait = 1'd0;
             end
             OVERFLOW: begin
                 err = 1'd1;
@@ -331,6 +338,5 @@ module controller (
         endcase
     end
 
-    
 endmodule
 

@@ -7,7 +7,7 @@ Report : timing
         -max_paths 1
 Design : fir_filter
 Version: W-2024.09-SP4
-Date   : Sun Mar  1 12:30:39 2026
+Date   : Sun Mar  1 17:15:56 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
@@ -59,7 +59,7 @@ Wire Load Model Mode: top
 Report : area
 Design : fir_filter
 Version: W-2024.09-SP4
-Date   : Sun Mar  1 12:30:39 2026
+Date   : Sun Mar  1 17:15:56 2026
 ****************************************
 
 Library(s) Used:
@@ -67,21 +67,21 @@ Library(s) Used:
     osu05_stdcells (File: /home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db)
 
 Number of ports:                         1172
-Number of nets:                          4311
-Number of cells:                         3100
-Number of combinational cells:           2488
+Number of nets:                          4323
+Number of cells:                         3111
+Number of combinational cells:           2500
 Number of sequential cells:               288
 Number of macros/black boxes:               0
-Number of buf/inv:                        706
+Number of buf/inv:                        708
 Number of references:                       4
 
-Combinational area:             788616.000000
-Buf/Inv area:                   106992.000000
+Combinational area:             792216.000000
+Buf/Inv area:                   107280.000000
 Noncombinational area:          456192.000000
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:               1244808.000000
+Total cell area:               1248408.000000
 Total area:                 undefined
 1
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
@@ -95,7 +95,7 @@ Report : power
         -analysis_effort low
 Design : fir_filter
 Version: W-2024.09-SP4
-Date   : Sun Mar  1 12:30:39 2026
+Date   : Sun Mar  1 17:15:56 2026
 ****************************************
 
 
@@ -122,12 +122,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =  58.0137 mW   (69%)
-  Net Switching Power  =  25.8223 mW   (31%)
+  Cell Internal Power  =  58.0327 mW   (69%)
+  Net Switching Power  =  25.8412 mW   (31%)
                          ---------
-Total Dynamic Power    =  83.8360 mW  (100%)
+Total Dynamic Power    =  83.8739 mW  (100%)
 
-Cell Leakage Power     = 384.2686 nW
+Cell Leakage Power     = 385.1084 nW
 
 Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
 
@@ -139,8 +139,8 @@ memory             0.0000            0.0000            0.0000            0.0000 
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
 register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
-sequential        51.7017            0.1874          153.4977           51.8893  (  61.89%)
-combinational      6.3119           25.6349          230.7709           31.9470  (  38.11%)
+sequential        51.6698            0.1256          153.4977           51.7956  (  61.75%)
+combinational      6.3628           25.7155          231.6107           32.0786  (  38.25%)
 --------------------------------------------------------------------------------------------------
-Total             58.0136 mW        25.8223 mW       384.2686 nW        83.8363 mW
+Total             58.0326 mW        25.8412 mW       385.1084 nW        83.8742 mW
 1
