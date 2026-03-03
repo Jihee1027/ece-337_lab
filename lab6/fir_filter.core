@@ -12,6 +12,7 @@ filesets:
             - "u337mg204:ece337:counter:1.0.0"
             - "u337mg204:ece337:magnitude:1.0.0"
             -  "ece337:course-lib:datapath"
+            - "u337mg204:ece337:sync"
 
     synth:
         depend:

@@ -16,8 +16,6 @@ module controller (
     output logic err
 );
     logic busy_modwait_next;
-    logic cnt_up_one_next;
-    logic clear_one_next;
 
     typedef enum logic [4:0] {
         IDLE = 5'd0,
@@ -71,20 +69,12 @@ module controller (
                               state_next == OVERFLOW);
     end
 
-    always_comb begin
-        cnt_up_one_next = (state_next == DONE);
-        clear_one_next = (state_next == LOAD_F0);
-    end
 
     always_ff @(posedge clk or negedge n_rst) begin
         if (!n_rst) begin
             modwait <= 1'b0;
-            cnt_up <= 1'b0;
-            clear <= 1'b0;
         end else begin
             modwait <= busy_modwait_next;
-            cnt_up <= cnt_up_one_next;
-            clear <= clear_one_next;
         end
     end
 
@@ -214,6 +204,8 @@ module controller (
     end
 
     always_comb begin
+        clear = 1'd0;
+        cnt_up = 1'd0;
         op = 3'd0;
         src1 = 4'd0;
         src2 = 4'd0;
@@ -263,6 +255,7 @@ module controller (
                 src1 = 4'd1;
                 src2 = 4'd5;
                 dest = 4'd9;
+                cnt_up = 1'd1;
             end
             ACC_0: begin
                 op = 3'd4;
@@ -311,6 +304,7 @@ module controller (
             LOAD_F0: begin
                 op = 3'd3;
                 dest = 4'd5;
+                clear = 1'd1;
             end
             LOAD_F0_WAIT: begin
             end

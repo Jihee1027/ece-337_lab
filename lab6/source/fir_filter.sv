@@ -63,5 +63,12 @@ module fir_filter (
         .out(fir_out)
     );
 
+    // sync sync_lc (
+    //     .clk(clk),
+    //     .n_rst(n_rst),
+    //     .async_in(lc)
+    //     .sync
+    // );
+
 endmodule
 
