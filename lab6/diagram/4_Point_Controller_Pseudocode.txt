@@ -18,41 +18,67 @@ LOAD_FO:    modwait = 1;
             clear = 1;
             err = 0;
             reg[5] = ext_data2;
-            goto LOAD_F1;
+            goto LOAD_F0_WAIT;
+
+LOAD_F0_WAIT: modwait = 0;
+              if (lc == 1) goto LOAD_F1;
 
 LOAD_F1:    reg[6] = ext_data2;
-            goto LOAD_F2;
+            goto LOAD_F1_WAIT;
+
+LOAD_F1_WAIT: modwait = 0;
+              if (lc == 1) goto LOAD_F2;
 
 LOAD_F2:    reg[7] = ext_data2;
-            goto LOAD_F3;
+            goto LOAD_F2_WAIT;
+        
+LOAD_F2_WAIT: modwait = 0;
+              if (lc == 1) goto LOAD_F3;
 
 LOAD_F3:    reg[8] = ext_data2;
-            goto IDLE;
+            goto LOAD_F3_WAIT;
+
+LOAD_F3_WAIT: modwait = 0;
+              goto IDLE;
 
 CHECK_DR:   modwait = 1;
             if (dr == 0) goto DR_ERROR;
             goto SHIFT_SAMPLES;
 
 DR_ERROR:   err = 1;
-            goto IDLE;
+            if (dr == 1) goto CHECK_DR_ERR;
+            else if (lc == 1) goto LOAD_F0;
 
-SHIFT_SAMPLES:  reg[4] = reg[3];
-                reg[3] = reg[2];
-                reg[2] = reg[1];
-                reg[1] = ext_data1;
-                goto CLR_ACC;
+CHECK_DR_ERR: err = 1;
+              if (dr == 1) goto SHIFT4_3;
+
+SHIFT4_3: reg[4] = reg[3];
+          goto SHIFT3_2;
+
+SHIFT3_2: reg[3] = reg[2];
+          goto SHIFT2_1;
+
+SHIFT2_1: reg[2] = reg[1];
+          goto SHIFT1_0;
+
+SHIFT1_0: reg[1] = ext_data1;
+          goto CLR_ACC;
 
 CLR_ACC:    reg[0] = 0;
             goto MUL_0;
 
 MUL_0:  reg[9] = reg[1] * reg[5];
+        if (overflow) goto OVERFLOW;
         goto ACC_0;
+        
 
 ACC_0:  reg[0] = reg[0] + reg[9];
+        cnt_up = 1;
         if (overflow) goto OVERFLOW;
         goto MUL_1;
 
 MUL_1:  reg[9] = reg[2] * reg[6];
+        if (overflow) goto OVERFLOW;
         goto ACC_1;
 
 ACC_1:  reg[0] = reg[0] - reg[9];
@@ -60,6 +86,7 @@ ACC_1:  reg[0] = reg[0] - reg[9];
         goto MUL_2;
 
 MUL_2:  reg[9] = reg[3] * reg[7];
+        if (overflow) goto OVERFLOW;
         goto ACC_2;
 
 ACC_2:  reg[0] = reg[0] + reg[9];
@@ -67,6 +94,7 @@ ACC_2:  reg[0] = reg[0] + reg[9];
         goto MUL_3;
 
 MUL_3:  reg[9] = reg[4] * reg[8];
+        if (overflow) goto OVERFLOW;
         goto ACC_3;
 
 ACC_3:  reg[0] = reg[0] - reg[9];
