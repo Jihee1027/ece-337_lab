@@ -7,48 +7,27 @@ Report : timing
         -max_paths 1
 Design : fir_filter
 Version: W-2024.09-SP4
-Date   : Sun Mar  1 17:15:56 2026
+Date   : Thu Mar  5 13:50:28 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
 Wire Load Model Mode: top
 
-  Startpoint: datapath/RF/genblk1[0].REGX/value_reg[1]
+  Startpoint: FIR_controller/state_reg[1]
               (rising edge-triggered flip-flop)
-  Endpoint: fir_out[15]
-            (output port)
+  Endpoint: err (output port)
   Path Group: (none)
   Path Type: max
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
-  datapath/RF/genblk1[0].REGX/value_reg[1]/CLK (DFFSR)
-                                                          0.00       0.00 r
-  datapath/RF/genblk1[0].REGX/value_reg[1]/Q (DFFSR)      0.68       0.68 r
-  datapath/RF/genblk1[0].REGX/current_value[1] (flex_sreg_NUM_BITS17_15)
-                                                          0.00       0.68 r
-  datapath/RF/outreg_data[1] (register_file)              0.00       0.68 r
-  datapath/outreg_data[1] (datapath)                      0.00       0.68 r
-  magnitude/in[1] (magnitude)                             0.00       0.68 r
-  magnitude/U49/Y (OR2X1)                                 0.30       0.98 r
-  magnitude/U46/Y (OR2X1)                                 0.23       1.21 r
-  magnitude/U42/Y (NOR2X1)                                0.22       1.43 f
-  magnitude/U38/Y (NAND2X1)                               0.20       1.63 r
-  magnitude/U34/Y (NOR2X1)                                0.23       1.87 f
-  magnitude/U31/Y (NAND2X1)                               0.20       2.07 r
-  magnitude/U27/Y (NOR2X1)                                0.23       2.30 f
-  magnitude/U24/Y (NAND2X1)                               0.20       2.50 r
-  magnitude/U20/Y (NOR2X1)                                0.23       2.73 f
-  magnitude/U17/Y (NAND2X1)                               0.20       2.93 r
-  magnitude/U13/Y (NOR2X1)                                0.23       3.16 f
-  magnitude/U10/Y (NAND2X1)                               0.20       3.36 r
-  magnitude/U7/Y (NOR2X1)                                 0.22       3.58 f
-  magnitude/U4/Y (INVX1)                                  0.13       3.72 r
-  magnitude/U3/Y (OAI21X1)                                0.15       3.87 f
-  magnitude/U2/Y (XNOR2X1)                                0.18       4.05 f
-  magnitude/out[15] (magnitude)                           0.00       4.05 f
-  fir_out[15] (out)                                       0.00       4.05 f
-  data arrival time                                                  4.05
+  FIR_controller/state_reg[1]/CLK (DFFSR)                 0.00       0.00 r
+  FIR_controller/state_reg[1]/Q (DFFSR)                   0.90       0.90 f
+  FIR_controller/U144/Y (INVX1)                           0.75       1.65 r
+  FIR_controller/U100/Y (MUX2X1)                          0.31       1.96 f
+  FIR_controller/err (controller)                         0.00       1.96 f
+  err (out)                                               0.00       1.96 f
+  data arrival time                                                  1.96
   --------------------------------------------------------------------------
   (Path is unconstrained)
 
@@ -59,29 +38,29 @@ Wire Load Model Mode: top
 Report : area
 Design : fir_filter
 Version: W-2024.09-SP4
-Date   : Sun Mar  1 17:15:56 2026
+Date   : Thu Mar  5 13:50:28 2026
 ****************************************
 
 Library(s) Used:
 
     osu05_stdcells (File: /home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db)
 
-Number of ports:                         1172
-Number of nets:                          4323
-Number of cells:                         3111
-Number of combinational cells:           2500
-Number of sequential cells:               288
+Number of ports:                         1180
+Number of nets:                          4289
+Number of cells:                         3072
+Number of combinational cells:           2449
+Number of sequential cells:               293
 Number of macros/black boxes:               0
-Number of buf/inv:                        708
-Number of references:                       4
+Number of buf/inv:                        703
+Number of references:                       6
 
-Combinational area:             792216.000000
-Buf/Inv area:                   107280.000000
-Noncombinational area:          456192.000000
+Combinational area:             776673.000000
+Buf/Inv area:                   106560.000000
+Noncombinational area:          464112.000000
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:               1248408.000000
+Total cell area:               1240785.000000
 Total area:                 undefined
 1
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
@@ -95,7 +74,7 @@ Report : power
         -analysis_effort low
 Design : fir_filter
 Version: W-2024.09-SP4
-Date   : Sun Mar  1 17:15:56 2026
+Date   : Thu Mar  5 13:50:28 2026
 ****************************************
 
 
@@ -122,12 +101,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =  58.0327 mW   (69%)
-  Net Switching Power  =  25.8412 mW   (31%)
+  Cell Internal Power  =  55.5481 mW   (72%)
+  Net Switching Power  =  21.4299 mW   (28%)
                          ---------
-Total Dynamic Power    =  83.8739 mW  (100%)
+Total Dynamic Power    =  76.9780 mW  (100%)
 
-Cell Leakage Power     = 385.1084 nW
+Cell Leakage Power     = 383.0119 nW
 
 Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
 
@@ -139,8 +118,8 @@ memory             0.0000            0.0000            0.0000            0.0000 
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
 register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
-sequential        51.6698            0.1256          153.4977           51.7956  (  61.75%)
-combinational      6.3628           25.7155          231.6107           32.0786  (  38.25%)
+sequential        51.7014        2.6056e-02          156.1626           51.7276  (  67.20%)
+combinational      3.8466           21.4039          226.8493           25.2507  (  32.80%)
 --------------------------------------------------------------------------------------------------
-Total             58.0326 mW        25.8412 mW       385.1084 nW        83.8742 mW
+Total             55.5480 mW        21.4299 mW       383.0118 nW        76.9783 mW
 1

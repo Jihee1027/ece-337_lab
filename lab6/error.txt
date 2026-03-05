@@ -1,0 +1,52 @@
+[337mg204@ee207lnx18]: ~/ece337 $ submit lab6-fir_filter
+Quiz completed with required score
+
+Submitting attempt number 1 out of 4 for submission command lab6-fir_filter
+Replacing grade of 0
+
+Press CTRL-C if you wish to cancel. It will not count as a submission attempt
+Enter the approximate amount of hours you spent working on "Lab 6 FIR Filter"
+ > 50
+                         !!! ----- !!!
+            
+Do NOT stop the grading command using CTRL-C or closing the terminal
+after you confirm the submission. You will be locked out of submitting 
+until a TA manually unlocks it.
+            
+                         !!! ----- !!!
+
+Are you sure that you want to submit? [Y/N] Y
+Removing build files...
+Synthesizing the u337mg204:ece337:fir_filter design using design_compiler...
+INFO: Preparing ece337:course-lib:datapath:1.0.0
+INFO: Preparing u337mg204:ece337:controller:1.0.0
+INFO: Preparing u337mg204:ece337:flex_counter:1.0.0
+INFO: Preparing u337mg204:ece337:magnitude:1.0.0
+INFO: Preparing u337mg204:ece337:sync:0
+INFO: Preparing u337mg204:ece337:synfiles:0
+INFO: Preparing u337mg204:ece337:counter:1.0.0
+INFO: Preparing u337mg204:ece337:fir_filter:1.0.0
+INFO: Setting up project
+INFO: Building
+INFO: (running make, which runs dc_shell which has an unbelievably long lag before printing. be patient)
+INFO: Running
+Storing reports for the u337mg204:ece337:fir_filter design...
+Checking synthesis log for errors and warnings...
+
+No synthesis errors were found
+
+Design Compiler is not loaded
+
+FILE ERROR (tmp/build/u337mg204_ece337_fir_filter_1.0.0/syn-design_compiler/fir_filter.v): Synthesis failed to generate netlist.
+
+make: *** [Makefile:224: syn_fir_filter] Error 1
+
+Could not synthesize design.
+
+
+Grade: 0/60
+
+[337mg204@ee207lnx18]: ~/ece337 $ ^C
+[337mg204@ee207lnx18]: ~/ece337 $ ^C
+[337mg204@ee207lnx18]: ~/ece337 $ ^C
+[337mg204@ee207lnx18]: ~/ece337 $ 

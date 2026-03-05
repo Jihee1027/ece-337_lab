@@ -20,6 +20,8 @@ module fir_filter (
     logic [3:0] src2;
     logic [3:0] dest;
     logic [16:0] outreg_data;
+    logic lc;
+    logic dr;
 
     counter counter (
         .clk(clk),
@@ -32,8 +34,8 @@ module fir_filter (
     controller FIR_controller (
         .clk(clk),
         .n_rst(n_rst),
-        .dr(data_ready),
-        .lc(load_coeff),
+        .dr(dr),
+        .lc(lc),
         .overflow(overflow),
         .cnt_up(cnt_up),
         .clear(clear),
@@ -63,12 +65,18 @@ module fir_filter (
         .out(fir_out)
     );
 
-    // sync sync_lc (
-    //     .clk(clk),
-    //     .n_rst(n_rst),
-    //     .async_in(lc)
-    //     .sync
-    // );
+    sync sync_lc (
+        .clk(clk),
+        .n_rst(n_rst),
+        .async_in(load_coeff),
+        .sync_out(lc)
+    );
 
+    sync sync_dr (
+        .clk(clk),
+        .n_rst(n_rst),
+        .async_in(data_ready),
+        .sync_out(dr)
+    );
 endmodule
 

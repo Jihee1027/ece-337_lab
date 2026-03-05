@@ -62,12 +62,12 @@ module tb_fir_filter ();
     task load_one_coeff(input logic [15:0] c);
     begin
         wait (modwait == 0);
-        @(negedge clk);
         fir_coefficient = c;
-        load_coeff = 1;   
+        load_coeff = 1;  
         @(negedge clk);
         load_coeff = 0;
-        wait (modwait == 0);
+        @(negedge modwait);
+        @(negedge clk);
     end
     endtask
 
@@ -101,17 +101,17 @@ module tb_fir_filter ();
         n_rst=1; sample_data=0; fir_coefficient=0; load_coeff=0; data_ready=0;
         reset_dut();
 
-        // // Test 1: 8000
-        // load_one_coeff(16'h8000); // F0
-        // load_one_coeff(16'h0000); // F1
-        // load_one_coeff(16'h0000); // F2
-        // load_one_coeff(16'h0000); // F3
-        // repeat (7) @(negedge clk);
-        // send_sample(16'h4000);
+        // Test 1: 8000
+        load_one_coeff(16'h8000); // F0
+        load_one_coeff(16'h0000); // F1
+        load_one_coeff(16'h0000); // F2
+        load_one_coeff(16'h0000); // F3
+        repeat (7) @(negedge clk);
+        send_sample(16'h4000);
 
-        // wait (modwait == 0);
-        // repeat (5) @(negedge clk);
-        // $display("fir_out=%h err=%b", fir_out, err);
+        wait (modwait == 0);
+        repeat (15) @(negedge clk);
+        $display("fir_out=%h err=%b", fir_out, err);
 
 
         // // Test 2: 8000
@@ -189,7 +189,7 @@ module tb_fir_filter ();
         //     repeat (10) @(negedge clk); send_sample(16'h8000);
         // end
 
-        // // Test7: err (dr)
+        // Test7: err (dr)
         // n_rst=1; sample_data=0; fir_coefficient=0; load_coeff=0; data_ready=0;
         // reset_dut();
         // load_one_coeff(16'h8000); // F0
@@ -203,25 +203,25 @@ module tb_fir_filter ();
         // repeat (5) @(negedge clk);
         // $display("fir_out=%h err=%b", fir_out, err);
 
-        // Test8: err (overflow)
-        n_rst=1; sample_data=0; fir_coefficient=0; load_coeff=0; data_ready=0;
-        reset_dut();
-        load_one_coeff(16'hF000); // F0
-        load_one_coeff(16'h0000); // F1
-        load_one_coeff(16'hF000); // F2
-        load_one_coeff(16'h0000); // F3
-        repeat (7) @(negedge clk);
-        send_sample(16'hF000);
-        repeat (10) @(negedge clk);
-        send_sample(16'h0000);
-        repeat (10) @(negedge clk);
-        send_sample(16'hF000);
-        repeat (10) @(negedge clk);
-        send_sample(16'h0000);
+        // // Test8: err (overflow)
+        // n_rst=1; sample_data=0; fir_coefficient=0; load_coeff=0; data_ready=0;
+        // reset_dut();
+        // load_one_coeff(16'b1); // F0
+        // load_one_coeff(16'b1); // F1
+        // load_one_coeff(16'b1); // F2
+        // load_one_coeff(16'b1); // F3
+        // repeat (7) @(negedge clk);
+        // send_sample(16'b1);
+        // repeat (10) @(negedge clk);
+        // send_sample(16'b1);
+        // repeat (10) @(negedge clk);
+        // send_sample(16'b1);
+        // repeat (10) @(negedge clk);
+        // send_sample(16'b1);
 
-        wait (modwait == 0);
-        repeat (5) @(negedge clk);
-        $display("fir_out=%h err=%b", fir_out, err);
+        // wait (modwait == 0);
+        // repeat (5) @(negedge clk);
+        // $display("fir_out=%h err=%b", fir_out, err);
 
         $finish;
     end
