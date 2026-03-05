@@ -61,6 +61,7 @@ module tb_fir_filter ();
 
     task load_one_coeff(input logic [15:0] c);
     begin
+        @(negedge clk);
         wait (modwait == 0);
         fir_coefficient = c;
         load_coeff = 1;  
@@ -222,7 +223,6 @@ module tb_fir_filter ();
         // wait (modwait == 0);
         // repeat (5) @(negedge clk);
         // $display("fir_out=%h err=%b", fir_out, err);
-
         $finish;
     end
 endmodule

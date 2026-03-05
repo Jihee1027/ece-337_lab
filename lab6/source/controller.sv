@@ -126,7 +126,11 @@ module controller (
                 state_next = MUL_0;
             end
             MUL_0: begin
-                state_next = ACC_0;
+                if (!overflow) begin
+                    state_next = ACC_0;
+                end else begin
+                    state_next = OVERFLOW;
+                end
             end
             ACC_0: begin
                 if (!overflow) begin
@@ -136,7 +140,11 @@ module controller (
                 end
             end
             MUL_1: begin
-                state_next = ACC_1;
+                if (!overflow) begin
+                    state_next = ACC_1;
+                end else begin
+                    state_next = OVERFLOW;
+                end
             end
             ACC_1: begin
                 if (!overflow) begin
@@ -146,7 +154,11 @@ module controller (
                 end
             end
             MUL_2: begin
-                state_next = ACC_2;
+                if (!overflow) begin
+                    state_next = ACC_2;
+                end else begin
+                    state_next = OVERFLOW;
+                end
             end
             ACC_2: begin
                 if (!overflow) begin
@@ -156,7 +168,11 @@ module controller (
                 end
             end
             MUL_3: begin
-                state_next = ACC_3;
+                if (!overflow) begin
+                    state_next = ACC_3;
+                end else begin
+                    state_next = OVERFLOW;
+                end
             end
             ACC_3: begin
                 if (!overflow) begin

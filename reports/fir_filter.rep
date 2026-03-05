@@ -7,13 +7,13 @@ Report : timing
         -max_paths 1
 Design : fir_filter
 Version: W-2024.09-SP4
-Date   : Thu Mar  5 13:50:28 2026
+Date   : Thu Mar  5 15:45:36 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
 Wire Load Model Mode: top
 
-  Startpoint: FIR_controller/state_reg[1]
+  Startpoint: FIR_controller/state_reg[3]
               (rising edge-triggered flip-flop)
   Endpoint: err (output port)
   Path Group: (none)
@@ -21,13 +21,13 @@ Wire Load Model Mode: top
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
-  FIR_controller/state_reg[1]/CLK (DFFSR)                 0.00       0.00 r
-  FIR_controller/state_reg[1]/Q (DFFSR)                   0.90       0.90 f
-  FIR_controller/U144/Y (INVX1)                           0.75       1.65 r
-  FIR_controller/U100/Y (MUX2X1)                          0.31       1.96 f
-  FIR_controller/err (controller)                         0.00       1.96 f
-  err (out)                                               0.00       1.96 f
-  data arrival time                                                  1.96
+  FIR_controller/state_reg[3]/CLK (DFFSR)                 0.00       0.00 r
+  FIR_controller/state_reg[3]/Q (DFFSR)                   1.15       1.15 f
+  FIR_controller/U120/Y (NAND2X1)                         0.39       1.54 r
+  FIR_controller/U119/Y (MUX2X1)                          0.08       1.62 f
+  FIR_controller/err (controller)                         0.00       1.62 f
+  err (out)                                               0.00       1.62 f
+  data arrival time                                                  1.62
   --------------------------------------------------------------------------
   (Path is unconstrained)
 
@@ -38,7 +38,7 @@ Wire Load Model Mode: top
 Report : area
 Design : fir_filter
 Version: W-2024.09-SP4
-Date   : Thu Mar  5 13:50:28 2026
+Date   : Thu Mar  5 15:45:36 2026
 ****************************************
 
 Library(s) Used:
@@ -46,21 +46,21 @@ Library(s) Used:
     osu05_stdcells (File: /home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db)
 
 Number of ports:                         1180
-Number of nets:                          4289
-Number of cells:                         3072
-Number of combinational cells:           2449
+Number of nets:                          4305
+Number of cells:                         3088
+Number of combinational cells:           2465
 Number of sequential cells:               293
 Number of macros/black boxes:               0
 Number of buf/inv:                        703
 Number of references:                       6
 
-Combinational area:             776673.000000
+Combinational area:             780561.000000
 Buf/Inv area:                   106560.000000
 Noncombinational area:          464112.000000
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:               1240785.000000
+Total cell area:               1244673.000000
 Total area:                 undefined
 1
 Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
@@ -74,7 +74,7 @@ Report : power
         -analysis_effort low
 Design : fir_filter
 Version: W-2024.09-SP4
-Date   : Thu Mar  5 13:50:28 2026
+Date   : Thu Mar  5 15:45:37 2026
 ****************************************
 
 
@@ -101,12 +101,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =  55.5481 mW   (72%)
-  Net Switching Power  =  21.4299 mW   (28%)
+  Cell Internal Power  =  55.5445 mW   (72%)
+  Net Switching Power  =  21.4291 mW   (28%)
                          ---------
-Total Dynamic Power    =  76.9780 mW  (100%)
+Total Dynamic Power    =  76.9736 mW  (100%)
 
-Cell Leakage Power     = 383.0119 nW
+Cell Leakage Power     = 384.3940 nW
 
 Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
 
@@ -118,8 +118,8 @@ memory             0.0000            0.0000            0.0000            0.0000 
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
 register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
-sequential        51.7014        2.6056e-02          156.1626           51.7276  (  67.20%)
-combinational      3.8466           21.4039          226.8493           25.2507  (  32.80%)
+sequential        51.7011        2.6031e-02          156.1626           51.7273  (  67.20%)
+combinational      3.8432           21.4031          228.2314           25.2465  (  32.80%)
 --------------------------------------------------------------------------------------------------
-Total             55.5480 mW        21.4299 mW       383.0118 nW        76.9783 mW
+Total             55.5443 mW        21.4291 mW       384.3940 nW        76.9738 mW
 1
