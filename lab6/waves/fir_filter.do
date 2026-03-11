@@ -15,6 +15,7 @@ add wave -noupdate /tb_fir_filter/one_k_samples
 add wave -noupdate /tb_fir_filter/dut/overflow
 add wave -noupdate /tb_fir_filter/modwait
 add wave -noupdate -radix ufixed /tb_fir_filter/fir_out
+add wave -noupdate /tb_fir_filter/dut/outreg_data
 add wave -noupdate /tb_fir_filter/err
 add wave -noupdate -divider Controller
 add wave -noupdate /tb_fir_filter/dut/FIR_controller/cnt_up
@@ -27,7 +28,7 @@ add wave -noupdate -divider States
 add wave -noupdate /tb_fir_filter/dut/FIR_controller/state
 add wave -noupdate /tb_fir_filter/dut/FIR_controller/state_next
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {80812 ps} 0}
+WaveRestoreCursors {{Cursor 1} {198333 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -43,4 +44,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ps} {166653 ps}
+WaveRestoreZoom {0 ps} {892500 ps}

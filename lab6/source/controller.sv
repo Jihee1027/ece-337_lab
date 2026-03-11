@@ -69,7 +69,6 @@ module controller (
                               state_next == OVERFLOW);
     end
 
-
     always_ff @(posedge clk or negedge n_rst) begin
         if (!n_rst) begin
             modwait <= 1'b0;
@@ -188,19 +187,25 @@ module controller (
                 state_next = LOAD_F0_WAIT;
             end
             LOAD_F0_WAIT: begin
-                state_next = LOAD_F1;
+                if (lc) begin
+                    state_next = LOAD_F1;
+                end
             end
             LOAD_F1: begin
                 state_next = LOAD_F1_WAIT;
             end
             LOAD_F1_WAIT: begin
+                if (lc) begin
                 state_next = LOAD_F2;
+                end
             end
             LOAD_F2: begin
                 state_next = LOAD_F2_WAIT;
             end
             LOAD_F2_WAIT: begin
+                if (lc) begin
                 state_next = LOAD_F3;
+                end
             end
             LOAD_F3: begin
                 state_next = LOAD_F3_WAIT;

@@ -6,19 +6,12 @@ module magnitude (
 );
   logic [16:0] in_temp;
 
-  integer i;
   always_comb begin
-    in_temp = in;
-    if (in_temp[16] == 1'b1) begin
-      for (i = 0; i < 17; i = i +1) begin
-        if (in_temp[i] == 1'b1) begin
-            in_temp[i] = 1'b0;
-        end else begin
-            in_temp[i] = 1'b1;
-        end
-      end
-      in_temp = in_temp + 1'b1;
+    if (in[16] == 1'b1) begin
+      in_temp = (~in) + 1'b1;
+    end else begin
+      in_temp = in;
     end
-    out = in [15:0];
+    out = in_temp[15:0];
   end
 endmodule
