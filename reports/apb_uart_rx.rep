@@ -1,0 +1,128 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : apb_uart_rx
+Version: W-2024.09-SP4
+Date   : Sat Mar 14 16:18:22 2026
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: paddr[0] (input port)
+  Endpoint: prdata[5] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  paddr[0] (in)                                           0.00       0.00 r
+  apb_subordinate/paddr[0] (apb_subordinate)              0.00       0.00 r
+  apb_subordinate/U82/Y (INVX1)                           0.20       0.20 f
+  apb_subordinate/U81/Y (NAND3X1)                         0.23       0.43 r
+  apb_subordinate/U78/Y (NOR2X1)                          0.59       1.03 f
+  apb_subordinate/U29/Y (INVX1)                           0.44       1.46 r
+  apb_subordinate/U6/Y (OAI21X1)                          0.08       1.54 f
+  apb_subordinate/prdata[5] (apb_subordinate)             0.00       1.54 f
+  prdata[5] (out)                                         0.00       1.54 f
+  data arrival time                                                  1.54
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : apb_uart_rx
+Version: W-2024.09-SP4
+Date   : Sat Mar 14 16:18:22 2026
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db)
+
+Number of ports:                          289
+Number of nets:                           756
+Number of cells:                          495
+Number of combinational cells:            354
+Number of sequential cells:                64
+Number of macros/black boxes:               0
+Number of buf/inv:                        118
+Number of references:                       2
+
+Combinational area:              86292.000000
+Buf/Inv area:                    16992.000000
+Noncombinational area:          101376.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                187668.000000
+Total area:                 undefined
+1
+Loading db file '/home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : apb_uart_rx
+Version: W-2024.09-SP4
+Date   : Sat Mar 14 16:18:22 2026
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /home/ecegrid/a/ece337/summer24-refactor/tech/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =  10.4754 mW   (82%)
+  Net Switching Power  =   2.3146 mW   (18%)
+                         ---------
+Total Dynamic Power    =  12.7900 mW  (100%)
+
+Cell Leakage Power     =  58.7092 nW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         8.9033            0.2344           34.1106            9.1377  (  71.44%)
+combinational      1.5721            2.0802           24.5986            3.6523  (  28.56%)
+--------------------------------------------------------------------------------------------------
+Total             10.4754 mW         2.3146 mW        58.7092 nW        12.7901 mW
+1

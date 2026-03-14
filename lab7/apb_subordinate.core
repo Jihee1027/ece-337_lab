@@ -21,6 +21,7 @@ filesets:
         file_type: systemVerilogSource
         depend:
             - "u337mg204:ece337:questafiles"
+            - "ece337:course-lib:apb_model"
 
     synfiles:
         files:

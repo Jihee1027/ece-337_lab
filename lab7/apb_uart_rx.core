@@ -7,8 +7,9 @@ filesets:
         files:
             - "source/apb_uart_rx.sv"
         file_type: systemVerilogSource
-        # depend:
-        #     - "fusesoc:core:name"
+        depend:
+            - "u337mg204:ece337:rcv_block:1.0.0"
+            - "u337mg204:ece337:apb_subordinate:1.0.0"
 
     synth:
         depend:
@@ -23,6 +24,7 @@ filesets:
         file_type: systemVerilogSource
         depend:
             - "u337mg204:ece337:questafiles"
+            - "ece337:course-lib:apb_model"
 
     synfiles:
         files:

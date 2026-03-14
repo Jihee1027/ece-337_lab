@@ -47,6 +47,17 @@ module tb_apb_subordinate ();
     logic [7:0] prdata;
     logic psaterr;
 
+    // Additional
+    logic [7:0] rx_data;
+    logic data_ready;
+    logic overrun_error;
+    logic framing_error;
+    logic data_read;
+    logic [3:0] data_size;
+    logic [13:0] bit_period;
+
+    // DUT
+    apb_subordinate DUT (.*);
     // bus model tasks
     task reset_model;
     begin
@@ -133,9 +144,42 @@ module tb_apb_subordinate ();
         transaction_data  = 8'b0;
         transaction_error = 1'b0;
 
+        rx_data = 8'h00;
+        data_ready = 1'b0;
+        overrun_error = 1'b0;
+        framing_error = 1'b0;
+        model_reset = 1'b0;
+        enable_transactions = 1'b0;
+
         reset_model;
         reset_dut;
 
+        // Test 1: 0x6: Data Buffer (payload)
+        data_ready = 1'b1;
+        rx_data = 8'hA5;
+        enqueue_transaction(1, 0, 3'h6, 8'hA5, 0);
+        execute_transactions(1);
+        repeat (3) @(posedge clk);
+
+        rx_data = 8'h00;
+
+        // Test 2: 0x0: Data status Register
+        data_ready = 1'b0;
+        enqueue_transaction(1, 0, 3'h0, 8'h00, 0);
+        execute_transactions(1);
+        repeat (3) @(posedge clk);
+
+        // Test 2.2: 0x0 Data ready
+        data_ready = 1'b1;
+        rx_data = 8'hA5;
+        enqueue_transaction(1, 0, 3'h0, rx_data, 0);
+        execute_transactions(1);
+        repeat (3) @(posedge clk);
+
+        // Test 2.3: 0x0 Write Error Test
+        enqueue_transaction(1, 1, 3'h0, rx_data, 1);
+        execute_transactions(1);
+        repeat (3) @(posedge clk);
         $finish;
     end
 endmodule
